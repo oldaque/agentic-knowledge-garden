@@ -3,7 +3,7 @@ site_description: Public repository for agentic AI knowledge
 site_url: https://oldaque.github.io/agentic-knowledge-garden
 
 nav:
-  - Home: README.md
+  - Home: home.md
   - Guide: guide/README.md
   - Patterns: patterns/README.md
   - Resources: resources/README.md
