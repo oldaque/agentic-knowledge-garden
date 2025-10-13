@@ -1,0 +1,22 @@
+$schema: notes.v1
+file:
+  path: notes/<AAAA-MM-DD>_<slug>.md
+front_matter:
+  title: string
+  slug: kebab
+  tags: list[string]
+  source:
+    type: enum[linkedin, paper, blog, video, talk, book]
+    author: string
+    org: string|null
+    url: url
+  status: enum[draft, in-review, stable]
+  created_at: date
+  summary: string
+sections:
+  - Highlights: list[string]
+  - Ideias_de_teste: list[string]
+  - Destilado: string
+rules:
+  - must_have: [title, slug, source.url]
+  - unique_by: [slug, source.url]

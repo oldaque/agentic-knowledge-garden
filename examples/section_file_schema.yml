@@ -1,0 +1,10 @@
+$schema: examples.v1
+file:
+  path: examples/<slug>/README.md
+meta:
+  objective: string
+  steps: list[string]
+  from_note: path
+rules:
+  - should_be_minimal: true
+  - link_to_snippets: true

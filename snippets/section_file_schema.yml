@@ -1,0 +1,11 @@
+$schema: snippets.v1
+file:
+  path: snippets/<lang>/<slug>.<ext>
+meta:
+  name: string
+  objective: string
+  how_to_run: string
+  from_note: path
+rules:
+  - size_limit_approx_kb: 30
+  - languages_allowed: [python, js, ts]
