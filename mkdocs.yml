@@ -1,0 +1,16 @@
+site_name: Agentic Knowledge Garden
+site_description: Guia pessoal sobre agentes de IA
+site_url: https://<usuario>.github.io/<repo>
+nav:
+  - Home: docs/index.md
+  - Guide: docs/guide/
+  - Patterns: docs/patterns/
+  - Resources: docs/resources/
+theme:
+  name: material
+  palette:
+    - scheme: slate
+markdown_extensions:
+  - admonition
+  - toc
+  - tables

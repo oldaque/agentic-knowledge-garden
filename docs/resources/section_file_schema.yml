@@ -1,0 +1,18 @@
+$schema: resources.v1
+files:
+  - links.md:
+      item:
+        title: string
+        author: string|null
+        org: string|null
+        url: url
+        insight: string  # 2 ou 3 linhas
+        tags: list[string]
+        from_note: path  # caminho da nota que originou
+      unique_by: [url]
+  - people.md:
+      item:
+        name: string
+        role: string
+        org: string|null
+        links: list[url]
