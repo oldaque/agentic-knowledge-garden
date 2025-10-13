@@ -10,28 +10,24 @@
       
       
       
-        <link rel="canonical" href="https://oldaque.github.io/agentic-knowledge-garden/notes/">
+        <link rel="canonical" href="https://oldaque.github.io/agentic-knowledge-garden/notes/2025-10-13_agent-memory-without-echo/">
       
       
-        <link rel="prev" href="../resources/">
       
       
-        <link rel="next" href="../snippets/">
-      
-      
-      <link rel="icon" href="../assets/images/favicon.png">
+      <link rel="icon" href="../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.21">
     
     
       
-        <title>Notes - Agentic Knowledge Garden</title>
+        <title>Memória do agente sem eco: como evitar respostas duplicadas - Agentic Knowledge Garden</title>
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/main.2a3383ac.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.2a3383ac.min.css">
       
         
-        <link rel="stylesheet" href="../assets/stylesheets/palette.06af60db.min.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
       
       
 
@@ -50,9 +46,9 @@
       
     
     
-      <link rel="stylesheet" href="../assets/extra.css">
+      <link rel="stylesheet" href="../../assets/extra.css">
     
-    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -78,7 +74,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#notas" class="md-skip">
+        <a href="#conteudo-bruto" class="md-skip">
           Skip to content
         </a>
       
@@ -94,7 +90,7 @@
 
 <header class="md-header md-header--shadow" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href=".." title="Agentic Knowledge Garden" class="md-header__button md-logo" aria-label="Agentic Knowledge Garden" data-md-component="logo">
+    <a href="../.." title="Agentic Knowledge Garden" class="md-header__button md-logo" aria-label="Agentic Knowledge Garden" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -114,7 +110,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Notes
+              Memória do agente sem eco: como evitar respostas duplicadas
             
           </span>
         </div>
@@ -204,7 +200,7 @@
 
 <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href=".." title="Agentic Knowledge Garden" class="md-nav__button md-logo" aria-label="Agentic Knowledge Garden" data-md-component="logo">
+    <a href="../.." title="Agentic Knowledge Garden" class="md-nav__button md-logo" aria-label="Agentic Knowledge Garden" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -222,7 +218,7 @@
   
   
     <li class="md-nav__item">
-      <a href=".." class="md-nav__link">
+      <a href="../.." class="md-nav__link">
         
   
   
@@ -244,7 +240,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../guide/" class="md-nav__link">
+      <a href="../../guide/" class="md-nav__link">
         
   
   
@@ -266,7 +262,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../patterns/" class="md-nav__link">
+      <a href="../../patterns/" class="md-nav__link">
         
   
   
@@ -288,7 +284,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../resources/" class="md-nav__link">
+      <a href="../../resources/" class="md-nav__link">
         
   
   
@@ -307,19 +303,10 @@
       
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../" class="md-nav__link">
         
   
   
@@ -330,7 +317,6 @@
   
 
       </a>
-      
     </li>
   
 
@@ -342,7 +328,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../snippets/" class="md-nav__link">
+      <a href="../../snippets/" class="md-nav__link">
         
   
   
@@ -364,7 +350,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../examples/" class="md-nav__link">
+      <a href="../../examples/" class="md-nav__link">
         
   
   
@@ -396,8 +382,23 @@
   
   
   
-    
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#conteudo-bruto" class="md-nav__link">
+    <span class="md-ellipsis">
+      Conteúdo Bruto
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
   
 </nav>
                   </div>
@@ -413,17 +414,54 @@
 
 
 
-<h1 id="notas">Notas<a class="headerlink" href="#notas" title="Permanent link">&para;</a></h1>
-<ul>
-<li><a href="2025-10-13_agent-memory-without-echo/">Memória do agente sem eco: como evitar respostas duplicadas</a></li>
-<li><a href="2025-10-13_book-agentic-design-patterns/">Livro: Agentic Design Patterns</a></li>
-</ul>
+  <h1>Memória do agente sem eco: como evitar respostas duplicadas</h1>
+
+<h3 id="conteudo-bruto">Conteúdo Bruto<a class="headerlink" href="#conteudo-bruto" title="Permanent link">&para;</a></h3>
+<p>🧠 Memória do agente sem “eco”: como evitar respostas duplicadas</p>
+<p>Repetição a cada turno costuma vir de 3 problemas: (1) reenvio do histórico bruto, (2) escrita concorrente da memória, (3) ausência de controles de idempotência. Na Scoras Stack, resolvemos assim:</p>
+<ol>
+<li>
+<p>PydanticAI: memória tipada e validada (episódica, resumo conversacional e variáveis de sessão). Nada de string solta.</p>
+</li>
+<li>
+<p>LangGraph: grafo de estados com MemorySaver() e checkpoints; só o essencial segue para o próximo nó.</p>
+</li>
+<li>
+<p>Redis: armazenamento de sessão e locks distribuídos (garantimos um único write por turno via SET NX com TTL).</p>
+</li>
+<li>
+<p>DuckDB: contexto estruturado e barato para consultas; evita reprocessar documentos a cada interação.</p>
+</li>
+<li>
+<p>Guardrails: dedupe de saída (hash do conteúdo), filtros de repetição e políticas de estilo antes de responder.</p>
+</li>
+<li>
+<p>Celery: o maestro assíncrono.</p>
+</li>
+<li>Write-behind da memória (resumo e embeddings) fora do request principal.</li>
+<li>Idempotência por chave de turno (ex: session_id:turn_id) evitando jobs duplicados.</li>
+<li>Rate limit e retry com backoff para chamadas a LLMs e vetores.</li>
+<li>Debounce de eventos rápidos (consolida múltiplas edições do usuário em um único resumo).</li>
+<li>Orquestração com groups/chords para batch de ferramentas e atualização de memória ao final.</li>
+<li>Outbox/Saga (opcional) para confirmar persistência antes de “promover” o estado do agente.</li>
+</ol>
+<p>💡 Fluxo prático:
+Usuário fala → LangGraph processa → resposta sai rápido → Celery enfileira tarefas de “memória” (resumo, indexação, métricas) → Redis bloqueia writes concorrentes → DuckDB/índices são atualizados uma vez por turno → Guardrails checa duplicação antes de enviar a próxima saída.</p>
+<p>Checklist anti-eco:
+- Não reenviar todo o histórico; use resumo incremental.
+- Lock + idempotency key em qualquer escrita de memória.
+- Deduplicação por hash no pós-processamento.
+- Jobs Celery para tudo que não precisa estar no caminho síncrono.</p>
+<p>Resultado: conversa natural, sem repetições, barata e estável!</p>
 
 
 
 
 
 
+
+  
+  
 
 
 
@@ -466,10 +504,10 @@
     
     
       
-      <script id="__config" type="application/json">{"base": "..", "features": ["navigation.sections", "content.code.copy"], "search": "../assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.sections", "content.code.copy"], "search": "../../assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
-      <script src="../assets/javascripts/bundle.f55a23d4.min.js"></script>
+      <script src="../../assets/javascripts/bundle.f55a23d4.min.js"></script>
       
     
   </body>
