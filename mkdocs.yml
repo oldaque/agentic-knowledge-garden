@@ -4,12 +4,12 @@ site_url: https://oldaque.github.io/agentic-knowledge-garden
 
 nav:
   - Home: index.md
-  - Guide: guide/
-  - Patterns: patterns/
-  - Resources: resources/
-  - Snippets: ../snippets/
-  - Examples: ../examples/
-  - Notes: ../notes/
+  - Guide: guide/README.md
+  - Patterns: patterns/README.md
+  - Resources: resources/README.md
+  - Snippets: ../snippets/README.md
+  - Examples: ../examples/README.md
+  - Notes: ../notes/README.md
 
 theme:
   name: material
