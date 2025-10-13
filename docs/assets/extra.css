@@ -51,23 +51,28 @@
   opacity: 1 !important;
 }
 
-/* Links da nav, hover e ativo */
+/* Navegação: limpa, moderna e sutil */
 [data-md-color-scheme="slate"] .md-nav__link {
-  color: rgba(255,255,255,.92) !important;
+  color: rgba(255, 255, 255, 0.65) !important;
+  transition: color 0.25s ease, opacity 0.25s ease;
 }
+
 [data-md-color-scheme="slate"] .md-nav__link:hover,
 [data-md-color-scheme="slate"] .md-nav__link:focus {
-  color: #000 !important;
-  background: #fff !important;
-  border-radius: 10px;
-  outline: none;
+  color: rgba(255, 255, 255, 0.9) !important;
+  opacity: 1 !important;
+  background: transparent !important;
+  text-decoration: none;
 }
+
 [data-md-color-scheme="slate"] .md-nav__item--active > .md-nav__link,
 [data-md-color-scheme="slate"] .md-nav__link--active {
-  color: #000 !important;
-  background: #fff !important;
-  border-radius: 10px;
-  box-shadow: inset 3px 0 0 0 #fff;
+  color: #fff !important;
+  font-weight: 600;
+  opacity: 1 !important;
+  background: transparent !important;
+  box-shadow: none !important;
+  border: none !important;
 }
 
 /* Código e cards */
