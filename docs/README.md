@@ -15,15 +15,16 @@ Every contribution starts small (as a note) and can grow over time as understand
 ## 🧭 Structure
 
 ```bash
-agentic-knowledge-garden/
-├─ notes/         # starting point for raw notes and discoveries
-├─ docs/
-│  ├─ guide/      # structured chapters and consolidated knowledge
-│  ├─ patterns/   # recurring design patterns for agent systems
-│  └─ resources/  # curated references, papers, authors, and links
-├─ snippets/      # small illustrative code or prompt snippets
-├─ examples/      # practical and reproducible examples
-└─ README.md
+docs/
+├─ README.md
+├─ index.md
+├─ assets/
+├─ guide/      # structured chapters and consolidated knowledge
+├─ patterns/   # recurring design patterns for agent systems
+├─ resources/  # curated references, papers, authors, and links
+├─ snippets/   # small illustrative code or prompt snippets
+├─ examples/   # practical and reproducible examples
+└─ notes/      # starting point for raw notes and discoveries
 ```
 
 **Notes → Decisions → Promotions**
@@ -43,15 +44,15 @@ Each piece of content begins in `notes/`. From there, it can be promoted to anot
 
 Raw notes and idea sketches. Use this section to capture insights, references, and exploratory thinking.
 
-### 🔸 `docs/guide/`
+### 🔸 `guide/`
 
 Consolidated content explaining topics in a structured or sequential way. Best for continuous reading.
 
-### 🔸 `docs/patterns/`
+### 🔸 `patterns/`
 
 A catalog of patterns and architectures for AI agents. Each file defines a problem, the applied pattern, and practical examples.
 
-### 🔸 `docs/resources/`
+### 🔸 `resources/`
 
 Curated links, articles, papers, and authors relevant to agentic AI development.
 
@@ -97,9 +98,9 @@ All content is released under the MIT License, unless otherwise specified by sou
 ## 🌐 Quick Navigation
 
 * [`notes/`](./notes/) – raw ideas and notes
-* [`docs/guide/`](./docs/guide/) – complete guide
-* [`docs/patterns/`](./docs/patterns/) – design patterns
-* [`docs/resources/`](./docs/resources/) – external references
+* [`guide/`](./guide/) – complete guide
+* [`patterns/`](./patterns/) – design patterns
+* [`resources/`](./resources/) – external references
 * [`snippets/`](./snippets/) – code snippets
 * [`examples/`](./examples/) – practical examples
 
