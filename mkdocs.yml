@@ -1,16 +1,29 @@
 site_name: Agentic Knowledge Garden
-site_description: Guia pessoal sobre agentes de IA
-site_url: https://<usuario>.github.io/<repo>
+site_description: Public repository for agentic AI knowledge
+site_url: https://oldaque.github.io/agentic-knowledge-garden
+
 nav:
-  - Home: docs/index.md
-  - Guide: docs/guide/
-  - Patterns: docs/patterns/
-  - Resources: docs/resources/
+  - Home: index.md
+  - Guide: guide/
+  - Patterns: patterns/
+  - Resources: resources/
+  - Snippets: ../snippets/
+  - Examples: ../examples/
+  - Notes: ../notes/
+
 theme:
   name: material
   palette:
     - scheme: slate
+  features:
+    - navigation.sections
+    - content.code.copy
+
 markdown_extensions:
   - admonition
-  - toc
+  - toc:
+      permalink: true
   - tables
+
+extra_css:
+  - assets/extra.css

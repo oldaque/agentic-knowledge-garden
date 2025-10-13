@@ -1,0 +1,21 @@
+:root {
+  --md-default-bg-color: #000000;
+  --md-default-fg-color: #ffffff;
+  --md-primary-fg-color: #ffffff;
+  --md-accent-fg-color: #ffffff;
+}
+html, body { background: #000000; color: #ffffff; }
+a { color: #ffffff; text-decoration: none; }
+a:hover { text-decoration: underline; }
+.md-nav, .md-sidebar, .md-header, .md-footer { background: #000000; }
+.md-typeset code, .md-typeset pre {
+  background: #0a0a0a;
+  border: 1px solid rgba(255,255,255,0.12);
+  border-radius: 8px;
+}
+.md-card, .md-typeset .admonition {
+  background: #0a0a0a;
+  border: 1px solid rgba(255,255,255,0.12);
+  border-radius: 12px;
+}
+img { filter: brightness(0.95) contrast(1.05); }
