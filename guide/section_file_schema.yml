@@ -1,0 +1,17 @@
+$schema: guide.v1
+file:
+  path: docs/guide/<NN>_<slug>.md
+front_matter:
+  title: string
+  slug: kebab
+  tags: list[string]
+  status: enum[draft, in-review, stable]
+  last_update: date
+  summary: string
+sections:
+  - Objetivo: string
+  - Conteudo: markdown
+  - Leituras: list[url]
+rules:
+  - must_have: [title, slug, summary]
+  - numbering: two_digits_prefix_optional
