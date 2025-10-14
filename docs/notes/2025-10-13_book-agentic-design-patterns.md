@@ -26,31 +26,31 @@ summary: "Sumário e estrutura do livro 'Agentic Design Patterns: A Hands-On Gui
 - What makes an AI system an "agent"?, 9 pages
 
 **Part One (Total: 103 pages)**
-- Chapter 1: Prompt Chaining
-- Chapter 2: Routing
-- Chapter 3: Parallelization
-- Chapter 4: Reflection
-- Chapter 5: Tool Use
-- Chapter 6: Planning
-- Chapter 7: Multi-Agent
+- [Chapter 1: Prompt Chaining](../patterns/prompt-chaining.md)
+- [Chapter 2: Routing](../patterns/routing.md)
+- [Chapter 3: Parallelization](../patterns/parallelization.md)
+- [Chapter 4: Reflection](../patterns/reflection.md)
+- [Chapter 5: Tool Use](../patterns/tool-use.md)
+- [Chapter 6: Planning](../patterns/planning.md)
+- [Chapter 7: Multi-Agent](../patterns/multi-agent.md)
 
 **Part Two (Total: 61 pages)**
-- Chapter 8: Memory Management
-- Chapter 9: Learning and Adaptation
-- Chapter 10: Model Context Protocol (MCP)
-- Chapter 11: Goal Setting and Monitoring
+- [Chapter 8: Memory Management](../patterns/memory-management.md)
+- [Chapter 9: Learning and Adaptation](../patterns/learning-and-adaptation.md)
+- [Chapter 10: Model Context Protocol (MCP)](../patterns/model-context-protocol-mcp.md)
+- [Chapter 11: Goal Setting and Monitoring](../patterns/goal-setting-and-monitoring.md)
 
 **Part Three (Total: 34 pages)**
 - Chapter 12: Exception Handling and Recovery
 - Chapter 13: Human-in-the-Loop
-- Chapter 14: Knowledge Retrieval (RAG)
+- [Chapter 14: Knowledge Retrieval (RAG)](../patterns/knowledge-retrieval-rag.md) [final, last read done, code ok]
 
 **Part Four (Total: 114 pages)**
-- Chapter 15: Inter-Agent Communication (A2A)
-- Chapter 16: Resource-Aware Optimization
-- Chapter 17: Reasoning Techniques
-- Chapter 18: Guardrails/Safety Patterns
-- Chapter 19: Evaluation and Monitoring
+- [Chapter 15: Inter-Agent Communication (A2A)](../patterns/inter-agent-communication-a2a.md) [final, last read done, code ok]
+- [Chapter 16: Resource-Aware Optimization](..//patterns/resource-aware-optimization.md) [final, last read done, code ok]
+- [Chapter 17: Reasoning Techniques](../patterns/reasoning-techniques.md) [final, last read done, code ok]
+- [Chapter 18: Guardrails/Safety Patterns](../patterns/guardrails-safety-patterns.md) [final, last read done, code ok]
+- [Chapter 19: Evaluation and Monitoring](../patterns/evaluation-and-monitoring.md) [final, last read done, code ok]
 - Chapter 20: Prioritization
 - Chapter 21: Exploration and Discovery
 

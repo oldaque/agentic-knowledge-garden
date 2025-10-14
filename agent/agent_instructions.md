@@ -44,3 +44,4 @@ pedir_snippet: false
 - Não gerar código completo. Apenas **snippets** quando indicado.
 - Manter front‑matter completo, com `status: draft | in-review | stable`.
 - Preservar a nota original como fonte de verdade. Promoções referenciam a nota.
+- Sempre consultar o arquivo `section_file_schema.yml` da pasta relevante antes de criar/editar um arquivo para garantir que esteja na estrutura correta (incluindo front-matter e caminho do arquivo).
