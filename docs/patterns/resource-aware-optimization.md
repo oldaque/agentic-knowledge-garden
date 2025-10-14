@@ -1,6 +1,15 @@
 ---
-title: "Resource-Aware Optimization"
-status: draft
+title: "Chapter 16: Resource-Aware Optimization"
+slug: "resource-aware-optimization"
+tags: ["resource", "optimization", "efficiency", "cost", "performance", "agentic-pattern"]
+source:
+  type: "book"
+  author: "Antonio Gulli"
+  org: "Google"
+  url: "https://docs.google.com/document/d/1nAN58l6JjqEJHk43126uh7xgdEblCpcbsNUHXgtBmJQ/edit?usp=sharing"
+status: "stable"
+last_update: "2025-10-13"
+summary: "Pattern for optimizing agent performance, cost, and resource utilization through intelligent model selection, caching, and efficiency strategies."
 source: "https://docs.google.com/document/d/1nAN58l6JjqEJHk43126uh7xgdEblCpcbsNUHXgtBmJQ/edit?usp=sharing"
 ---
 

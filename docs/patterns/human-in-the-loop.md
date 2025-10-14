@@ -1,3 +1,17 @@
+---
+title: "Chapter 13: Human-in-the-Loop"
+slug: "human-in-the-loop"
+tags: ["human-in-the-loop", "hitl", "supervision", "collaboration", "agentic-pattern"]
+source:
+  type: "book"
+  author: "Antonio Gulli"
+  org: "Google"
+  url: "https://docs.google.com/document/d/1ImOZcw6yeb7a-uRBMNP1VdovYfyip4IdsAcLu9yue-0/edit?usp=sharing"
+status: "stable"
+last_update: "2025-10-13"
+summary: "Pattern for integrating human oversight and collaboration in agentic systems to ensure quality, safety, and ethical decision-making."
+---
+
 # Chapter 13: Human-in-the-Loop
 
 The Human-in-the-Loop (HITL) pattern represents a pivotal strategy in the development and deployment of Agents. It deliberately interweaves the unique strengths of human cognition—such as judgment, creativity, and nuanced understanding—with the computational power and efficiency of AI. This strategic integration is not merely an option but often a necessity, especially as AI systems become increasingly embedded in critical decision-making processes.

@@ -1,3 +1,17 @@
+---
+title: "Chapter 11: Goal Setting and Monitoring"
+slug: "goal-setting-and-monitoring"
+tags: ["goal-setting", "monitoring", "tracking", "agentic-pattern"]
+source:
+  type: "book"
+  author: "Antonio Gulli"
+  org: "Google"
+  url: "https://docs.google.com/document/d/10ndlCB39BWjyFRWKpcoKib4vuPD1ojD-x0-ynMaf5uw/edit?tab=t.0"
+status: "stable"
+last_update: "2025-10-13"
+summary: "Pattern for defining measurable objectives and continuously tracking agent progress toward goals with feedback loops."
+---
+
 # Chapter 11: Goal Setting and Monitoring
 
 ## GOAL SETTING AND MONITORING PATTERN OVERVIEW

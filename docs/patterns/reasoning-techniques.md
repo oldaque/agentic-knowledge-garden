@@ -1,6 +1,12 @@
 ---
 title: "Reasoning Techniques"
-status: draft
+slug: "reasoning-techniques"
+tags: ["reasoning", "palms", "cognitive", "agentic-pattern"]
+source:
+  type: "internal"
+status: "draft"
+last_update: "2025-10-13"
+summary: "Pattern for advanced reasoning capabilities in agents including Program-Aided Language Models (PALMs) and cognitive techniques."
 source: "https://docs.google.com/document/d/1Yt1W_hLaC6ZNgJXfT4W6NrCL4TzNVdKOX50kgpHiIq4/edit?usp=sharing"
 ---
 

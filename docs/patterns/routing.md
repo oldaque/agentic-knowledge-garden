@@ -1,3 +1,17 @@
+---
+title: "Chapter 2: Routing"
+slug: "routing"
+tags: ["routing", "coordinator", "agentic-pattern", "langchain", "google-adk"]
+source:
+  type: "book"
+  author: "Antonio Gulli"
+  org: "Google"
+  url: "https://docs.google.com/document/d/1ux_n8n3T4bYndOjs1DKW5ccpC802KISdy2IWnlvYbas/edit?tab=t.0"
+status: "stable"
+last_update: "2025-10-13"
+summary: "Pattern that enables dynamic decision-making in agentic systems by routing requests to specialized agents or tools based on context and intent analysis."
+---
+
 # Chapter 2: Routing
 
 ## ROUTING PATTERN OVERVIEW

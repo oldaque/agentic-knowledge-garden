@@ -1,3 +1,17 @@
+---
+title: "Chapter 1: Prompt Chaining"
+slug: "prompt-chaining"
+tags: ["prompt-chaining", "pipeline", "agentic-pattern", "langchain", "google-adk"]
+source:
+  type: "book"
+  author: "Antonio Gulli"
+  org: "Google"
+  url: "https://docs.google.com/document/d/1rsaK53T3Lg5KoGwvf8ukOUvbELRtH-V0LnOIFDxBryE/edit?tab=t.0"
+status: "stable"
+last_update: "2025-10-13"
+summary: "Pattern for breaking down complex tasks into sequential, manageable steps where each step's output becomes input for the next, improving reliability and control."
+---
+
 # Chapter 1: Prompt Chaining
 
 ## PROMPT CHAINING PATTERN OVERVIEW

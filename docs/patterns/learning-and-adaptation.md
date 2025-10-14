@@ -1,3 +1,17 @@
+---
+title: "Chapter 9: Learning and Adaptation"
+slug: "learning-and-adaptation"
+tags: ["learning", "adaptation", "machine-learning", "agentic-pattern"]
+source:
+  type: "book"
+  author: "Antonio Gulli"
+  org: "Google"
+  url: "https://docs.google.com/document/d/1UHTEDCmSM1nwB-iyMoHuYzVcu_B_4KkJ2ITGGUKqo8s/edit?tab=t.0"
+status: "stable"
+last_update: "2025-10-13"
+summary: "Pattern for enabling agents to learn from experience, adapt to changing conditions, and improve performance over time."
+---
+
 # Chapter 9: Learning and Adaptation
 
 ## THE BIG PICTURE

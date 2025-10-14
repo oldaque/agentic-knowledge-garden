@@ -1,3 +1,17 @@
+---
+title: "Chapter 3: Parallelization"
+slug: "parallelization"
+tags: ["parallelization", "concurrent", "performance", "agentic-pattern", "langchain", "google-adk"]
+source:
+  type: "book"
+  author: "Antonio Gulli"
+  org: "Google"
+  url: "https://docs.google.com/document/d/1XVMp4RcRkoUJTVbrP2foWZX703CUJpWkrhyFU2cfUOA/edit?tab=t.0"
+status: "stable"
+last_update: "2025-10-13"
+summary: "Pattern for executing independent tasks concurrently to improve performance and reduce overall execution time in agentic systems."
+---
+
 # Chapter 3: Parallelization
 
 ## PARALLELIZATION PATTERN OVERVIEW

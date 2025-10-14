@@ -1,3 +1,17 @@
+---
+title: "Chapter 7: Multi-Agent Collaboration"
+slug: "multi-agent-collaboration"
+tags: ["multi-agent", "collaboration", "teamwork", "agentic-pattern", "crewai", "google-adk"]
+source:
+  type: "book"
+  author: "Antonio Gulli"
+  org: "Google"
+  url: "https://docs.google.com/document/d/1RZ5-2fykDQKOBx01pwfKkDe0GCs5ydca7xW9Q4wqS_M/edit?tab=t.0"
+status: "stable"
+last_update: "2025-10-13"
+summary: "Pattern for orchestrating multiple specialized agents to work together on complex tasks, each handling specific roles and responsibilities."
+---
+
 # Chapter 7: Multi-Agent Collaboration
 
 ## MULTI-AGENT COLLABORATION PATTERN OVERVIEW

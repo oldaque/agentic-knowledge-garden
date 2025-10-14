@@ -41,13 +41,13 @@ summary: "Sumário e estrutura do livro 'Agentic Design Patterns: A Hands-On Gui
 - [Chapter 11: Goal Setting and Monitoring](../patterns/goal-setting-and-monitoring.md)
 
 **Part Three (Total: 34 pages)**
-- Chapter 12: Exception Handling and Recovery
-- Chapter 13: Human-in-the-Loop
+- [Chapter 12: Exception Handling and Recovery](../patterns/exception-handling-recovery.md)
+- [Chapter 13: Human-in-the-Loop](../patterns/human-in-the-loop.md)
 - [Chapter 14: Knowledge Retrieval (RAG)](../patterns/knowledge-retrieval-rag.md) [final, last read done, code ok]
 
 **Part Four (Total: 114 pages)**
 - [Chapter 15: Inter-Agent Communication (A2A)](../patterns/inter-agent-communication-a2a.md) [final, last read done, code ok]
-- [Chapter 16: Resource-Aware Optimization](..//patterns/resource-aware-optimization.md) [final, last read done, code ok]
+- [Chapter 16: Resource-Aware Optimization](../patterns/resource-aware-optimization.md) [final, last read done, code ok]
 - [Chapter 17: Reasoning Techniques](../patterns/reasoning-techniques.md) [final, last read done, code ok]
 - [Chapter 18: Guardrails/Safety Patterns](../patterns/guardrails-safety-patterns.md) [final, last read done, code ok]
 - [Chapter 19: Evaluation and Monitoring](../patterns/evaluation-and-monitoring.md) [final, last read done, code ok]

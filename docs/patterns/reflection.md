@@ -1,3 +1,17 @@
+---
+title: "Chapter 4: Reflection"
+slug: "reflection"
+tags: ["reflection", "critique", "iterative", "agentic-pattern", "langchain", "google-adk"]
+source:
+  type: "book"
+  author: "Antonio Gulli"
+  org: "Google"
+  url: "https://docs.google.com/document/d/1HXXJOQIMWowtLw4WMiSR360caDAlZPtl5dPPgvq9IT4/edit?tab=t.0#heading=h.a7nkedxjnyap"
+status: "stable"
+last_update: "2025-10-13"
+summary: "Pattern for iterative self-correction in agentic systems where agents evaluate their own outputs and refine them for improved accuracy and quality."
+---
+
 # Chapter 4: Reflection
 
 ## REFLECTION PATTERN OVERVIEW

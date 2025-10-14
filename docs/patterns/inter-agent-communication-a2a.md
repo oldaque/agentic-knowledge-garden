@@ -1,6 +1,15 @@
 ---
-title: "Inter-Agent Communication (A2A)"
-status: draft
+title: "Chapter 15: Inter-Agent Communication (A2A)"
+slug: "inter-agent-communication-a2a"
+tags: ["inter-agent", "communication", "a2a", "agentic-pattern", "collaboration"]
+source:
+  type: "book"
+  author: "Antonio Gulli"
+  org: "Google"
+  url: "https://docs.google.com/document/d/1H6HmUYcy5kugt5gt7Kh2Zzb8C62d5pu36RsgMNDCX24/edit?usp=sharing"
+status: "stable"
+last_update: "2025-10-13"
+summary: "Pattern for enabling seamless communication and coordination between multiple agents in distributed systems."
 source: "https://docs.google.com/document/d/1H6HmUYcy5kugt5gt7Kh2Zzb8C62d5pu36RsgMNDCX24/edit?usp=sharing"
 ---
 

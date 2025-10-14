@@ -1,3 +1,17 @@
+---
+title: "Chapter 6: Planning"
+slug: "planning"
+tags: ["planning", "strategy", "workflow", "agentic-pattern", "crewai", "openai"]
+source:
+  type: "book"
+  author: "Antonio Gulli"
+  org: "Google"
+  url: "https://docs.google.com/document/d/18vvNESEwHnVUREzIipuaDNCnNAREGqEfy9MQYC9wb4o/edit?usp=sharing"
+status: "stable"
+last_update: "2025-10-13"
+summary: "Pattern for enabling agents to create sequential workflows and break down complex goals into actionable steps."
+---
+
 # Chapter 6: Planning
 
 ## PLANNING PATTERN OVERVIEW

@@ -1,3 +1,17 @@
+---
+title: "Chapter 12: Exception Handling and Recovery"
+slug: "exception-handling-recovery"
+tags: ["exception-handling", "recovery", "robustness", "error-handling", "agentic-pattern"]
+source:
+  type: "book"
+  author: "Antonio Gulli"
+  org: "Google"
+  url: "https://docs.google.com/document/d/1C07AuMur6-infwE0viCp4QtAy_wWI-uceFm6MaYHQGk/edit?tab=t.0#heading=h.m2kk4kdjt6ir"
+status: "stable"
+last_update: "2025-10-13"
+summary: "Pattern for building resilient agents that can handle errors, exceptions, and unexpected situations gracefully with recovery mechanisms."
+---
+
 # Chapter 12: Exception Handling and Recovery
 
 For AI agents to operate reliably in diverse real-world environments, they must be able to manage unforeseen situations, errors, and malfunctions. Just as humans adapt to unexpected obstacles, intelligent agents need robust systems to detect problems, initiate recovery procedures, or at least ensure controlled failure. This essential requirement forms the basis of the Exception Handling and Recovery pattern.

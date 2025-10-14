@@ -1,3 +1,17 @@
+---
+title: "Chapter 5: Tool Use"
+slug: "tool-use"
+tags: ["tool-use", "function-calling", "functionality", "agentic-pattern", "langchain", "google-adk"]
+source:
+  type: "book"
+  author: "Antonio Gulli"
+  org: "Google"
+  url: "https://docs.google.com/document/d/1bE4iMljhppqGY1p48gQWtZvk6MfRuJRCiba1yRykGNE/edit?usp=sharing"
+status: "stable"
+last_update: "2025-10-13"
+summary: "Pattern for enabling agents to interact with external APIs, services and tools to extend their capabilities beyond training data."
+---
+
 # Chapter 5: Tool Use (Function Calling)
 
 ## TOOL USE PATTERN OVERVIEW

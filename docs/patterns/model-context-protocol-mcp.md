@@ -1,6 +1,15 @@
 ---
-title: "Model Context Protocol (MCP)"
-status: draft
+title: "Chapter 10: Model Context Protocol (MCP)"
+slug: "model-context-protocol-mcp"
+tags: ["mcp", "protocol", "model-context", "agentic-pattern", "anthropic"]
+source:
+  type: "book"
+  author: "Antonio Gulli"
+  org: "Google"
+  url: "https://docs.google.com/document/d/1e6XimYczKmhX9zpqEyxLFWPQgGuG0brp7Hic2sFl_qw/edit?usp=sharing"
+status: "stable"
+last_update: "2025-10-13"
+summary: "Pattern for enabling secure communication and data sharing between AI models and external tools through standardized protocols."
 source: "https://docs.google.com/document/d/1e6XimYczKmhX9zpqEyxLFWPQgGuG0brp7Hic2sFl_qw/edit?usp=sharing"
 ---
 

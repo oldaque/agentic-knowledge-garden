@@ -1,6 +1,6 @@
 $schema: snippets.v1
 file:
-  path: snippets/<lang>/<slug>.<ext>
+  path: snippets/<pattern>/<slug>.md
 meta:
   name: string
   objective: string
@@ -9,4 +9,4 @@ meta:
 rules:
   - size_limit_approx_kb: 30
   - languages_allowed: [python, js, ts, go]
-  - format: markdwon with codeblock
+  - format: markdown with codeblocks

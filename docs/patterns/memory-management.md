@@ -1,3 +1,17 @@
+---
+title: "Chapter 8: Memory Management"
+slug: "memory-management"
+tags: ["memory", "context", "retention", "agentic-pattern", "long-term", "short-term"]
+source:
+  type: "book"
+  author: "Antonio Gulli"
+  org: "Google"
+  url: "https://docs.google.com/document/d/1asVTObtzIye0I9ypAztaeeI_sr_Hx2TORE02uUuqH_c/edit?tab=t.0"
+status: "stable"
+last_update: "2025-10-13"
+summary: "Pattern for managing short-term and long-term memory in agents to maintain context, learn from experience, and personalize interactions."
+---
+
 # Chapter 8: Memory Management
 
 ## Introduction to Memory Management in Agents

@@ -97,12 +97,12 @@ All content is released under the MIT License, unless otherwise specified by sou
 
 ## 🌐 Quick Navigation
 
-* [`notes/`](./notes/) – raw ideas and notes
-* [`guide/`](./guide/) – complete guide
-* [`patterns/`](./patterns/) – design patterns
-* [`resources/`](./resources/) – external references
-* [`snippets/`](./snippets/) – code snippets
-* [`examples/`](./examples/) – practical examples
+* [`notes/`](./notes/README.md) – raw ideas and notes
+* [`guide/`](./guide/README.md) – complete guide
+* [`patterns/`](./patterns/README.md) – design patterns
+* [`resources/`](./resources/README.md) – external references
+* [`snippets/`](./snippets/README.md) – code snippets
+* [`examples/`](./examples/README.md) – practical examples
 
 ---
 

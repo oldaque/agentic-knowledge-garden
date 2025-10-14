@@ -1,6 +1,15 @@
---- 
-title: "Knowledge Retrieval (RAG)"
-status: draft
+---
+title: "Chapter 14: Knowledge Retrieval (RAG)"
+slug: "knowledge-retrieval-rag"
+tags: ["rag", "retrieval", "knowledge", "vector", "agentic-pattern", "search"]
+source:
+  type: "book"
+  author: "Antonio Gulli"
+  org: "Google"
+  url: "https://docs.google.com/document/d/1v96Oobio6xDOqbK8ejsXjmOc4Dp2uoLMo5_gfJgi-NE/edit?usp=sharing"
+status: "stable"
+last_update: "2025-10-13"
+summary: "Pattern for enhancing agent responses by retrieving relevant information from external knowledge bases using vector search and retrieval-augmented generation."
 source: "https://docs.google.com/document/d/1v96Oobio6xDOqbK8ejsXjmOc4Dp2uoLMo5_gfJgi-NE/edit?usp=sharing"
 ---
 
