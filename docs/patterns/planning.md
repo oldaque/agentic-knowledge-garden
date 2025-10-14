@@ -35,19 +35,18 @@ However, there's a trade-off between flexibility and predictability. Dynamic pla
 
 This section demonstrates an implementation of the Planner pattern using the Crew AI framework, where an agent first formulates a multi-step plan and then executes it.
 
-[Code Example: CrewAI Planner-Writer Agent](../snippets/planning-crewai-planner-writer-agent.py)
+[Code Example: CrewAI Planner-Writer Agent](../snippets/planning-crewai-planner-writer-agent.md)
 
 ## GOOGLE DEEPRESEARCH
 
 Google Gemini DeepResearch is an agent-based system designed for autonomous information retrieval and synthesis. It functions through a multi-step agentic pipeline that dynamically and iteratively queries Google Search to systematically explore complex topics. The system is engineered to process a large corpus of web-based sources, evaluate the collected data for relevance and knowledge gaps, and perform subsequent searches to address them. The final output consolidates the vetted information into a structured, multi-page summary with citations to the original sources.
 
-![Fig. 1: Google Deep Research agent generating an execution plan for using Google Search as a tool.](placeholder_for_fig1)
 
 ## OPENAI DEEP RESEARCH API
 
 The OpenAI Deep Research API is a specialized tool designed to automate complex research tasks. It utilizes an advanced, agentic model that can independently reason, plan, and synthesize information from real-world sources. It takes a high-level query and autonomously breaks it down into sub-questions, performs web searches using its built-in tools, and delivers a structured, citation-rich final report.
 
-[Code Example: OpenAI Deep Research API](../snippets/planning-openai-deep-research-api.py)
+[Code Example: OpenAI Deep Research API](../snippets/planning-openai-deep-research-api.md)
 
 ## AT A GLANCE
 
@@ -59,7 +58,6 @@ The OpenAI Deep Research API is a specialized tool designed to automate complex 
 
 ## VISUAL SUMMARY
 
-![Fig.4; Planning design pattern](placeholder_for_fig4)
 
 ## KEY TAKEAWAYS
 

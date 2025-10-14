@@ -56,7 +56,7 @@ This pattern exemplifies a practical method for AI implementation. It harnesses 
 
 To demonstrate the Human-in-the-Loop pattern, an ADK agent can identify scenarios requiring human review and initiate an escalation process . This allows for human intervention in situations where the agent's autonomous decision-making capabilities are limited or when complex judgments are required. This is not an isolated feature; other popular frameworks have adopted similar capabilities. LangChain, for instance, also provides tools to implement these types of interactions.
 
-[Code Example: ADK Technical Support Agent with HITL](../snippets/human-in-the-loop-adk-technical-support-agent.py)
+[Code Example: ADK Technical Support Agent with HITL](../snippets/human-in-the-loop-adk-technical-support-agent.md)
 
 This code offers a blueprint for creating a technical support agent using Google's ADK, designed around a HITL framework. The agent acts as an intelligent first line of support, configured with specific instructions and equipped with tools like troubleshoot_issue, create_ticket, and escalate_to_human to manage a complete support workflow. The escalation tool is a core part of the HITL design, ensuring complex or sensitive cases are passed to human specialists.
 
@@ -72,7 +72,6 @@ A key feature of this architecture is its capacity for deep personalization, ach
 
 **Visual summary:**
 
-![Fig.1: Human in the loop design pattern](placeholder_for_fig1)
 
 ## KEY TAKEAWAYS
 

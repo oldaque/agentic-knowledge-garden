@@ -20,7 +20,6 @@ Parallelization involves executing multiple components, such as LLM calls, tool 
 
 This pattern is vital for improving the efficiency and responsiveness of agentic systems, especially when dealing with tasks that involve multiple independent lookups, computations, or interactions with external services.
 
-![Fig.1. Example of parallelization with sub-agents](placeholder_for_fig1)
 
 Frameworks like LangChain, LangGraph, and Google ADK provide mechanisms for parallel execution.
 
@@ -36,13 +35,13 @@ Frameworks like LangChain, LangGraph, and Google ADK provide mechanisms for para
 
 This example uses LangChain Expression Language (LCEL) to run multiple chains in parallel and then synthesize their results.
 
-[Code Example: LangChain Parallel Map-Synthesis Chain](../snippets/parallelization-langchain-map-synthesis-chain.py)
+[Code Example: LangChain Parallel Map-Synthesis Chain](../snippets/parallelization-langchain-map-synthesis-chain.md)
 
 ## HANDS-ON CODE EXAMPLE (GOOGLE ADK)
 
 This example uses `ParallelAgent` and `SequentialAgent` from the Google ADK to run researcher agents concurrently and then merge their findings.
 
-[Code Example: Google ADK Parallel Research and Synthesis](../snippets/parallelization-google-adk-research-synthesis.py)
+[Code Example: Google ADK Parallel Research and Synthesis](../snippets/parallelization-google-adk-research-synthesis.md)
 
 ## AT A GLANCE
 
@@ -54,7 +53,6 @@ This example uses `ParallelAgent` and `SequentialAgent` from the Google ADK to r
 
 ## VISUAL SUMMARY
 
-![Fig.2: Parallelization design pattern](placeholder_for_fig2)
 
 ## KEY TAKEAWAYS
 

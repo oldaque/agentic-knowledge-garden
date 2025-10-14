@@ -79,17 +79,17 @@ By incorporating external knowledge, RAG extends the capabilities of LLMs beyond
 
 To illustrate the Knowledge Retrieval (RAG) pattern, let's see three examples. First, is how to use Google Search to do RAG and ground LLMs to search results. Since RAG involves accessing external information, the Google Search tool is a direct example of a built-in retrieval mechanism that can augment an LLM's knowledge.
 
-{% include 'snippets/knowledge-retrieval-rag-adk-google-search.py' %}
+{% include 'snippets/knowledge-retrieval-rag-adk-google-search.md' %}
 
 Second, this section explains how to utilize Vertex AI RAG capabilities within the Google ADK. The code provided demonstrates the initialization of VertexAiRagMemoryService from the ADK. This allows for establishing a connection to a Google Cloud Vertex AI RAG Corpus. The service is configured by specifying the corpus resource name and optional parameters such as SIMILARITY_TOP_K and VECTOR_DISTANCE_THRESHOLD. These parameters influence the retrieval process. SIMILARITY_TOP_K defines the number of top similar results to be retrieved. VECTOR_DISTANCE_THRESHOLD sets a limit on the semantic distance for the retrieved results. This setup enables agents to perform scalable and persistent semantic knowledge retrieval from the designated RAG Corpus. The process effectively integrates Google Cloud's RAG functionalities into an ADK agent, thereby supporting the development of responses grounded in factual data.
 
-{% include 'snippets/knowledge-retrieval-rag-adk-vertex-ai.py' %}
+{% include 'snippets/knowledge-retrieval-rag-adk-vertex-ai.md' %}
 
 ## Hands-On Code Example (LangChain)
 
 Third, let's walk through a complete example using LangChain.
 
-{% include 'snippets/knowledge-retrieval-rag-langchain.py' %}
+{% include 'snippets/knowledge-retrieval-rag-langchain.md' %}
 This Python code illustrates a Retrieval-Augmented Generation (RAG) pipeline implemented with LangChain and LangGraph. The process begins with the creation of a knowledge base derived from a text document, which is segmented into chunks and transformed into embeddings. These embeddings are then stored in a Weaviate vector store, facilitating efficient information retrieval. A StateGraph in LangGraph is utilized to manage the workflow between two key functions: `retrieve_documents_node` and `generate_response_node`. The `retrieve_documents_node` function queries the vector store to identify relevant document chunks based on the user's input. Subsequently, the `generate_response_node` function utilizes the retrieved information and a predefined prompt template to produce a response using an OpenAI Large Language Model (LLM). The `app.stream` method allows the execution of queries through the RAG pipeline, demonstrating the system's capacity to generate contextually relevant outputs.
 
 ## At Glance

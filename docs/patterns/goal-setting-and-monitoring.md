@@ -33,9 +33,8 @@ A good planning capability allows agents to tackle problems that aren't simple, 
 
 ## HANDS-ON CODE EXAMPLE
 
-[Code Example: LangChain Code Generation Agent with Goal Setting](../snippets/goal-setting-monitoring-langchain-code-generation-agent.py)
+[Code Example: LangChain Code Generation Agent with Goal Setting](../snippets/goal-setting-monitoring-langchain-code-generation-agent.md)
 
-![Fig.1: Goal Setting and Monitor example](placeholder_for_fig1)
 
 **Caveats and Considerations:** This is an exemplary illustration and not production-ready code. An LLM may not fully grasp the intended meaning of a goal and might incorrectly assess its performance as successful. Even if the goal is well understood, the model may hallucinate. When the same LLM is responsible for both writing the code and judging its quality, it may have a harder time discovering it is going in the wrong direction.
 
@@ -57,7 +56,6 @@ A more robust approach involves separating these concerns by giving specific rol
 
 ## VISUAL SUMMARY
 
-![Fig.2: Goal design patterns](placeholder_for_fig2)
 
 ## KEY TAKEAWAYS
 
