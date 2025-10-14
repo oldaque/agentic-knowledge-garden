@@ -87,7 +87,7 @@ pip install langchain langchain-community langchain-openai
 
 You will also need to set up your environment with your API key for the language model you choose (e.g., OpenAI, Google Gemini, Anthropic).
 
-[Code Example: LangChain Iterative Code Refinement](../../snippets/reflection-langchain-iterative-code-refinement.py)
+[Code Example: LangChain Iterative Code Refinement](../snippets/reflection-langchain-iterative-code-refinement.py)
 
 The code begins by setting up the environment, loading API keys, and initializing a powerful language model like GPT-4o with a low temperature for focused outputs. The core task is defined by a prompt asking for a Python function to calculate the factorial of a number, including specific requirements for docstrings, edge cases (factorial of 0), and error handling for negative input. The `run_reflection_loop` function orchestrates the iterative refinement process. Within the loop, in the first iteration, the language model generates initial code based on the task prompt. In subsequent iterations, it refines the code based on critiques from the previous step. A separate "reflector" role, also played by the language model but with a different system prompt, acts as a senior software engineer to critique the generated code against the original task requirements. This critique is provided as a bulleted list of issues or the phrase 'CODE_IS_PERFECT' if no issues are found. The loop continues until the critique indicates the code is perfect or a maximum number of iterations is reached. The conversation history is maintained and passed to the language model in each step to provide context for both generation/refinement and reflection stages. Finally, the script prints the last generated code version after the loop concludes.
 
@@ -95,7 +95,7 @@ The code begins by setting up the environment, loading API keys, and initializin
 
 Let's now look at a conceptual code example implemented using the Google ADK. Specifically, the code showcases this by employing a Generator-Critic structure, where one component (the Generator) produces an initial result or plan, and another component (the Critic) provides critical feedback or a critique, guiding the Generator towards a more refined or accurate final output.
 
-[Code Example: Google ADK Generator-Critic Pipeline](../../snippets/reflection-google-adk-generator-critic.py)
+[Code Example: Google ADK Generator-Critic Pipeline](../snippets/reflection-google-adk-generator-critic.py)
 
 This code demonstrates the use of a sequential agent pipeline in Google ADK for generating and reviewing text. It defines two LlmAgent instances: `generator` and `reviewer`. The `generator` agent is designed to create an initial draft paragraph on a given subject. It is instructed to write a short and informative piece and saves its output to the state key `draft_text`. The `reviewer` agent acts as a fact-checker for the text produced by the generator. It is instructed to read the text from `draft_text` and verify its factual accuracy. The reviewer's output is a structured dictionary with two keys: `status` and `reasoning`. `status` indicates if the text is "ACCURATE" or "INACCURATE", while `reasoning` provides an explanation for the status. This dictionary is saved to the state key `review_output`. A `SequentialAgent` named `review_pipeline` is created to manage the execution order of the two agents. It ensures that the generator runs first, followed by the reviewer. The overall execution flow is that the generator produces text, which is then saved to the state. Subsequently, the reviewer reads this text from the state, performs its fact-checking, and saves its findings (the status and reasoning) back to the state. This pipeline allows for a structured process of content creation and review using separate agents. Note: An alternative implementation utilizing ADK's `LoopAgent` is also available for those interested.
 
@@ -111,9 +111,9 @@ Before concluding, it's important to consider that while the Reflection pattern 
 
 **Visual summary**
 
-![Fig. 1: Reflection design pattern, self-reflection](placeholder_for_fig1.png)
+![Fig. 1: Reflection design pattern, self-reflection](placeholder_for_fig1)
 
-![Fig.2: Reflection design pattern, producer and critique agent](placeholder_for_fig2.png)
+![Fig.2: Reflection design pattern, producer and critique agent](placeholder_for_fig2)
 
 ## KEY TAKEAWAYS
 

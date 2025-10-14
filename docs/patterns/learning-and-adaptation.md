@@ -41,11 +41,11 @@ SICA's self-improvement operates through an iterative cycle:
 4.  Directly alters its codebase.
 5.  Tests the modified agent against benchmarks, recording results.
 
-![Fig.1: SICA's self-improvement, learning and adapting based on its past versions](placeholder_for_sica_fig1.png)
+![Fig.1: SICA's self-improvement, learning and adapting based on its past versions](placeholder_for_sica_fig1)
 
 SICA underwent significant self-improvement, leading to advancements in code editing and navigation, developing tools like a "Smart Editor" and an "AST Symbol Locator."
 
-![Fig.2 : Performance across iterations. Key improvements are annotated with their corresponding tool or agent modifications.](placeholder_for_sica_fig2.png)
+![Fig.2 : Performance across iterations. Key improvements are annotated with their corresponding tool or agent modifications.](placeholder_for_sica_fig2)
 
 SICA's architecture comprises a foundational toolkit for basic file operations, command execution, and arithmetic calculations, including mechanisms for result submission and the invocation of specialized sub-agents. An asynchronous overseer, another LLM, monitors SICA's behavior, identifying potential issues and communicating with SICA.
 
@@ -55,9 +55,9 @@ SICA's architecture comprises a foundational toolkit for basic file operations, 
 
 **OpenEvolve** is an evolutionary coding agent that leverages LLMs to iteratively optimize code. It orchestrates a pipeline of LLM-driven code generation, evaluation, and selection to continuously enhance programs for a wide range of tasks.
 
-![Fig. 3: The OpenEvolve internal architecture is managed by a controller.](placeholder_for_openevolve_fig3.png)
+![Fig. 3: The OpenEvolve internal architecture is managed by a controller.](placeholder_for_openevolve_fig3)
 
-[Code Example: OpenEvolve Evolutionary Optimization](../../snippets/learning-adaptation-openevolve-optimization.py)
+[Code Example: OpenEvolve Evolutionary Optimization](../snippets/learning-adaptation-openevolve-optimization.py)
 ## AT A GLANCE
 
 **What:** AI agents often operate in dynamic and unpredictable environments where pre-programmed logic is insufficient. Without the ability to learn from experience, agents cannot optimize their strategies or personalize their interactions over time.
@@ -68,7 +68,7 @@ SICA's architecture comprises a foundational toolkit for basic file operations, 
 
 ## VISUAL SUMMARY
 
-![Fig.4: Learning and adapting pattern](placeholder_for_learning_adaptation_fig4.png)
+![Fig.4: Learning and adapting pattern](placeholder_for_learning_adaptation_fig4)
 
 ## KEY TAKEAWAYS
 

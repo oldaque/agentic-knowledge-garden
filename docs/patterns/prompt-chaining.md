@@ -60,13 +60,13 @@ Prompt chaining is a versatile pattern applicable in a wide range of scenarios w
 
 ## HANDS-ON CODE EXAMPLE
 
-[Code Example: LangChain Extraction and Transformation Chain](../../snippets/prompt-chaining-langchain-extraction-transformation.py)
+[Code Example: LangChain Extraction and Transformation Chain](../snippets/prompt-chaining-langchain-extraction-transformation.py)
 
 ## CONTEXT ENGINEERING AND PROMPT ENGINEERING
 
 Context Engineering (see Fig.1) is the systematic discipline of designing, constructing, and delivering a complete informational environment to an AI model prior to token generation. This methodology asserts that the quality of a model's output is less dependent on the model's architecture itself and more on the richness of the context provided.
 
-![Fig.1: Context Engineering is the discipline of building a rich, comprehensive informational environment for an AI, as the quality of this context is a primary factor in enabling advanced Agentic performance.](placeholder_for_fig1.png)
+![Fig.1: Context Engineering is the discipline of building a rich, comprehensive informational environment for an AI, as the quality of this context is a primary factor in enabling advanced Agentic performance.](placeholder_for_fig1)
 
 ## AT A GLANCE
 
@@ -78,7 +78,7 @@ Context Engineering (see Fig.1) is the systematic discipline of designing, const
 
 ### Visual summary
 
-![Fig. 2: Prompt Chaining Pattern: Agents receive a series of prompts from the user, with the output of each agent serving as the input for the next in the chain.](placeholder_for_fig2.png)
+![Fig. 2: Prompt Chaining Pattern: Agents receive a series of prompts from the user, with the output of each agent serving as the input for the next in the chain.](placeholder_for_fig2)
 
 ## KEY TAKEAWAYS
 

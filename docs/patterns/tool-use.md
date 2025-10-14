@@ -18,7 +18,7 @@ While "function calling" describes invoking specific code functions, "tool calli
 
 Frameworks like LangChain, LangGraph, and Google Agent Developer Kit (ADK) provide robust support for defining tools and integrating them into agent workflows.
 
-![Fig.1: Some examples of an Agent using Tools](placeholder_for_fig1.png)
+![Fig.1: Some examples of an Agent using Tools](placeholder_for_fig1)
 
 ## PRACTICAL APPLICATIONS & USE CASES
 
@@ -33,13 +33,13 @@ Frameworks like LangChain, LangGraph, and Google Agent Developer Kit (ADK) provi
 
 This example demonstrates a tool-calling agent using LangChain and the Google Gemini model, with a simulated `search_information` tool.
 
-[Code Example: LangChain Tool-Calling Agent](../../snippets/tool-use-langchain-search-information.py)
+[Code Example: LangChain Tool-Calling Agent](../snippets/tool-use-langchain-search-information.py)
 
 ## HANDS-ON CODE EXAMPLE (CREWAI)
 
 This example shows how to implement function calling (Tools) within the CrewAI framework to fetch a simulated stock price.
 
-[Code Example: CrewAI Stock Price Lookup Tool](../../snippets/tool-use-crewai-stock-price-lookup.py)
+[Code Example: CrewAI Stock Price Lookup Tool](../snippets/tool-use-crewai-stock-price-lookup.py)
 
 ## HANDS-ON CODE EXAMPLE (GOOGLE ADK)
 
@@ -47,11 +47,11 @@ This section demonstrates two examples using Google ADK: one for Google Search a
 
 ### Google Search Tool
 
-[Code Example: Google ADK Google Search Tool](../../snippets/tool-use-google-adk-google-search.py)
+[Code Example: Google ADK Google Search Tool](../snippets/tool-use-google-adk-google-search.py)
 
 ### Code Execution Tool
 
-[Code Example: Google ADK Code Execution Tool](../../snippets/tool-use-google-adk-code-execution.py)
+[Code Example: Google ADK Code Execution Tool](../snippets/tool-use-google-adk-code-execution.py)
 
 ## AT A GLANCE
 
@@ -63,7 +63,7 @@ This section demonstrates two examples using Google ADK: one for Google Search a
 
 ## VISUAL SUMMARY
 
-![Fig.2: Tool use design pattern](placeholder_for_fig2.png)
+![Fig.2: Tool use design pattern](placeholder_for_fig2)
 
 ## KEY TAKEAWAYS
 

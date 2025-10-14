@@ -25,13 +25,13 @@ The routing pattern is a critical control mechanism in the design of adaptive ag
 
 This example demonstrates a simple coordinator that routes user requests to different sub-agent handlers based on the request's intent.
 
-[Code Example: LangChain Coordinator Router](../../snippets/routing-langchain-coordinator-router.py)
+[Code Example: LangChain Coordinator Router](../snippets/routing-langchain-coordinator-router.py)
 
 ## HANDS-ON CODE EXAMPLE (GOOGLE ADK)
 
 This example shows routing within the Google Agent Development Kit (ADK) by defining a set of "tools" and letting the framework's logic route the user's intent to the correct function.
 
-[Code Example: Google ADK Coordinator with Sub-Agents](../../snippets/routing-google-adk-coordinator-subagents.py)
+[Code Example: Google ADK Coordinator with Sub-Agents](../snippets/routing-google-adk-coordinator-subagents.py)
 
 ## AT A GLANCE
 
@@ -43,7 +43,7 @@ This example shows routing within the Google Agent Development Kit (ADK) by defi
 
 ## VISUAL SUMMARY
 
-![Fig.1: Router pattern, using an LLM as a Router](placeholder_for_fig1.png)
+![Fig.1: Router pattern, using an LLM as a Router](placeholder_for_fig1)
 
 ## KEY TAKEAWAYS
 

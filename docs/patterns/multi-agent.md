@@ -13,7 +13,7 @@ Collaboration can take various forms:
 *   **Expert Teams:** Agents with specialized knowledge collaborate to produce complex output.
 *   **Critic-Reviewer:** Agents create initial outputs, and a second group critically assesses them for quality and adherence to policies.
 
-![Fig.1: Example of multi-agent system](placeholder_for_fig1.png)
+![Fig.1: Example of multi-agent system](placeholder_for_fig1)
 
 Frameworks such as Crew AI and Google ADK facilitate this paradigm by providing structures for the specification of agents, tasks, and their interactive procedures.
 
@@ -38,43 +38,43 @@ Understanding how agents interact and communicate is fundamental. A spectrum of 
 5.  **Hierarchical:** Multi-layered organizational structure with multiple levels of supervisors.
 6.  **Custom:** Unique interrelationship and communication structures tailored to specific requirements.
 
-![Fig. 2: Agents communicate and interact in various ways.](placeholder_for_fig2.png)
+![Fig. 2: Agents communicate and interact in various ways.](placeholder_for_fig2)
 
 ## HANDS-ON CODE EXAMPLE (CREW AI)
 
 This example defines an AI-powered crew using CrewAI to generate a blog post about AI trends, with a researcher and a writer agent.
 
-[Code Example: CrewAI Blog Creation Crew](../../snippets/multi-agent-crewai-blog-creation.py)
+[Code Example: CrewAI Blog Creation Crew](../snippets/multi-agent-crewai-blog-creation.py)
 
 ## HANDS-ON CODE EXAMPLE (GOOGLE ADK)
 
 This section demonstrates the establishment of a hierarchical agent structure within the Google ADK through the creation of a parent-child relationship.
 
-[Code Example: Google ADK Hierarchical Agent Structure](../../snippets/multi-agent-google-adk-hierarchical-structure.py)
+[Code Example: Google ADK Hierarchical Agent Structure](../snippets/multi-agent-google-adk-hierarchical-structure.py)
 
 ### LoopAgent Example (Google ADK)
 
 This code illustrates the employment of the `LoopAgent` within the Google ADK framework to establish iterative workflows.
 
-[Code Example: Google ADK LoopAgent](../../snippets/multi-agent-google-adk-loop-agent.py)
+[Code Example: Google ADK LoopAgent](../snippets/multi-agent-google-adk-loop-agent.py)
 
 ### SequentialAgent Example (Google ADK)
 
 This code excerpt elucidates the `SequentialAgent` pattern within the Google ADK, engineered for the construction of linear workflows.
 
-[Code Example: Google ADK SequentialAgent](../../snippets/multi-agent-google-adk-sequential-agent.py)
+[Code Example: Google ADK SequentialAgent](../snippets/multi-agent-google-adk-sequential-agent.py)
 
 ### ParallelAgent Example (Google ADK)
 
 This code example illustrates the `ParallelAgent` pattern within the Google ADK, which facilitates the concurrent execution of multiple agent tasks.
 
-[Code Example: Google ADK ParallelAgent](../../snippets/multi-agent-google-adk-parallel-agent.py)
+[Code Example: Google ADK ParallelAgent](../snippets/multi-agent-google-adk-parallel-agent.py)
 
 ### Agent as a Tool Example (Google ADK)
 
 This code segment exemplifies the "Agent as a Tool" paradigm within the Google ADK, enabling an agent to utilize the capabilities of another agent.
 
-[Code Example: Google ADK Agent as a Tool](../../snippets/multi-agent-google-adk-agent-as-tool.py)
+[Code Example: Google ADK Agent as a Tool](../snippets/multi-agent-google-adk-agent-as-tool.py)
 
 ## AT A GLANCE
 
@@ -86,7 +86,7 @@ This code segment exemplifies the "Agent as a Tool" paradigm within the Google A
 
 ## VISUAL SUMMARY
 
-![Fig.3: Multi-Agent design pattern](placeholder_for_fig3.png)
+![Fig.3: Multi-Agent design pattern](placeholder_for_fig3)
 
 ## KEY TAKEAWAYS
 
