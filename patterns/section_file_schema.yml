@@ -1,24 +1,31 @@
-$schema: patterns.v1
+$schema: patterns.v2
 file:
-  path: docs/patterns/<topico>/<slug>.md
+  path: patterns/<theme>/<slug>.md
 front_matter:
   title: string
   slug: kebab
   tags: list[string]
+  themes: list[string]
   source:
-    type: string|null
+    origin_note: path
     author: string|null
     org: string|null
     url: url|null
   status: enum[draft, in-review, stable]
   last_update: date
   summary: string
+  relationships:
+    snippets: list[path]
+    examples: list[path]
+    resources: list[path]
 sections:
-  - Problema: markdown
-  - Padrao: markdown
-  - Exemplo_minimo: code|markdown
-  - Quando_usar: markdown
-  - Leituras: list[url]
+  - Problem: markdown
+  - Pattern: markdown
+  - Trade_offs: markdown
+  - When_to_use: markdown
+  - Minimal_example: markdown|code
+  - Further_reading: list[url]
 rules:
-  - must_have: [title, slug, summary]
+  - must_have: [title, slug, summary, source.origin_note]
+  - link_back_to_note: true
   - link_back_to_note: true

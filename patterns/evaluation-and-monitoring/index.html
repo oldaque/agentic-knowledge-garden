@@ -13,6 +13,10 @@
         <link rel="canonical" href="https://oldaque.github.io/agentic-knowledge-garden/patterns/evaluation-and-monitoring/">
       
       
+        <link rel="prev" href="../goal-setting-and-monitoring/">
+      
+      
+        <link rel="next" href="../guardrails-safety-patterns/">
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
@@ -20,7 +24,7 @@
     
     
       
-        <title>Chapter 19: Evaluation and Monitoring - Agentic Knowledge Garden</title>
+        <title>Pattern: Evaluation and Monitoring - Agentic Knowledge Garden</title>
       
     
     
@@ -74,7 +78,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#chapter-19-evaluation-and-monitoring" class="md-skip">
+        <a href="#problem" class="md-skip">
           Skip to content
         </a>
       
@@ -86,9 +90,7 @@
     
       
 
-  
-
-<header class="md-header md-header--shadow" data-md-component="header">
+<header class="md-header" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
     <a href="../.." title="Agentic Knowledge Garden" class="md-header__button md-logo" aria-label="Agentic Knowledge Garden" data-md-component="logo">
       
@@ -110,7 +112,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Chapter 19: Evaluation and Monitoring
+              Pattern: Evaluation and Monitoring
             
           </span>
         </div>
@@ -184,6 +186,156 @@
       
         
           
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Garden Overview
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../notes/" class="md-tabs__link">
+          
+  
+  
+  Brain Dump
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../" class="md-tabs__link">
+          
+  
+  
+  Patterns
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../guide/" class="md-tabs__link">
+          
+  
+  
+  Guides
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../examples/" class="md-tabs__link">
+          
+  
+  
+  Examples
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../snippets/" class="md-tabs__link">
+          
+  
+  
+  Snippets
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../resources/" class="md-tabs__link">
+          
+  
+  
+  Resources
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
         
       
       <main class="md-main" data-md-component="main">
@@ -197,8 +349,10 @@
                     
 
 
+  
 
-<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
     <a href="../.." title="Agentic Knowledge Garden" class="md-nav__button md-logo" aria-label="Agentic Knowledge Garden" data-md-component="logo">
       
@@ -223,7 +377,7 @@
   
   
   <span class="md-ellipsis">
-    Home
+    Garden Overview
     
   </span>
   
@@ -235,17 +389,58 @@
     
       
       
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Brain Dump
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Brain Dump
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
   
   
   
   
     <li class="md-nav__item">
-      <a href="../../guide/" class="md-nav__link">
+      <a href="../../notes/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
-    Guide
+    Overview
     
   </span>
   
@@ -254,9 +449,172 @@
     </li>
   
 
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
     
       
       
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_2" id="__nav_2_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Source Notes
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_2">
+            <span class="md-nav__icon md-icon"></span>
+            Source Notes
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../notes/2025-10-13_agent-memory-without-echo/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Agent Memory Without Echo
+    
+  </span>
+  
+    
+  
+  
+    <span class="md-status md-status--"draft""></span>
+  
+
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../notes/2025-10-13_book-agentic-design-patterns/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Agentic Design Patterns (Book)
+    
+  </span>
+  
+    
+  
+  
+    <span class="md-status md-status--"draft""></span>
+  
+
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    Patterns
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Patterns
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
   
   
   
@@ -267,7 +625,101 @@
   
   
   <span class="md-ellipsis">
-    Patterns
+    Overview
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_2" id="__nav_3_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Memory & Context
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_2">
+            <span class="md-nav__icon md-icon"></span>
+            Memory & Context
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../agent-memory-without-echo/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Agent Memory Without Echo
+    
+  </span>
+  
+    
+  
+  
+    <span class="md-status md-status--"draft""></span>
+  
+
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../memory-management/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Memory Management
     
   </span>
   
@@ -283,25 +735,905 @@
     </li>
   
 
-    
-      
-      
+              
+            
+              
+                
   
   
   
   
     <li class="md-nav__item">
-      <a href="../../resources/" class="md-nav__link">
+      <a href="../knowledge-retrieval-rag/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
-    Resources
+    Knowledge Retrieval (RAG)
+    
+  </span>
+  
+    
+  
+  
+    <span class="md-status md-status--stable"></span>
+  
+
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_3" id="__nav_3_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Tooling & Integration
     
   </span>
   
 
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_3">
+            <span class="md-nav__icon md-icon"></span>
+            Tooling & Integration
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../model-context-protocol-mcp/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Model Context Protocol (MCP)
+    
+  </span>
+  
+    
+  
+  
+    <span class="md-status md-status--stable"></span>
+  
+
+  
+
       </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../tool-use/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Tool Use
+    
+  </span>
+  
+    
+  
+  
+    <span class="md-status md-status--stable"></span>
+  
+
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_4" id="__nav_3_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Reasoning & Planning
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_4">
+            <span class="md-nav__icon md-icon"></span>
+            Reasoning & Planning
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../prompt-chaining/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Prompt Chaining
+    
+  </span>
+  
+    
+  
+  
+    <span class="md-status md-status--stable"></span>
+  
+
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../routing/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Routing
+    
+  </span>
+  
+    
+  
+  
+    <span class="md-status md-status--stable"></span>
+  
+
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../planning/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Planning
+    
+  </span>
+  
+    
+  
+  
+    <span class="md-status md-status--stable"></span>
+  
+
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../reflection/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Reflection
+    
+  </span>
+  
+    
+  
+  
+    <span class="md-status md-status--stable"></span>
+  
+
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../parallelization/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Parallelization
+    
+  </span>
+  
+    
+  
+  
+    <span class="md-status md-status--stable"></span>
+  
+
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../reasoning-techniques/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Reasoning Techniques
+    
+  </span>
+  
+    
+  
+  
+    <span class="md-status md-status--stable"></span>
+  
+
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_5" id="__nav_3_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Collaboration & Multi-Agent
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_5">
+            <span class="md-nav__icon md-icon"></span>
+            Collaboration & Multi-Agent
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../multi-agent/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Multi-Agent Collaboration
+    
+  </span>
+  
+    
+  
+  
+    <span class="md-status md-status--stable"></span>
+  
+
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../inter-agent-communication-a2a/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Inter-Agent Communication (A2A)
+    
+  </span>
+  
+    
+  
+  
+    <span class="md-status md-status--stable"></span>
+  
+
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../human-in-the-loop/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Human-in-the-Loop
+    
+  </span>
+  
+    
+  
+  
+    <span class="md-status md-status--stable"></span>
+  
+
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_6" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_3_6" id="__nav_3_6_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Governance & Reliability
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_6_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3_6">
+            <span class="md-nav__icon md-icon"></span>
+            Governance & Reliability
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../goal-setting-and-monitoring/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Goal Setting and Monitoring
+    
+  </span>
+  
+    
+  
+  
+    <span class="md-status md-status--stable"></span>
+  
+
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Evaluation and Monitoring
+    
+  </span>
+  
+    
+  
+  
+    <span class="md-status md-status--stable"></span>
+  
+
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    Evaluation and Monitoring
+    
+  </span>
+  
+    
+  
+  
+    <span class="md-status md-status--stable"></span>
+  
+
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#problem" class="md-nav__link">
+    <span class="md-ellipsis">
+      Problem
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pattern" class="md-nav__link">
+    <span class="md-ellipsis">
+      Pattern
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#trade_offs" class="md-nav__link">
+    <span class="md-ellipsis">
+      Trade_offs
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#when_to_use" class="md-nav__link">
+    <span class="md-ellipsis">
+      When_to_use
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#minimal_example" class="md-nav__link">
+    <span class="md-ellipsis">
+      Minimal_example
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#further_reading" class="md-nav__link">
+    <span class="md-ellipsis">
+      Further_reading
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../guardrails-safety-patterns/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Guardrails and Safety
+    
+  </span>
+  
+    
+  
+  
+    <span class="md-status md-status--stable"></span>
+  
+
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../exception-handling-recovery/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Exception Handling and Recovery
+    
+  </span>
+  
+    
+  
+  
+    <span class="md-status md-status--stable"></span>
+  
+
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../resource-aware-optimization/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Resource-Aware Optimization
+    
+  </span>
+  
+    
+  
+  
+    <span class="md-status md-status--stable"></span>
+  
+
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_7" id="__nav_3_7_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Evolution & Learning
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_7">
+            <span class="md-nav__icon md-icon"></span>
+            Evolution & Learning
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../learning-and-adaptation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Learning and Adaptation
+    
+  </span>
+  
+    
+  
+  
+    <span class="md-status md-status--stable"></span>
+  
+
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
     </li>
   
 
@@ -312,18 +1644,225 @@
   
   
   
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Guides
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Guides
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
     <li class="md-nav__item">
-      <a href="../../notes/" class="md-nav__link">
+      <a href="../../guide/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
-    Notes
+    Overview
     
   </span>
   
 
       </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_2" id="__nav_4_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Foundations
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_2">
+            <span class="md-nav__icon md-icon"></span>
+            Foundations
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../guide/foundations/01_agentic-fundamentals/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Agentic Fundamentals
+    
+  </span>
+  
+    
+  
+  
+    <span class="md-status md-status--draft"></span>
+  
+
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_3" id="__nav_4_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Pattern Deep Dives
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_3">
+            <span class="md-nav__icon md-icon"></span>
+            Pattern Deep Dives
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../guide/patterns/02_memory-ecosystem/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Memory Ecosystem
+    
+  </span>
+  
+    
+  
+  
+    <span class="md-status md-status--draft"></span>
+  
+
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
     </li>
   
 
@@ -334,24 +1873,43 @@
   
   
   
-    <li class="md-nav__item">
-      <a href="../../snippets/" class="md-nav__link">
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
         
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
   
   
   <span class="md-ellipsis">
-    Snippets
+    Examples
     
   </span>
   
 
-      </a>
-    </li>
-  
-
-    
-      
-      
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            Examples
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
   
   
   
@@ -362,12 +1920,275 @@
   
   
   <span class="md-ellipsis">
-    Examples
+    Overview
     
   </span>
   
 
       </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../examples/prompt-chaining/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Prompt Chaining Pipeline
+    
+  </span>
+  
+    
+  
+  
+    <span class="md-status md-status--draft"></span>
+  
+
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../examples/tool-use/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Tool Use Research Agent
+    
+  </span>
+  
+    
+  
+  
+    <span class="md-status md-status--draft"></span>
+  
+
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../examples/multi-agent/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Multi-Agent Content Crew
+    
+  </span>
+  
+    
+  
+  
+    <span class="md-status md-status--draft"></span>
+  
+
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Snippets
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            Snippets
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../snippets/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Overview
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Resources
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            Resources
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../resources/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Overview
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../resources/links/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Links
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
     </li>
   
 
@@ -389,8 +2210,6 @@
   
   
   
-    
-  
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
@@ -399,132 +2218,54 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#practical-applications-use-cases" class="md-nav__link">
+  <a href="#problem" class="md-nav__link">
     <span class="md-ellipsis">
-      Practical Applications &amp; Use Cases
+      Problem
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#hands-on-code-example" class="md-nav__link">
+  <a href="#pattern" class="md-nav__link">
     <span class="md-ellipsis">
-      Hands-On Code Example
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Hands-On Code Example">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#latency-monitoring" class="md-nav__link">
-    <span class="md-ellipsis">
-      Latency Monitoring
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#tracking-token-usage-for-llm-interactions" class="md-nav__link">
-    <span class="md-ellipsis">
-      Tracking Token Usage for LLM Interactions
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#custom-metric-for-helpfulness-using-llm-as-a-judge" class="md-nav__link">
-    <span class="md-ellipsis">
-      Custom Metric for "Helpfulness" using LLM-as-a-Judge
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#agents-trajectories" class="md-nav__link">
-    <span class="md-ellipsis">
-      Agents trajectories
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#multi-agents" class="md-nav__link">
-    <span class="md-ellipsis">
-      Multi-agents
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#from-agents-to-advanced-contractors" class="md-nav__link">
-    <span class="md-ellipsis">
-      From Agents to Advanced Contractors
+      Pattern
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#googles-adk" class="md-nav__link">
+  <a href="#trade_offs" class="md-nav__link">
     <span class="md-ellipsis">
-      Google's ADK
+      Trade_offs
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#at-a-glance" class="md-nav__link">
+  <a href="#when_to_use" class="md-nav__link">
     <span class="md-ellipsis">
-      At a Glance
+      When_to_use
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#visual-summary" class="md-nav__link">
+  <a href="#minimal_example" class="md-nav__link">
     <span class="md-ellipsis">
-      Visual summary
+      Minimal_example
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#key-takeaways" class="md-nav__link">
+  <a href="#further_reading" class="md-nav__link">
     <span class="md-ellipsis">
-      Key Takeaways
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#conclusions" class="md-nav__link">
-    <span class="md-ellipsis">
-      Conclusions
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#references" class="md-nav__link">
-    <span class="md-ellipsis">
-      References
+      Further_reading
     </span>
   </a>
   
@@ -546,326 +2287,50 @@
 
 
 
-<h1 id="chapter-19-evaluation-and-monitoring">Chapter 19: Evaluation and Monitoring<a class="headerlink" href="#chapter-19-evaluation-and-monitoring" title="Permanent link">&para;</a></h1>
-<p>This chapter examines methodologies that allow intelligent agents to systematically assess their performance, monitor progress toward goals, and detect operational anomalies. While Chapter 11 outlines goal setting and monitoring, and Chapter 17 addresses Reasoning mechanisms, this chapter focuses on the continuous, often external, measurement of an agent's effectiveness, efficiency, and compliance with requirements. This includes defining metrics, establishing feedback loops, and implementing reporting systems to ensure agent performance aligns with expectations in operational environments (see Fig.1)</p>
-<p>Fig:1. Best practices for evaluation and monitoring</p>
-<h2 id="practical-applications-use-cases">Practical Applications &amp; Use Cases<a class="headerlink" href="#practical-applications-use-cases" title="Permanent link">&para;</a></h2>
-<p>Most Common Applications and Use Cases:</p>
+  <h1>Evaluation and Monitoring</h1>
+
+<h3 id="problem">Problem<a class="headerlink" href="#problem" title="Permanent link">&para;</a></h3>
+<p>Agentes evoluem depois de entrar em produção. Sem telemetria contínua, você não detecta degradação de qualidade, violações de política ou desperdício de recursos.</p>
+<h3 id="pattern">Pattern<a class="headerlink" href="#pattern" title="Permanent link">&para;</a></h3>
+<p>Construir um ciclo fechado:
+1. <strong>Definir métricas</strong> (qualidade, latência, custo, compliance).<br />
+2. <strong>Instrumentar captura</strong> em cada estágio (entrada, tool use, saída).<br />
+3. <strong>Avaliar</strong> com pipelines automáticos (LLM-as-a-judge, testes sintéticos, comparativos).<br />
+4. <strong>Monitorar &amp; alertar</strong> com thresholds, dashboards e playbooks de resposta.<br />
+5. <strong>Aprender</strong> alimentando melhorias nos prompts, ferramentas e políticas.</p>
+<h3 id="trade_offs">Trade_offs<a class="headerlink" href="#trade_offs" title="Permanent link">&para;</a></h3>
 <ul>
-<li><strong>Performance Tracking in Live Systems:</strong> Continuously monitoring the accuracy, latency, and resource consumption of an agent deployed in a production environment (e.g., a customer service chatbot's resolution rate, response time).</li>
-<li><strong>A/B Testing for Agent Improvements:</strong> Systematically comparing the performance of different agent versions or strategies in parallel to identify optimal approaches (e.g., trying two different planning algorithms for a logistics agent).</li>
-<li><strong>Compliance and Safety Audits:</strong> Generate automated audit reports that track an agent's compliance with ethical guidelines, regulatory requirements, and safety protocols over time. These reports can be verified by a human-in-the-loop or another agent, and can generate KPIs or trigger alerts upon identifying issues.</li>
-<li><strong>Enterprise systems:</strong> To govern Agentic AI in corporate systems, a new control instrument, the AI "Contract," is needed. This dynamic agreement codifies the objectives, rules, and controls for AI-delegated tasks.</li>
-<li><strong>Drift Detection:</strong> Monitoring the relevance or accuracy of an agent's outputs over time, detecting when its performance degrades due to changes in input data distribution (concept drift) or environmental shifts.</li>
-<li><strong>Anomaly Detection in Agent Behavior:</strong> Identifying unusual or unexpected actions taken by an agent that might indicate an error, a malicious attack, or an emergent un-desired behavior.</li>
-<li><strong>Learning Progress Assessment:</strong> For agents designed to learn, tracking their learning curve, improvement in specific skills, or generalization capabilities over different tasks or data sets.</li>
+<li><strong>Pró:</strong> visibilidade contínua e capacidade de reação rápida.  </li>
+<li><strong>Pró:</strong> gera dados históricos para calibração e regressão controlada.  </li>
+<li><strong>Contra:</strong> aumenta custo operacional (infra, labeling).  </li>
+<li><strong>Contra:</strong> métricas ruins induzem otimização míope.</li>
 </ul>
-<h2 id="hands-on-code-example">Hands-On Code Example<a class="headerlink" href="#hands-on-code-example" title="Permanent link">&para;</a></h2>
-<p>Developing a comprehensive evaluation framework for AI agents is a challenging endeavor, comparable to an academic discipline or a substantial publication in its complexity. This difficulty stems from the multitude of factors to consider, such as model performance, user interaction, ethical implications, and broader societal impact. Nevertheless, for practical implementation, the focus can be narrowed to critical use cases essential for the efficient and effective functioning of AI agents.</p>
-<p>Agent Response Assessment: This core process is essential for evaluating the quality and accuracy of an agent's outputs. It involves determining if the agent delivers pertinent, correct,  logical, unbiased, and accurate information in response to given inputs. Assessment metrics may include factual correctness, fluency, grammatical precision, and adherence to the user's intended purpose.</p>
-<pre><code class="language-python">def evaluate_response_accuracy(agent_output: str, expected_output: str) -&gt; float:
-   &quot;&quot;&quot;Calculates a simple accuracy score for agent responses.&quot;&quot;&quot;
-   # This is a very basic exact match; real-world would use more sophisticated metrics
-   return 1.0 if agent_output.strip().lower() == expected_output.strip().lower() else 0.0
-
-# Example usage
-agent_response = &quot;The capital of France is Paris.&quot;
-ground_truth = &quot;Paris is the capital of France.&quot;
-score = evaluate_response_accuracy(agent_response, ground_truth)
-print(f&quot;Response accuracy: {score}&quot;)
-</code></pre>
-<p>The Python function <code>evaluate_response_accuracy</code> calculates a basic accuracy score for an AI agent's response by performing an exact, case-insensitive comparison between the agent's output and the expected output, after removing leading or trailing whitespace. It returns a score of 1.0 for an exact match and 0.0 otherwise, representing a binary correct or incorrect evaluation. This method, while straightforward for simple checks, does not account for variations like paraphrasing or semantic equivalence.</p>
-<p>The problem lies in its method of comparison. The function performs a strict, character-for-character comparison of the two strings. In the example provided:</p>
+<h3 id="when_to_use">When_to_use<a class="headerlink" href="#when_to_use" title="Permanent link">&para;</a></h3>
 <ul>
-<li>agent_response: "The capital of France is Paris."</li>
-<li>ground_truth: "Paris is the capital of France."</li>
+<li>Agentes com impacto direto no negócio (suporte, vendas, operações críticas).  </li>
+<li>Ambientes regulados que exigem trilhas de auditoria.  </li>
+<li>Times que fazem deploy frequente de prompts/modelos.</li>
 </ul>
-<p>Even after removing whitespace and converting to lowercase, these two strings are not identical. As a result, the function will incorrectly return an accuracy score of 0.0, even though both sentences convey the same meaning.</p>
-<p>A straightforward comparison falls short in assessing semantic similarity, only succeeding if an agent's response exactly matches the expected output. A more effective evaluation necessitates advanced Natural Language Processing (NLP) techniques to discern the meaning between sentences. For thorough AI agent evaluation in real-world scenarios, more sophisticated metrics are often indispensable. These metrics can encompass String Similarity Measures like Levenshtein distance and Jaccard similarity, Keyword Analysis for the presence or absence of specific keywords, Semantic Similarity using cosine similarity with embedding models, LLM-as-a-Judge Evaluations (discussed later for assessing nuanced correctness and helpfulness), and RAG-specific Metrics such as faithfulness and relevance.</p>
-<h3 id="latency-monitoring">Latency Monitoring<a class="headerlink" href="#latency-monitoring" title="Permanent link">&para;</a></h3>
-<p>Latency Monitoring for Agent Actions is crucial in applications where the speed of an AI agent's response or action is a critical factor. This process measures the duration required for an agent to process requests and generate outputs. Elevated latency can adversely affect user experience and the agent's overall effectiveness, particularly in real-time or interactive environments. In practical applications, simply printing latency data to the console is insufficient. Logging this information to a persistent storage system is recommended. Options include structured log files (e.g., JSON), time-series databases (e.g., InfluxDB, Prometheus), data warehouses (e.g., Snowflake, BigQuery, PostgreSQL), or observability platforms (e.g., Datadog, Splunk, Grafana Cloud).</p>
-<h3 id="tracking-token-usage-for-llm-interactions">Tracking Token Usage for LLM Interactions<a class="headerlink" href="#tracking-token-usage-for-llm-interactions" title="Permanent link">&para;</a></h3>
-<p>For LLM-powered agents, tracking token usage is crucial for managing costs and optimizing resource allocation. Billing for LLM interactions often depends on the number of tokens processed (input and output). Therefore, efficient token usage directly reduces operational expenses. Additionally, monitoring token counts helps identify potential areas for improvement in prompt engineering or response generation processes.</p>
-<pre><code class="language-python"># This is conceptual as actual token counting depends on the LLM API
-class LLMInteractionMonitor:
-   def __init__(self):
-       self.total_input_tokens = 0
-       self.total_output_tokens = 0
-
-   def record_interaction(self, prompt: str, response: str):
-       # In a real scenario, use LLM API's token counter or a tokenizer
-       input_tokens = len(prompt.split()) # Placeholder
-       output_tokens = len(response.split()) # Placeholder
-       self.total_input_tokens += input_tokens
-       self.total_output_tokens += output_tokens
-       print(f&quot;Recorded interaction: Input tokens={input_tokens}, Output tokens={output_tokens}&quot;)
-
-   def get_total_tokens(self):
-       return self.total_input_tokens, self.total_output_tokens
-
-# Example usage
-monitor = LLMInteractionMonitor()
-monitor.record_interaction(&quot;What is the capital of France?&quot;, &quot;The capital of France is Paris.&quot;)
-monitor.record_interaction(&quot;Tell me a joke.&quot;, &quot;Why don't scientists trust atoms? Because they make up everything!&quot;)
-input_t, output_t = monitor.get_total_tokens()
-print(f&quot;Total input tokens: {input_t}, Total output tokens: {output_t}&quot;)
-</code></pre>
-<p>This section introduces a conceptual Python class, <code>LLMInteractionMonitor</code>, developed to track token usage in large language model interactions. The class incorporates counters for both input and output tokens. Its <code>record_interaction</code> method simulates token counting by splitting the prompt and response strings. In a practical implementation, specific LLM API tokenizers would be employed for precise token counts. As interactions occur, the monitor accumulates the total input and output token counts. The <code>get_total_tokens</code> method provides access to these cumulative totals, essential for cost management and optimization of LLM usage.</p>
-<h3 id="custom-metric-for-helpfulness-using-llm-as-a-judge">Custom Metric for "Helpfulness" using LLM-as-a-Judge<a class="headerlink" href="#custom-metric-for-helpfulness-using-llm-as-a-judge" title="Permanent link">&para;</a></h3>
-<p>Evaluating subjective qualities like an AI agent's "helpfulness" presents challenges beyond standard objective metrics. A potential framework involves using an LLM as an evaluator. This LLM-as-a-Judge approach assesses another AI agent's output based on predefined criteria for "helpfulness." Leveraging the advanced linguistic capabilities of LLMs, this method offers nuanced, human-like evaluations of subjective qualities, surpassing simple keyword matching or rule-based assessments. Though in development, this technique shows promise for automating and scaling qualitative evaluations.</p>
-<pre><code class="language-python">import google.generativeai as genai
-import os
-import json
-import logging
-from typing import Optional
-
-# --- Configuration ---
-logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
-
-# Set your API key as an environment variable to run this script
-# For example, in your terminal: export GOOGLE_API_KEY='your_key_here'
-try:
-   genai.configure(api_key=os.environ[&quot;GOOGLE_API_KEY&quot;])
-except KeyError:
-   logging.error(&quot;Error: GOOGLE_API_KEY environment variable not set.&quot;)
-   exit(1)
-
-# --- LLM-as-a-Judge Rubric for Legal Survey Quality ---
-LEGAL_SURVEY_RUBRIC = &quot;&quot;&quot;
-You are an expert legal survey methodologist and a critical legal reviewer. Your task is to evaluate the quality of a given legal survey question.
-
-
-Provide a score from 1 to 5 for overall quality, along with a detailed rationale and specific feedback.
-Focus on the following criteria:
-
-1.  **Clarity &amp; Precision (Score 1-5):**
-    * 1: Extremely vague, highly ambiguous, or confusing.
-    * 3: Moderately clear, but could be more precise.
-    * 5: Perfectly clear, unambiguous, and precise in its legal terminology (if applicable) and intent.
-
-2.  **Neutrality &amp; Bias (Score 1-5):**
-    * 1: Highly leading or biased, clearly influencing the respondent towards a specific answer.
-    * 3: Slightly suggestive or could be interpreted as leading.
-    * 5: Completely neutral, objective, and free from any leading language or loaded terms.
-
-3.  **Relevance &amp; Focus (Score 1-5):**
-    * 1: Irrelevant to the stated survey topic or out of scope.
-    * 3: Loosely related but could be more focused.
-    * 5: Directly relevant to the survey's objectives and well-focused on a single concept.
-
-4.  **Completeness (Score 1-5):**
-    * 1: Omits critical information needed to answer accurately or provides insufficient context.
-    * 3: Mostly complete, but minor details are missing.
-    * 5: Provides all necessary context and information for the respondent to answer thoroughly.
-
-5.  **Appropriateness for Audience (Score 1-5):**
-    * 1: Uses jargon inaccessible to the target audience or is overly simplistic for experts.
-    * 3: Generally appropriate, but some terms might be challenging or oversimplified.
-    * 5: Perfectly tailored to the assumed legal knowledge and background of the target survey audience.
-
-**Output Format:**
-Your response MUST be a JSON object with the following keys:
-* `overall_score`: An integer from 1 to 5 (average of criterion scores, or your holistic judgment).
-* `rationale`: A concise summary of why this score was given, highlighting major strengths and weaknesses.
-* `detailed_feedback`: A bullet-point list detailing feedback for each criterion (Clarity, Neutrality, Relevance, Completeness, Audience Appropriateness). Suggest specific improvements.
-* `concerns`: A list of any specific legal, ethical, or methodological concerns.
-* `recommended_action`: A brief recommendation (e.g., &quot;Revise for neutrality&quot;, &quot;Approve as is&quot;, &quot;Clarify scope&quot;).
-&quot;&quot;&quot;
-
-class LLMJudgeForLegalSurvey:
-   &quot;&quot;&quot;A class to evaluate legal survey questions using a generative AI model.&quot;&quot;&quot;
-
-
-
-   def __init__(self, model_name: str = 'gemini-1.5-flash-latest', temperature: float = 0.2):
-       &quot;&quot;&quot;
-       Initializes the LLM Judge.
-
-       Args:
-           model_name (str): The name of the Gemini model to use.
-                             'gemini-1.5-flash-latest' is recommended for speed and cost.
-                             'gemini-1.5-pro-latest' offers the highest quality.
-           temperature (float): The generation temperature. Lower is better for deterministic evaluation.
-       &quot;&quot;&quot;
-       self.model = genai.GenerativeModel(model_name)
-       self.temperature = temperature
-
-
-
-   def _generate_prompt(self, survey_question: str) -&gt; str:
-       &quot;&quot;&quot;Constructs the full prompt for the LLM judge.&quot;&quot;&quot;
-       return f&quot;{LEGAL_SURVEY_RUBRIC}\n\n---\n**LEGAL SURVEY QUESTION TO EVALUATE:**\n{survey_question}\n---&quot;
-
-
-   def judge_survey_question(self, survey_question: str) -&gt; Optional[dict]:
-       &quot;&quot;&quot;
-       Judges the quality of a single legal survey question using the LLM.
-
-
-       Args:
-           survey_question (str): The legal survey question to be evaluated.
-
-
-       Returns:
-           Optional[dict]: A dictionary containing the LLM's judgment, or None if an error occurs.
-       &quot;&quot;&quot;
-       full_prompt = self._generate_prompt(survey_question)
-
-       try:
-           logging.info(f&quot;Sending request to '{self.model.model_name}' for judgment...&quot;)
-           response = self.model.generate_content(
-               full_prompt,
-               generation_config=genai.types.GenerationConfig(
-                   temperature=self.temperature,
-                   response_mime_type=&quot;application/json&quot;
-               )
-           )
-
-
-           # Check for content moderation or other reasons for an empty response.
-           if not response.parts:
-               safety_ratings = response.prompt_feedback.safety_ratings
-               logging.error(f&quot;LLM response was empty or blocked. Safety Ratings: {safety_ratings}&quot;)
-               return None
-
-           return json.loads(response.text)
-
-
-       except json.JSONDecodeError:
-           logging.error(f&quot;Failed to decode LLM response as JSON. Raw response: {response.text}&quot;)
-           return None
-       except Exception as e:
-           logging.error(f&quot;An unexpected error occurred during LLM judgment: {e}&quot;)
-           return None
-
-
-# --- Example Usage ---
-if __name__ == &quot;__main__&quot;:
-   judge = LLMJudgeForLegalSurvey()
-
-
-   # --- Good Example ---
-   good_legal_survey_question = &quot;&quot;&quot;
-   To what extent do you agree or disagree that current intellectual property laws in Switzerland adequately protect emerging AI-generated content, assuming the content meets the originality criteria established by the Federal Supreme Court?
-   (Select one: Strongly Disagree, Disagree, Neutral, Agree, Strongly Agree)
-   &quot;&quot;&quot;
-   print(&quot;\n--- Evaluating Good Legal Survey Question ---&quot;)
-   judgment_good = judge.judge_survey_question(good_legal_survey_question)
-   if judgment_good:
-       print(json.dumps(judgment_good, indent=2))
-
-
-   # --- Biased/Poor Example ---
-   biased_legal_survey_question = &quot;&quot;&quot;
-   Don't you agree that overly restrictive data privacy laws like the FADP are hindering essential technological innovation and economic growth in Switzerland?
-   (Select one: Yes, No)
-   &quot;&quot;&quot;
-   print(&quot;\n--- Evaluating Biased Legal Survey Question ---&quot;)
-   judgment_biased = judge.judge_survey_question(biased_legal_survey_question)
-   if judgment_biased:
-       print(json.dumps(judgment_biased, indent=2))
-
-
-   # --- Ambiguous/Vague Example ---
-   vague_legal_survey_question = &quot;&quot;&quot;
-   What are your thoughts on legal tech?
-   &quot;&quot;&quot;
-   print(&quot;\n--- Evaluating Vague Legal Survey Question ---&quot;)
-   judgment_vague = judge.judge_survey_question(vague_legal_survey_question)
-   if judgment_vague:
-       print(json.dumps(judgment_vague, indent=2))
-</code></pre>
-<p>The Python code defines a class LLMJudgeForLegalSurvey designed to evaluate the quality of legal survey questions using a generative AI model. It utilizes the google.generativeai library to interact with Gemini models. 
-The core functionality involves sending a survey question to the model along with a detailed rubric for evaluation. The rubric specifies five criteria for judging survey questions: Clarity &amp; Precision, Neutrality &amp; Bias, Relevance &amp; Focus, Completeness, and Appropriateness for Audience. For each criterion, a score from 1 to 5 is assigned, and a detailed rationale and feedback are required in the output. The code constructs a prompt that includes the rubric and the survey question to be evaluated. 
-The judge_survey_question method sends this prompt to the configured Gemini model, requesting a JSON response formatted according to the defined structure. The expected output JSON includes an overall score, a summary rationale, detailed feedback for each criterion, a list of concerns, and a recommended action. The class handles potential errors during the AI model interaction, such as JSON decoding issues or empty responses. The script demonstrates its operation by evaluating examples of legal survey questions, illustrating how the AI assesses quality based on the predefined criteria.</p>
-<p>Before we conclude, let's examine various evaluation methods, considering their strengths and weaknesses.</p>
-<table>
-<thead>
-<tr>
-<th style="text-align: left;">Evaluation Method</th>
-<th style="text-align: left;">Strengths</th>
-<th style="text-align: left;">Weaknesses</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align: left;">Human Evaluation</td>
-<td style="text-align: left;">Captures subtle behavior</td>
-<td style="text-align: left;">Difficult to scale, expensive, and time-consuming, as it considers subjective human factors.</td>
-</tr>
-<tr>
-<td style="text-align: left;">LLM-as-a-Judge</td>
-<td style="text-align: left;">Consistent, efficient, and scalable.</td>
-<td style="text-align: left;">Intermediate steps may be overlooked. Limited by LLM capabilities.</td>
-</tr>
-<tr>
-<td style="text-align: left;">Automated Metrics</td>
-<td style="text-align: left;">Scalable, efficient, and objective</td>
-<td style="text-align: left;">Potential limitation in capturing complete capabilities.</td>
-</tr>
-</tbody>
-</table>
-<h3 id="agents-trajectories">Agents trajectories<a class="headerlink" href="#agents-trajectories" title="Permanent link">&para;</a></h3>
-<p>Evaluating agents' trajectories is essential, as traditional software tests are insufficient. Standard code yields predictable pass/fail results, whereas agents operate probabilistically, necessitating qualitative assessment of both the final output and the agent's trajectory—the sequence of steps taken to reach a solution. Evaluating multi-agent systems is challenging because they are constantly in flux. This requires developing sophisticated metrics that go beyond individual performance to measure the effectiveness of communication and teamwork. Moreover, the environments themselves are not static, demanding that evaluation methods, including test cases, adapt over time.</p>
-<p>This involves examining the quality of decisions, the reasoning process, and the overall outcome. Implementing automated evaluations is valuable, particularly for development beyond the prototype stage. Analyzing trajectory and tool use includes evaluating the steps an agent employs to achieve a goal, such as tool selection, strategies, and task efficiency. For example, an agent addressing a customer's product query might ideally follow a trajectory involving intent determination, database search tool use, result review, and report generation. The agent's actual actions are compared to this expected, or ground truth, trajectory to identify errors and inefficiencies. Comparison methods include exact match (requiring a perfect match to the ideal sequence), in-order match (correct actions in order, allowing extra steps), any-order match (correct actions in any order, allowing extra steps), precision (measuring the relevance of predicted actions), recall (measuring how many essential actions are captured), and single-tool use (checking for a specific action). Metric selection depends on specific agent requirements, with high-stakes scenarios potentially demanding an exact match, while more flexible situations might use an in-order or any-order match.</p>
-<p>Evaluation of AI agents involves two primary approaches: using test files and using evalset files. Test files, in JSON format, represent single, simple agent-model interactions or sessions and are ideal for unit testing during active development, focusing on rapid execution and simple session complexity. Each test file contains a single session with multiple turns, where a turn is a user-agent interaction including the user’s query, expected tool use trajectory, intermediate agent responses, and final response. For example, a test file might detail a user request to “Turn off device_2 in the Bedroom,” specifying the agent’s use of a set_device_info tool with parameters like location: Bedroom, device_id: device_2, and status: OFF, and an expected final response of “I have set the device_2 status to off.” Test files can be organized into folders and may include a test_config.json file to define evaluation criteria. Evalset files utilize a dataset called an “evalset” to evaluate interactions, containing multiple potentially lengthy sessions suited for simulating complex, multi-turn conversations and integration tests. An evalset file comprises multiple “evals,” each representing a distinct session with one or more “turns” that include user queries, expected tool use, intermediate responses, and a reference final response. An example evalset might include a session where the user first asks “What can you do?” and then says “Roll a 10 sided dice twice and then check if 9 is a prime or not,” defining expected roll_die tool calls and a check_prime tool call, along with the final response summarizing the dice rolls and the prime check. </p>
-<h3 id="multi-agents">Multi-agents<a class="headerlink" href="#multi-agents" title="Permanent link">&para;</a></h3>
-<p>Evaluating a complex AI system with multiple agents is much like assessing a team project. Because there are many steps and handoffs, its complexity is an advantage, allowing you to check the quality of work at each stage. You can examine how well each individual "agent" performs its specific job, but you must also evaluate how the entire system is performing as a whole.</p>
-<p>To do this, you ask key questions about the team's dynamics, supported by concrete examples:</p>
+<h3 id="minimal_example">Minimal_example<a class="headerlink" href="#minimal_example" title="Permanent link">&para;</a></h3>
 <ul>
-<li><strong>Are the agents cooperating effectively?</strong> For instance, after a 'Flight-Booking Agent' secures a flight, does it successfully pass the correct dates and destination to the 'Hotel-Booking Agent'? A failure in cooperation could lead to a hotel being booked for the wrong week.</li>
-<li><strong>Did they create a good plan and stick to it?</strong> Imagine the plan is to first book a flight, then a hotel. If the 'Hotel Agent' tries to book a room before the flight is confirmed, it has deviated from the plan. You also check if an agent gets stuck, for example, endlessly searching for a "perfect" rental car and never moving on to the next step.</li>
-<li><strong>Is the right agent being chosen for the right task?</strong> If a user asks about the weather for their trip, the system should use a specialized 'Weather Agent' that provides live data. If it instead uses a 'General Knowledge Agent' that gives a generic answer like "it's usually warm in summer," it has chosen the wrong tool for the job.</li>
-<li><strong>Finally, does adding more agents improve performance?</strong> If you add a new 'Restaurant-Reservation Agent' to the team, does it make the overall trip-planning better and more efficient? Or does it create conflicts and slow the system down, indicating a problem with scalability?.</li>
+<li><a href="../../snippets/evaluation-and-monitoring-llm-judge/"><code>snippets/evaluation-and-monitoring/evaluation-and-monitoring-llm-judge.md</code></a> — uso de LLM como juiz.  </li>
+<li><a href="../../snippets/evaluation-and-monitoring-response-accuracy/"><code>snippets/evaluation-and-monitoring/evaluation-and-monitoring-response-accuracy.md</code></a> — baseline de acurácia.  </li>
+<li><a href="../../snippets/evaluation-and-monitoring-token-usage/"><code>snippets/evaluation-and-monitoring/evaluation-and-monitoring-token-usage.md</code></a> — monitor de custo/latência.</li>
 </ul>
-<h2 id="from-agents-to-advanced-contractors">From Agents to Advanced Contractors<a class="headerlink" href="#from-agents-to-advanced-contractors" title="Permanent link">&para;</a></h2>
-<p>Recently, it has been proposed (Agent Companion, gulli et al.) an evolution from simple AI agents to advanced "contractors", moving from probabilistic, often unreliable systems to more deterministic and accountable ones designed for complex, high-stakes environments (see Fig.2). </p>
-<p>Today's common AI agents operate on brief, underspecified instructions, which makes them suitable for simple demonstrations but brittle in production, where ambiguity leads to failure. The "contractor" model addresses this by establishing a rigorous, formalized relationship between the user and the AI, built upon a foundation of clearly defined and mutually agreed-upon terms, much like a legal service agreement in the human world. This transformation is supported by four key pillars that collectively ensure clarity, reliability, and robust execution of tasks that were previously beyond the scope of autonomous systems.</p>
-<p>First is the pillar of the <strong>Formalized Contract</strong>, a detailed specification that serves as the single source of truth for a task. It goes far beyond a simple prompt. For example, a contract for a financial analysis task wouldn't just say "analyze last quarter's sales"; it would demand "a 20-page PDF report analyzing European market sales from Q1 2025, including five specific data visualizations, a comparative analysis against Q1 2024, and a risk assessment based on the included dataset of supply chain disruptions." This contract explicitly defines the required deliverables, their precise specifications, the acceptable data sources, the scope of work, and even the expected computational cost and completion time, making the outcome objectively verifiable.</p>
-<p>Second is the pillar of a <strong>Dynamic Lifecycle of Negotiation and Feedback</strong>. The contract is not a static command but the start of a dialogue. The contractor agent can analyze the initial terms and negotiate. For instance, if a contract demands the use of a specific proprietary data source the agent cannot access, it can return feedback stating, "The specified XYZ database is inaccessible. Please provide credentials or approve the use of an alternative public database, which may slightly alter the data's granularity." This negotiation phase, which also allows the agent to flag ambiguities or potential risks, resolves misunderstandings before execution begins, preventing costly failures and ensuring the final output aligns perfectly with the user's actual intent.</p>
-<p>Fig. 2: Contract execution example among agents
-The third pillar is <strong>Quality-Focused Iterative Execution</strong>. Unlike agents designed for low-latency responses, a contractor prioritizes correctness and quality. It operates on a principle of self-validation and correction. For a code generation contract, for example, the agent would not just write the code; it would generate multiple algorithmic approaches, compile and run them against a suite of unit tests defined within the contract, score each solution on metrics like performance, security, and readability, and only submit the version that passes all validation criteria. This internal loop of generating, reviewing, and improving its own work until the contract's specifications are met is crucial for building trust in its outputs.</p>
-<p>Finally, the fourth pillar is <strong>Hierarchical Decomposition via Subcontracts</strong>. For tasks of significant complexity, a primary contractor agent can act as a project manager, breaking the main goal into smaller, more manageable sub-tasks. It achieves this by generating new, formal "subcontracts." For example, a master contract to "build an e-commerce mobile application" could be decomposed by the primary agent into subcontracts for "designing the UI/UX," "developing the user authentication module," "creating the product database schema," and "integrating a payment gateway." Each of these subcontracts is a complete, independent contract with its own deliverables and specifications, which could be assigned to other specialized agents. This structured decomposition allows the system to tackle immense, multifaceted projects in a highly organized and scalable manner, marking the transition of AI from a simple tool to a truly autonomous and reliable problem-solving engine.</p>
-<p>Ultimately, this contractor framework reimagines AI interaction by embedding principles of formal specification, negotiation, and verifiable execution directly into the agent's core logic. This methodical approach elevates artificial intelligence from a promising but often unpredictable assistant into a dependable system capable of autonomously managing complex projects with auditable precision. By solving the critical challenges of ambiguity and reliability, this model paves the way for deploying AI in mission-critical domains where trust and accountability are paramount.</p>
-<h2 id="googles-adk">Google's ADK<a class="headerlink" href="#googles-adk" title="Permanent link">&para;</a></h2>
-<p>Before concluding, let's look at a concrete example of a framework that supports evaluation. Agent evaluation with Google's ADK (see Fig.3) can be conducted via three methods: web-based UI (adk web) for interactive evaluation and dataset generation, programmatic integration using pytest for incorporation into testing pipelines, and direct command-line interface (adk eval) for automated evaluations suitable for regular build generation and verification processes. </p>
-<p>Fig.3: Evaluation Support for Google ADK</p>
-<p>The web-based UI enables interactive session creation and saving into existing or new eval sets, displaying evaluation status. Pytest integration allows running test files as part of integration tests by calling AgentEvaluator.evaluate, specifying the agent module and test file path. </p>
-<p>The command-line interface facilitates automated evaluation by providing the agent module path and eval set file, with options to specify a configuration file or print detailed results. Specific evals within a larger eval set can be selected for execution by listing them after the eval set filename, separated by commas.</p>
-<h2 id="at-a-glance">At a Glance<a class="headerlink" href="#at-a-glance" title="Permanent link">&para;</a></h2>
-<p><strong>What:</strong> Agentic systems and LLMs operate in complex, dynamic environments where their performance can degrade over time. Their probabilistic and non-deterministic nature means that traditional software testing is insufficient for ensuring reliability. Evaluating dynamic multi-agent systems is a significant challenge because their constantly changing nature and that of their environments demand the development of adaptive testing methods and sophisticated metrics that can measure collaborative success beyond individual performance. Problems like data drift, unexpected interactions, tool calling, and deviations from intended goals can arise after deployment. Continuous assessment is therefore necessary to measure an agent's effectiveness, efficiency, and adherence to operational and safety requirements.</p>
-<p><strong>Why:</strong> A standardized evaluation and monitoring framework provides a systematic way to assess and ensure the ongoing performance of intelligent agents. This involves defining clear metrics for accuracy, latency, and resource consumption, like token usage for LLMs. It also includes advanced techniques such as analyzing agentic trajectories to understand the reasoning process and employing an LLM-as-a-Judge for nuanced, qualitative assessments. By establishing feedback loops and reporting systems, this framework allows for continuous improvement, A/B testing, and the detection of anomalies or performance drift, ensuring the agent remains aligned with its objectives.</p>
-<p><strong>Rule of thumb:</strong> Use this pattern when deploying agents in live, production environments where real-time performance and reliability are critical. Additionally, use it when needing to systematically compare different versions of an agent or its underlying models to drive improvements, and when operating in regulated or high-stakes domains requiring compliance, safety, and ethical audits. This pattern is also suitable when an agent's performance may degrade over time due to changes in data or the environment (drift), or when evaluating complex agentic behavior, including the sequence of actions (trajectory) and the quality of subjective outputs like helpfulness.</p>
-<h2 id="visual-summary">Visual summary<a class="headerlink" href="#visual-summary" title="Permanent link">&para;</a></h2>
-<p>Fig.4: Evaluation and Monitoring design pattern</p>
-<h2 id="key-takeaways">Key Takeaways<a class="headerlink" href="#key-takeaways" title="Permanent link">&para;</a></h2>
+<h3 id="further_reading">Further_reading<a class="headerlink" href="#further_reading" title="Permanent link">&para;</a></h3>
 <ul>
-<li>Evaluating intelligent agents goes beyond traditional tests to continuously measure their effectiveness, efficiency, and adherence to requirements in real-world environments.</li>
-<li>Practical applications of agent evaluation include performance tracking in live systems, A/B testing for improvements, compliance audits, and detecting drift or anomalies in behavior.</li>
-<li>Basic agent evaluation involves assessing response accuracy, while real-world scenarios demand more sophisticated metrics like latency monitoring and token usage tracking for LLM-powered agents.</li>
-<li>Agent trajectories, the sequence of steps an agent takes, are crucial for evaluation, comparing actual actions against an ideal, ground-truth path to identify errors and inefficiencies.</li>
-<li>The ADK provides structured evaluation methods through individual test files for unit testing and comprehensive evalset files for integration testing, both defining expected agent behavior.</li>
-<li>Agent evaluations can be executed via a web-based UI for interactive testing, programmatically with pytest for CI/CD integration, or through a command-line interface for automated workflows.</li>
-<li>In order to make AI reliable for complex, high-stakes tasks, we must move from simple prompts to formal "contracts" that precisely define verifiable deliverables and scope. This structured agreement allows the Agents to negotiate, clarify ambiguities, and iteratively validate its own work, transforming it from an unpredictable tool into an accountable and trustworthy system.</li>
+<li><a href="https://docs.google.com/document/d/1rsaK53T3Lg5KoGwvf8ukOUvbELRtH-V0LnOIFDxBryE/edit?tab=t.0">Agentic Design Patterns — Capítulo 19</a></li>
+<li><a href="https://platform.openai.com/docs/guides/evals">LLM Evaluation Guide (OpenAI)</a></li>
 </ul>
-<h2 id="conclusions">Conclusions<a class="headerlink" href="#conclusions" title="Permanent link">&para;</a></h2>
-<p>In conclusion, effectively evaluating AI agents requires moving beyond simple accuracy checks to a continuous, multi-faceted assessment of their performance in dynamic environments. This involves practical monitoring of metrics like latency and resource consumption, as well as sophisticated analysis of an agent's decision-making process through its trajectory. For nuanced qualities like helpfulness, innovative methods such as the LLM-as-a-Judge are becoming essential, while frameworks like Google's ADK provide structured tools for both unit and integration testing. The challenge intensifies with multi-agent systems, where the focus shifts to evaluating collaborative success and effective cooperation.</p>
-<p>To ensure reliability in critical applications, the paradigm is shifting from simple, prompt-driven agents to advanced "contractors" bound by formal agreements. These contractor agents operate on explicit, verifiable terms, allowing them to negotiate, decompose tasks, and self-validate their work to meet rigorous quality standards. This structured approach transforms agents from unpredictable tools into accountable systems capable of handling complex, high-stakes tasks. Ultimately, this evolution is crucial for building the trust required to deploy sophisticated agentic AI in mission-critical domains.</p>
-<h2 id="references">References<a class="headerlink" href="#references" title="Permanent link">&para;</a></h2>
-<p>Relevant research includes:</p>
-<ol>
-<li>ADK Web: https://github.com/google/adk-web </li>
-<li>ADK Evaluate: https://google.github.io/adk-docs/evaluate/</li>
-<li>Survey on Evaluation of LLM-based Agents, https://arxiv.org/abs/2503.16416 </li>
-<li>Agent-as-a-Judge: Evaluate Agents with Agents, https://arxiv.org/abs/2410.10934 </li>
-<li>Agent Companion, gulli et al: https://www.kaggle.com/whitepaper-agent-companion</li>
-</ol>
 
 
 
 
 
 
+
+  
+  
 
 
 
@@ -908,7 +2373,7 @@ The third pillar is <strong>Quality-Focused Iterative Execution</strong>. Unlike
     
     
       
-      <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.sections", "content.code.copy"], "search": "../../assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.instant", "navigation.tabs", "content.code.copy"], "search": "../../assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
       <script src="../../assets/javascripts/bundle.f55a23d4.min.js"></script>

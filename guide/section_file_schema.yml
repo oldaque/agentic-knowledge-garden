@@ -1,17 +1,25 @@
-$schema: guide.v1
+$schema: guide.v2
 file:
-  path: docs/guide/<NN>_<slug>.md
+  path: guide/<pillar>/<NN>_<slug>.md
 front_matter:
   title: string
   slug: kebab
   tags: list[string]
+  themes: list[string]
   status: enum[draft, in-review, stable]
   last_update: date
   summary: string
+  level: enum[intro, intermediate, advanced]
+  origin_notes: list[path]
+  relationships:
+    patterns: list[path]
+    snippets: list[path]
+    examples: list[path]
 sections:
-  - Objetivo: string
-  - Conteudo: markdown
-  - Leituras: list[url]
+  - Objective: markdown
+  - Core_concepts: list[string]
+  - Content: markdown
+  - Further_reading: list[url]
 rules:
   - must_have: [title, slug, summary]
   - numbering: two_digits_prefix_optional

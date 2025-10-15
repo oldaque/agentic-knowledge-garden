@@ -1,10 +1,21 @@
-$schema: examples.v1
+$schema: examples.v2
 file:
   path: examples/<slug>/README.md
-meta:
+front_matter:
+  title: string
+  slug: kebab
+  summary: string
+  status: enum[draft, in-review, stable]
+  last_update: date
+  origin_note: path
   objective: string
-  steps: list[string]
-  from_note: path
+  estimated_time: string|null
+  related_patterns: list[path]
+sections:
+  - Overview: markdown
+  - Prerequisites: list[string]
+  - Steps: list[markdown]
+  - Related_snippets: list[path]
 rules:
   - should_be_minimal: true
   - link_to_snippets: true

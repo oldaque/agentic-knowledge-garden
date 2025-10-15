@@ -11,7 +11,7 @@
 
 /* Header com degradê preto transparente para preto */
 [data-md-color-scheme="slate"] .md-header {
-  background: transparent !important;
+  background: linear-gradient(0deg, rgba(0,0,0,0) 0%, rgba(0,0,0,0.90) 30%, rgba(0,0,0,1) 100%); !important;
   border: 0 !important;
   box-shadow: none !important;
   position: sticky;
@@ -22,7 +22,6 @@
   position: absolute;
   inset: 0;
   pointer-events: none;
-  background: linear-gradient(0deg, rgba(0,0,0,0) 0%, rgba(0,0,0,.60) 45%, rgba(0,0,0,.95) 100%);
 }
 
 /* Título do site no topo e H1 da página */
@@ -38,11 +37,50 @@
   opacity: 1 !important;
 }
 
+/* Tabs menu centralizado e com fundo preto */
+[data-md-color-scheme="slate"] .md-tabs {
+  background: #000 !important;
+  display: flex;
+  justify-content: center;
+  border-top: 1px solid rgba(255,255,255,0.1);
+  border-bottom: 1px solid rgba(255,255,255,0.1);
+  padding: 0.5rem 0;
+}
+
+[data-md-color-scheme="slate"] .md-tabs__list {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+[data-md-color-scheme="slate"] .md-tabs__link {
+  color: rgba(255,255,255,0.7);
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.25s ease;
+}
+
+[data-md-color-scheme="slate"] .md-tabs__link:hover,
+[data-md-color-scheme="slate"] .md-tabs__item--active .md-tabs__link {
+  color: #fff;
+}
+
 /* Sidebars e navegação com alto contraste */
 [data-md-color-scheme="slate"] .md-sidebar--primary,
 [data-md-color-scheme="slate"] .md-sidebar--secondary,
 [data-md-color-scheme="slate"] .md-nav {
   background: #000 !important;
+}
+
+[data-md-color-scheme="slate"] .md-sidebar--secondary {
+  display: none !important;
+}
+
+[data-md-color-scheme="slate"] .md-main__inner {
+  margin-right: auto !important;
 }
 
 /* Títulos das navs estavam cinza por causa de opacity */
@@ -93,4 +131,85 @@
 [data-md-color-scheme="slate"] :focus-visible {
   outline: 2px solid rgba(255,255,255,.65);
   outline-offset: 2px;
+}
+
+/* Knowledge Garden cards */
+[data-md-color-scheme="slate"] .kg-grid {
+  display: grid;
+  gap: 1.5rem;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  margin: 1.5rem 0;
+}
+
+[data-md-color-scheme="slate"] .kg-card {
+  background: linear-gradient(160deg, rgba(12,12,12,0.95), rgba(24,24,24,0.95));
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 16px;
+  padding: 1.5rem;
+  box-shadow: 0 18px 50px -35px rgba(0,0,0,0.85);
+  transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
+}
+
+[data-md-color-scheme="slate"] .kg-card:hover,
+[data-md-color-scheme="slate"] .kg-card:focus-within {
+  transform: translateY(-4px);
+  border-color: rgba(255,255,255,0.18);
+  box-shadow: 0 24px 60px -35px rgba(0,0,0,0.95);
+}
+
+[data-md-color-scheme="slate"] .kg-card__type {
+  font-size: 0.75rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.52);
+  margin-bottom: 0.5rem;
+}
+
+[data-md-color-scheme="slate"] .kg-card h3 {
+  margin: 0 0 0.75rem;
+  font-size: 1.1rem;
+}
+
+[data-md-color-scheme="slate"] .kg-card h3 a {
+  color: #fff;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+[data-md-color-scheme="slate"] .kg-card h3 a:hover,
+[data-md-color-scheme="slate"] .kg-card h3 a:focus {
+  color: rgba(255,255,255,0.85);
+}
+
+[data-md-color-scheme="slate"] .kg-card__summary {
+  color: rgba(255,255,255,0.7);
+  font-size: 0.95rem;
+  line-height: 1.5;
+  min-height: 3.5rem;
+}
+
+[data-md-color-scheme="slate"] .kg-card__meta {
+  margin-top: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem;
+}
+
+[data-md-color-scheme="slate"] .kg-badge {
+  background: rgba(255,255,255,0.08);
+  border-radius: 999px;
+  padding: 0.25rem 0.65rem;
+  font-size: 0.75rem;
+  color: rgba(255,255,255,0.78);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(255,255,255,0.1);
+}
+
+[data-md-color-scheme="slate"] .kg-badge--status {
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+[data-md-color-scheme="slate"] .kg-badge--date {
+  color: rgba(255,255,255,0.55);
 }

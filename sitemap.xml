@@ -2,278 +2,298 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>https://oldaque.github.io/agentic-knowledge-garden/</loc>
-         <lastmod>2025-10-14</lastmod>
+         <lastmod>2025-10-15</lastmod>
     </url>
     <url>
          <loc>https://oldaque.github.io/agentic-knowledge-garden/examples/</loc>
-         <lastmod>2025-10-14</lastmod>
+         <lastmod>2025-10-15</lastmod>
+    </url>
+    <url>
+         <loc>https://oldaque.github.io/agentic-knowledge-garden/examples/multi-agent/</loc>
+         <lastmod>2025-10-15</lastmod>
+    </url>
+    <url>
+         <loc>https://oldaque.github.io/agentic-knowledge-garden/examples/prompt-chaining/</loc>
+         <lastmod>2025-10-15</lastmod>
+    </url>
+    <url>
+         <loc>https://oldaque.github.io/agentic-knowledge-garden/examples/tool-use/</loc>
+         <lastmod>2025-10-15</lastmod>
     </url>
     <url>
          <loc>https://oldaque.github.io/agentic-knowledge-garden/guide/</loc>
-         <lastmod>2025-10-14</lastmod>
+         <lastmod>2025-10-15</lastmod>
+    </url>
+    <url>
+         <loc>https://oldaque.github.io/agentic-knowledge-garden/guide/foundations/01_agentic-fundamentals/</loc>
+         <lastmod>2025-10-15</lastmod>
+    </url>
+    <url>
+         <loc>https://oldaque.github.io/agentic-knowledge-garden/guide/patterns/02_memory-ecosystem/</loc>
+         <lastmod>2025-10-15</lastmod>
     </url>
     <url>
          <loc>https://oldaque.github.io/agentic-knowledge-garden/notes/</loc>
-         <lastmod>2025-10-14</lastmod>
+         <lastmod>2025-10-15</lastmod>
     </url>
     <url>
          <loc>https://oldaque.github.io/agentic-knowledge-garden/notes/2025-10-13_agent-memory-without-echo/</loc>
-         <lastmod>2025-10-14</lastmod>
+         <lastmod>2025-10-15</lastmod>
     </url>
     <url>
          <loc>https://oldaque.github.io/agentic-knowledge-garden/notes/2025-10-13_book-agentic-design-patterns/</loc>
-         <lastmod>2025-10-14</lastmod>
+         <lastmod>2025-10-15</lastmod>
     </url>
     <url>
          <loc>https://oldaque.github.io/agentic-knowledge-garden/patterns/</loc>
-         <lastmod>2025-10-14</lastmod>
+         <lastmod>2025-10-15</lastmod>
     </url>
     <url>
          <loc>https://oldaque.github.io/agentic-knowledge-garden/patterns/agent-memory-without-echo/</loc>
-         <lastmod>2025-10-14</lastmod>
+         <lastmod>2025-10-15</lastmod>
     </url>
     <url>
          <loc>https://oldaque.github.io/agentic-knowledge-garden/patterns/evaluation-and-monitoring/</loc>
-         <lastmod>2025-10-14</lastmod>
+         <lastmod>2025-10-15</lastmod>
     </url>
     <url>
          <loc>https://oldaque.github.io/agentic-knowledge-garden/patterns/exception-handling-recovery/</loc>
-         <lastmod>2025-10-14</lastmod>
+         <lastmod>2025-10-15</lastmod>
     </url>
     <url>
          <loc>https://oldaque.github.io/agentic-knowledge-garden/patterns/goal-setting-and-monitoring/</loc>
-         <lastmod>2025-10-14</lastmod>
+         <lastmod>2025-10-15</lastmod>
     </url>
     <url>
          <loc>https://oldaque.github.io/agentic-knowledge-garden/patterns/guardrails-safety-patterns/</loc>
-         <lastmod>2025-10-14</lastmod>
+         <lastmod>2025-10-15</lastmod>
     </url>
     <url>
          <loc>https://oldaque.github.io/agentic-knowledge-garden/patterns/human-in-the-loop/</loc>
-         <lastmod>2025-10-14</lastmod>
+         <lastmod>2025-10-15</lastmod>
     </url>
     <url>
          <loc>https://oldaque.github.io/agentic-knowledge-garden/patterns/inter-agent-communication-a2a/</loc>
-         <lastmod>2025-10-14</lastmod>
+         <lastmod>2025-10-15</lastmod>
     </url>
     <url>
          <loc>https://oldaque.github.io/agentic-knowledge-garden/patterns/knowledge-retrieval-rag/</loc>
-         <lastmod>2025-10-14</lastmod>
+         <lastmod>2025-10-15</lastmod>
     </url>
     <url>
          <loc>https://oldaque.github.io/agentic-knowledge-garden/patterns/learning-and-adaptation/</loc>
-         <lastmod>2025-10-14</lastmod>
+         <lastmod>2025-10-15</lastmod>
     </url>
     <url>
          <loc>https://oldaque.github.io/agentic-knowledge-garden/patterns/memory-management/</loc>
-         <lastmod>2025-10-14</lastmod>
+         <lastmod>2025-10-15</lastmod>
     </url>
     <url>
          <loc>https://oldaque.github.io/agentic-knowledge-garden/patterns/model-context-protocol-mcp/</loc>
-         <lastmod>2025-10-14</lastmod>
+         <lastmod>2025-10-15</lastmod>
     </url>
     <url>
          <loc>https://oldaque.github.io/agentic-knowledge-garden/patterns/multi-agent/</loc>
-         <lastmod>2025-10-14</lastmod>
+         <lastmod>2025-10-15</lastmod>
     </url>
     <url>
          <loc>https://oldaque.github.io/agentic-knowledge-garden/patterns/parallelization/</loc>
-         <lastmod>2025-10-14</lastmod>
+         <lastmod>2025-10-15</lastmod>
     </url>
     <url>
          <loc>https://oldaque.github.io/agentic-knowledge-garden/patterns/planning/</loc>
-         <lastmod>2025-10-14</lastmod>
+         <lastmod>2025-10-15</lastmod>
     </url>
     <url>
          <loc>https://oldaque.github.io/agentic-knowledge-garden/patterns/prompt-chaining/</loc>
-         <lastmod>2025-10-14</lastmod>
+         <lastmod>2025-10-15</lastmod>
     </url>
     <url>
          <loc>https://oldaque.github.io/agentic-knowledge-garden/patterns/reasoning-techniques/</loc>
-         <lastmod>2025-10-14</lastmod>
+         <lastmod>2025-10-15</lastmod>
     </url>
     <url>
          <loc>https://oldaque.github.io/agentic-knowledge-garden/patterns/reflection/</loc>
-         <lastmod>2025-10-14</lastmod>
+         <lastmod>2025-10-15</lastmod>
     </url>
     <url>
          <loc>https://oldaque.github.io/agentic-knowledge-garden/patterns/resource-aware-optimization/</loc>
-         <lastmod>2025-10-14</lastmod>
+         <lastmod>2025-10-15</lastmod>
     </url>
     <url>
          <loc>https://oldaque.github.io/agentic-knowledge-garden/patterns/routing/</loc>
-         <lastmod>2025-10-14</lastmod>
+         <lastmod>2025-10-15</lastmod>
     </url>
     <url>
          <loc>https://oldaque.github.io/agentic-knowledge-garden/patterns/tool-use/</loc>
-         <lastmod>2025-10-14</lastmod>
+         <lastmod>2025-10-15</lastmod>
     </url>
     <url>
          <loc>https://oldaque.github.io/agentic-knowledge-garden/resources/</loc>
-         <lastmod>2025-10-14</lastmod>
+         <lastmod>2025-10-15</lastmod>
     </url>
     <url>
          <loc>https://oldaque.github.io/agentic-knowledge-garden/resources/links/</loc>
-         <lastmod>2025-10-14</lastmod>
+         <lastmod>2025-10-15</lastmod>
     </url>
     <url>
          <loc>https://oldaque.github.io/agentic-knowledge-garden/snippets/</loc>
-         <lastmod>2025-10-14</lastmod>
+         <lastmod>2025-10-15</lastmod>
     </url>
     <url>
          <loc>https://oldaque.github.io/agentic-knowledge-garden/snippets/evaluation-and-monitoring-llm-judge/</loc>
-         <lastmod>2025-10-14</lastmod>
+         <lastmod>2025-10-15</lastmod>
     </url>
     <url>
          <loc>https://oldaque.github.io/agentic-knowledge-garden/snippets/evaluation-and-monitoring-response-accuracy/</loc>
-         <lastmod>2025-10-14</lastmod>
+         <lastmod>2025-10-15</lastmod>
     </url>
     <url>
          <loc>https://oldaque.github.io/agentic-knowledge-garden/snippets/evaluation-and-monitoring-token-usage/</loc>
-         <lastmod>2025-10-14</lastmod>
+         <lastmod>2025-10-15</lastmod>
     </url>
     <url>
          <loc>https://oldaque.github.io/agentic-knowledge-garden/snippets/exception-handling-recovery-adk-robust-location-agent/</loc>
-         <lastmod>2025-10-14</lastmod>
+         <lastmod>2025-10-15</lastmod>
     </url>
     <url>
          <loc>https://oldaque.github.io/agentic-knowledge-garden/snippets/goal-setting-monitoring-langchain-code-generation-agent/</loc>
-         <lastmod>2025-10-14</lastmod>
+         <lastmod>2025-10-15</lastmod>
     </url>
     <url>
          <loc>https://oldaque.github.io/agentic-knowledge-garden/snippets/guardrails-safety-patterns-crewai/</loc>
-         <lastmod>2025-10-14</lastmod>
+         <lastmod>2025-10-15</lastmod>
     </url>
     <url>
          <loc>https://oldaque.github.io/agentic-knowledge-garden/snippets/guardrails-safety-patterns-vertex-ai/</loc>
-         <lastmod>2025-10-14</lastmod>
+         <lastmod>2025-10-15</lastmod>
     </url>
     <url>
          <loc>https://oldaque.github.io/agentic-knowledge-garden/snippets/human-in-the-loop-adk-technical-support-agent/</loc>
-         <lastmod>2025-10-14</lastmod>
+         <lastmod>2025-10-15</lastmod>
     </url>
     <url>
          <loc>https://oldaque.github.io/agentic-knowledge-garden/snippets/inter-agent-communication-a2a-adk-agent-creation/</loc>
-         <lastmod>2025-10-14</lastmod>
+         <lastmod>2025-10-15</lastmod>
     </url>
     <url>
          <loc>https://oldaque.github.io/agentic-knowledge-garden/snippets/inter-agent-communication-a2a-adk-server-setup/</loc>
-         <lastmod>2025-10-14</lastmod>
+         <lastmod>2025-10-15</lastmod>
     </url>
     <url>
          <loc>https://oldaque.github.io/agentic-knowledge-garden/snippets/knowledge-retrieval-rag-adk-google-search/</loc>
-         <lastmod>2025-10-14</lastmod>
+         <lastmod>2025-10-15</lastmod>
     </url>
     <url>
          <loc>https://oldaque.github.io/agentic-knowledge-garden/snippets/knowledge-retrieval-rag-adk-vertex-ai/</loc>
-         <lastmod>2025-10-14</lastmod>
+         <lastmod>2025-10-15</lastmod>
     </url>
     <url>
          <loc>https://oldaque.github.io/agentic-knowledge-garden/snippets/knowledge-retrieval-rag-langchain/</loc>
-         <lastmod>2025-10-14</lastmod>
+         <lastmod>2025-10-15</lastmod>
     </url>
     <url>
          <loc>https://oldaque.github.io/agentic-knowledge-garden/snippets/learning-adaptation-openevolve-optimization/</loc>
-         <lastmod>2025-10-14</lastmod>
+         <lastmod>2025-10-15</lastmod>
     </url>
     <url>
          <loc>https://oldaque.github.io/agentic-knowledge-garden/snippets/multi-agent-crewai-blog-creation/</loc>
-         <lastmod>2025-10-14</lastmod>
+         <lastmod>2025-10-15</lastmod>
     </url>
     <url>
          <loc>https://oldaque.github.io/agentic-knowledge-garden/snippets/multi-agent-google-adk-agent-as-tool/</loc>
-         <lastmod>2025-10-14</lastmod>
+         <lastmod>2025-10-15</lastmod>
     </url>
     <url>
          <loc>https://oldaque.github.io/agentic-knowledge-garden/snippets/multi-agent-google-adk-hierarchical-structure/</loc>
-         <lastmod>2025-10-14</lastmod>
+         <lastmod>2025-10-15</lastmod>
     </url>
     <url>
          <loc>https://oldaque.github.io/agentic-knowledge-garden/snippets/multi-agent-google-adk-loop-agent/</loc>
-         <lastmod>2025-10-14</lastmod>
+         <lastmod>2025-10-15</lastmod>
     </url>
     <url>
          <loc>https://oldaque.github.io/agentic-knowledge-garden/snippets/multi-agent-google-adk-parallel-agent/</loc>
-         <lastmod>2025-10-14</lastmod>
+         <lastmod>2025-10-15</lastmod>
     </url>
     <url>
          <loc>https://oldaque.github.io/agentic-knowledge-garden/snippets/multi-agent-google-adk-sequential-agent/</loc>
-         <lastmod>2025-10-14</lastmod>
+         <lastmod>2025-10-15</lastmod>
     </url>
     <url>
          <loc>https://oldaque.github.io/agentic-knowledge-garden/snippets/parallelization-google-adk-research-synthesis/</loc>
-         <lastmod>2025-10-14</lastmod>
+         <lastmod>2025-10-15</lastmod>
     </url>
     <url>
          <loc>https://oldaque.github.io/agentic-knowledge-garden/snippets/parallelization-langchain-map-synthesis-chain/</loc>
-         <lastmod>2025-10-14</lastmod>
+         <lastmod>2025-10-15</lastmod>
     </url>
     <url>
          <loc>https://oldaque.github.io/agentic-knowledge-garden/snippets/planning-crewai-planner-writer-agent/</loc>
-         <lastmod>2025-10-14</lastmod>
+         <lastmod>2025-10-15</lastmod>
     </url>
     <url>
          <loc>https://oldaque.github.io/agentic-knowledge-garden/snippets/planning-openai-deep-research-api/</loc>
-         <lastmod>2025-10-14</lastmod>
+         <lastmod>2025-10-15</lastmod>
     </url>
     <url>
          <loc>https://oldaque.github.io/agentic-knowledge-garden/snippets/prompt-chaining-langchain-extraction-transformation/</loc>
-         <lastmod>2025-10-14</lastmod>
+         <lastmod>2025-10-15</lastmod>
     </url>
     <url>
          <loc>https://oldaque.github.io/agentic-knowledge-garden/snippets/reasoning-techniques-adk-palms/</loc>
-         <lastmod>2025-10-14</lastmod>
+         <lastmod>2025-10-15</lastmod>
     </url>
     <url>
          <loc>https://oldaque.github.io/agentic-knowledge-garden/snippets/reasoning-techniques-langgraph-deepsearch/</loc>
-         <lastmod>2025-10-14</lastmod>
+         <lastmod>2025-10-15</lastmod>
     </url>
     <url>
          <loc>https://oldaque.github.io/agentic-knowledge-garden/snippets/reflection-google-adk-generator-critic/</loc>
-         <lastmod>2025-10-14</lastmod>
+         <lastmod>2025-10-15</lastmod>
     </url>
     <url>
          <loc>https://oldaque.github.io/agentic-knowledge-garden/snippets/reflection-langchain-iterative-code-refinement/</loc>
-         <lastmod>2025-10-14</lastmod>
+         <lastmod>2025-10-15</lastmod>
     </url>
     <url>
          <loc>https://oldaque.github.io/agentic-knowledge-garden/snippets/resource-aware-optimization-adk-agents/</loc>
-         <lastmod>2025-10-14</lastmod>
+         <lastmod>2025-10-15</lastmod>
     </url>
     <url>
          <loc>https://oldaque.github.io/agentic-knowledge-garden/snippets/resource-aware-optimization-openai/</loc>
-         <lastmod>2025-10-14</lastmod>
+         <lastmod>2025-10-15</lastmod>
     </url>
     <url>
          <loc>https://oldaque.github.io/agentic-knowledge-garden/snippets/resource-aware-optimization-openrouter/</loc>
-         <lastmod>2025-10-14</lastmod>
+         <lastmod>2025-10-15</lastmod>
     </url>
     <url>
          <loc>https://oldaque.github.io/agentic-knowledge-garden/snippets/resource-aware-optimization-query-router-agent/</loc>
-         <lastmod>2025-10-14</lastmod>
+         <lastmod>2025-10-15</lastmod>
     </url>
     <url>
          <loc>https://oldaque.github.io/agentic-knowledge-garden/snippets/routing-google-adk-coordinator-subagents/</loc>
-         <lastmod>2025-10-14</lastmod>
+         <lastmod>2025-10-15</lastmod>
     </url>
     <url>
          <loc>https://oldaque.github.io/agentic-knowledge-garden/snippets/routing-langchain-coordinator-router/</loc>
-         <lastmod>2025-10-14</lastmod>
+         <lastmod>2025-10-15</lastmod>
     </url>
     <url>
          <loc>https://oldaque.github.io/agentic-knowledge-garden/snippets/tool-use-crewai-stock-price-lookup/</loc>
-         <lastmod>2025-10-14</lastmod>
+         <lastmod>2025-10-15</lastmod>
     </url>
     <url>
          <loc>https://oldaque.github.io/agentic-knowledge-garden/snippets/tool-use-google-adk-code-execution/</loc>
-         <lastmod>2025-10-14</lastmod>
+         <lastmod>2025-10-15</lastmod>
     </url>
     <url>
          <loc>https://oldaque.github.io/agentic-knowledge-garden/snippets/tool-use-google-adk-google-search/</loc>
-         <lastmod>2025-10-14</lastmod>
+         <lastmod>2025-10-15</lastmod>
     </url>
     <url>
          <loc>https://oldaque.github.io/agentic-knowledge-garden/snippets/tool-use-langchain-search-information/</loc>
-         <lastmod>2025-10-14</lastmod>
+         <lastmod>2025-10-15</lastmod>
     </url>
 </urlset>

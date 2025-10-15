@@ -1,22 +1,32 @@
-$schema: notes.v1
+$schema: notes.v2
 file:
-  path: notes/<AAAA-MM-DD>_<slug>.md
+  path: notes/<YYYY-MM-DD>_<slug>.md
 front_matter:
   title: string
   slug: kebab
+  summary: string
   tags: list[string]
+  themes: list[string]
   source:
-    type: enum[linkedin, paper, blog, video, talk, book]
-    author: string
+    type: enum[brain_dump, personal, linkedin, paper, blog, video, talk, book, podcast, report, other]
+    title: string|null
+    author: string|null
     org: string|null
-    url: url
+    url: url|null
   status: enum[draft, in-review, stable]
   created_at: date
-  summary: string
+  updated_at: date
+  relationships:
+    promotes_to: list[path]
+    related_notes: list[path]
 sections:
+  - Overview: markdown
+  - Brain_dump: markdown
   - Highlights: list[string]
-  - Ideias_de_teste: list[string]
-  - Destilado: string
+  - Test_ideas: list[string]
+  - Destilado: markdown
+  - Next_steps: list[string]
 rules:
-  - must_have: [title, slug, source.url]
-  - unique_by: [slug, source.url]
+  - must_have: [title, slug, summary, created_at]
+  - unique_by: [slug]
+  - default_themes: ["core/unsorted"]
