@@ -1,0 +1,37 @@
+$schema: content_manifest.v1
+root:
+  generated_at: datetime
+  version: integer
+  items: list[manifest_item]
+
+manifest_item:
+  id: string           # slug or composite id
+  type: enum[note, pattern, guide, resource, snippet, example]
+  title: string
+  slug: string
+  summary: string
+  status: string
+  tags: list[string]
+  themes: list[string]
+  created_at: date
+  updated_at: date
+  path: path
+  origin_note: path|null
+  promotions: list[path]
+  relationships:
+    patterns: list[path]
+    guides: list[path]
+    resources: list[path]
+    snippets: list[path]
+    examples: list[path]
+
+indexes:
+  - name: last_updates
+    order_by: updated_at desc
+    limit: 12
+  - name: by_theme
+    group_by: themes
+  - name: brain_dump
+    filter:
+      type: note
+    order_by: updated_at desc

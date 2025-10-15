@@ -1,49 +1,62 @@
 ---
-title: "Chapter 10: Model Context Protocol (MCP)"
+title: "Pattern: Model Context Protocol (MCP)"
 slug: "model-context-protocol-mcp"
-tags: ["mcp", "protocol", "model-context", "agentic-pattern", "anthropic"]
+tags: ["mcp", "protocol", "model-context", "interoperability", "anthropic", "agentic-pattern"]
+themes: ["execution/tooling", "architecture/integration"]
 source:
-  type: "book"
+  origin_note: "docs/notes/2025-10-13_book-agentic-design-patterns.md"
   author: "Antonio Gulli"
   org: "Google"
   url: "https://docs.google.com/document/d/1e6XimYczKmhX9zpqEyxLFWPQgGuG0brp7Hic2sFl_qw/edit?usp=sharing"
 status: "stable"
-last_update: "2025-10-13"
-summary: "Pattern for enabling secure communication and data sharing between AI models and external tools through standardized protocols."
-source: "https://docs.google.com/document/d/1e6XimYczKmhX9zpqEyxLFWPQgGuG0brp7Hic2sFl_qw/edit?usp=sharing"
+last_update: "2025-10-14"
+summary: "Protocolo aberto que padroniza comunicação entre LLMs e ferramentas externas, promovendo interoperabilidade e reutilização de componentes."
+relationships:
+  snippets: []
+  examples: []
+  resources: []
 ---
 
-# The Model Context Protocol (MCP)
+### Problem
 
-The Model Context Protocol (MCP) is an open standard designed to standardize how Large Language Models (LLMs) communicate with external applications, data sources, and tools. It acts as a universal adapter, enabling LLMs to access current data, utilize external software, and execute specific operational tasks.
+LLMs precisam integrar com múltiplas fontes de dados e ferramentas, mas cada provedor usa interfaces proprietárias. Isso dificulta interoperabilidade, reusabilidade e composição de componentes agentic.
 
-**Key Aspects of MCP:**
-*   **Client-Server Architecture:** MCP operates on a client-server model where MCP servers expose data (resources), interactive templates (prompts), and actionable functions (tools) to MCP clients (LLM host applications or AI agents).
-*   **Standardization:** Unlike proprietary tool function calling, MCP provides a standardized interface, promoting interoperability, composability, and reusability across different LLMs and tools.
-*   **Dynamic Discovery:** MCP clients can dynamically query a server to discover available tools and resources, allowing agents to adapt to new capabilities without redeployment.
-*   **Components:** It distinguishes between:
-    *   **Resources:** Static data (e.g., PDF files, database records).
-    *   **Tools:** Executable functions that perform actions (e.g., sending emails, querying APIs).
-    *   **Prompts:** Templates guiding the LLM's interaction with resources or tools.
-*   **Transportation Mechanisms:** Uses JSON-RPC over STDIO for local interactions and web-friendly protocols like Streamable HTTP and Server-Sent Events (SSE) for remote connections.
+### Pattern
 
-**MCP vs. Tool Function Calling:**
-*   **Tool Function Calling:** A direct, proprietary, and vendor-specific request from an LLM to a predefined tool, often tightly coupled with the specific application and LLM.
-*   **MCP:** An open, standardized protocol that enables dynamic discovery and communication with a wide range of external capabilities, fostering an ecosystem of reusable components.
+Model Context Protocol (MCP) define um padrão aberto cliente-servidor onde:
 
-**Practical Applications:**
-MCP significantly broadens LLM capabilities, enabling:
-*   Database integration (e.g., querying Google BigQuery).
-*   Generative media orchestration (e.g., integrating with Imagen, Veo).
-*   External API interaction (e.g., fetching weather data, sending emails).
-*   Reasoning-based information extraction.
-*   Custom tool development and exposure.
-*   Complex workflow orchestration.
-*   IoT device control.
-*   Financial services automation.
+1. **MCP Servers** expõem:
+   - **Resources**: dados estáticos (PDFs, registros de banco).
+   - **Tools**: funções executáveis (enviar emails, consultar APIs).
+   - **Prompts**: templates que guiam interações.
 
-**Integration with ADK and FastMCP:**
-*   **ADK (Agent Development Kit):** Supports connecting ADK agents to MCP servers using `MCPToolset` and `StdioServerParameters` (for local servers) or `HttpServerParameters` (for remote servers).
-*   **FastMCP:** A Python framework that simplifies the development of MCP servers, automatically generating schema from Python function signatures, type hints, and docstrings, making it easy to expose Python functions as MCP tools.
+2. **MCP Clients** (hosts LLM ou agentes) descobrem dinamicamente capacidades disponíveis via JSON-RPC sobre STDIO (local) ou HTTP/SSE (remoto).
 
-_Code examples for this chapter are available in the Google Drive folder: [https://drive.google.com/drive/u/0/folders/1Y3U3IrYCiJ3E45Z8okR5eCg7OPnWQtPV](https://drive.google.com/drive/u/0/folders/1Y3U3IrYCiJ3E45Z8okR5eCg7OPnWQtPV)_
+3. Benefícios:
+   - Substituir interfaces proprietárias por padrão universal.
+   - Reuso de servidores MCP entre diferentes agentes/frameworks.
+   - Descoberta dinâmica de novas ferramentas sem redeploy.
+
+### Trade_offs
+
+- **Pró:** interoperabilidade, composição, ecossistema de componentes reutilizáveis.
+- **Pró:** desacoplamento entre host LLM e ferramentas.
+- **Contra:** curva de aprendizado inicial para implementar servidores.
+- **Contra:** overhead adicional de transporte (comparado a chamadas diretas).
+
+### When_to_use
+
+- Agentes que precisam integrar múltiplas ferramentas de terceiros.
+- Desenvolvimento de componentes reutilizáveis para ecossistema multi-framework.
+- Aplicações que exigem descoberta dinâmica de capacidades.
+- Substituição de integrações proprietárias para maior portabilidade.
+
+### Minimal_example
+
+(Snippets a serem criados: ADK MCPToolset, FastMCP Server, MCP client com descoberta dinâmica)
+
+### Further_reading
+
+- [Agentic Design Patterns — Capítulo 10](https://docs.google.com/document/d/1e6XimYczKmhX9zpqEyxLFWPQgGuG0brp7Hic2sFl_qw/edit?usp=sharing)
+- [MCP Specification (Anthropic)](https://spec.modelcontextprotocol.io/)
+- [FastMCP Documentation](https://github.com/jlowin/fastmcp)

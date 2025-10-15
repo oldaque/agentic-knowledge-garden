@@ -13,6 +13,7 @@ jobs:
         with:
           python-version: '3.x'
       - run: pip install mkdocs mkdocs-material
+      - run: python3 scripts/build_manifest.py --quiet
       - run: mkdocs build --strict
       - uses: peaceiris/actions-gh-pages@v3
         with:

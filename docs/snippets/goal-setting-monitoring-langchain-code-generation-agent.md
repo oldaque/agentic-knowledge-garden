@@ -1,15 +1,21 @@
 ---
-name: "Goal Setting - LangChain Code Generation Agent"
-objective: "Demonstrates iterative code generation with goal setting and monitoring using LangChain."
+title: "Goal Setting - LangChain Code Generation Agent"
+slug: "goal-setting-monitoring-langchain-code-generation-agent"
+summary: "Demonstrates iterative code generation with goal setting and monitoring using LangChain, featuring a feedback loop between code generator and critic."
+tags: ["langchain", "goal-setting", "code-generation", "feedback-loop", "iterative-refinement"]
+status: "stable"
+last_update: "2025-10-14"
+origin_note: "docs/patterns/goal-setting-and-monitoring.md"
+languages: ["python"]
 how_to_run: "Requires OPENAI_API_KEY. Run: python goal-setting-monitoring-langchain-code-generation-agent.py"
-from_note: "../patterns/goal-setting-and-monitoring.md"
+related_patterns: ["docs/patterns/goal-setting-and-monitoring.md"]
 ---
 
-# Iterative Code Generation with Goal Setting and Monitoring
+## Context
 
-This example demonstrates an AI coding agent that sets goals, generates code, gets feedback from a critic, and iteratively improves its output using goal monitoring.
+This snippet demonstrates the Goal Setting and Monitoring pattern through an AI coding agent that sets explicit goals, generates code, receives feedback from a critic, and iteratively improves until goals are met. The system uses LLM-based evaluation to determine when defined objectives have been achieved, showcasing how agents can monitor progress toward measurable outcomes through multiple refinement cycles.
 
-## Code Example
+## Snippet
 
 ```python
 # MIT License
@@ -22,17 +28,16 @@ from pathlib import Path
 from langchain_openai import ChatOpenAI
 from dotenv import load_dotenv, find_dotenv
 
-# 🔐 Load environment variables
+# Load environment variables
 _ = load_dotenv(find_dotenv())
 OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
 if not OPENAI_API_KEY:
-    raise EnvironmentError("❌ Please set the OPENAI_API_KEY environment variable.")
+    raise EnvironmentError("Please set the OPENAI_API_KEY environment variable.")
 
-# ✅ Initialize OpenAI model
-print("📡 Initializing OpenAI LLM (gpt-4o)...
-")
+# Initialize OpenAI model
+print("Initializing OpenAI LLM (gpt-4o)...")
 llm = ChatOpenAI(
-    model="gpt-4o", # If you dont have access to got-4o use other OpenAI LLMs
+    model="gpt-4o",
     temperature=0.3,
     openai_api_key=OPENAI_API_KEY,
 )
@@ -84,9 +89,7 @@ Here are the goals:
 {chr(10).join(f"- {g.strip()}" for g in goals)}
 
 Here is the feedback on the code:
-"""
 {feedback_text}
-"""
 
 Based on the feedback above, have the goals been met?
 
@@ -153,14 +156,13 @@ if __name__ == "__main__":
     run_code_agent(use_case_input, goals_input)
 ```
 
-## How It Works
+## Notes
 
-This example demonstrates the Goal Setting and Monitoring pattern with these key features:
+Key implementation details:
 
-1. **Goal Definition**: The agent accepts use cases and specific goals as input
-2. **Iterative Code Generation**: Generates code, reviews it, and iterates until goals are met
-3. **Feedback Loop**: Uses an LLM critic to evaluate code quality against defined goals
-4. **Goal Monitoring**: Continuously checks if the defined goals have been achieved
-5. **File Saving**: Saves the final approved code to a file with appropriate naming
-
-The pattern showcases how agents can set measurable objectives and monitor progress toward achieving them through iterative refinement.</content>
+- **Goal Definition**: Agent accepts explicit, comma-separated goals as input criteria
+- **Iterative Refinement**: Generates code, receives critique, and refines up to max_iterations
+- **LLM-based Evaluation**: Uses separate LLM call to determine if goals have been achieved
+- **Feedback Loop**: Critic provides specific feedback on clarity, correctness, and edge cases
+- **File Management**: Automatically generates filename from use case and saves final code
+- **Clean Output**: Strips markdown code fences and adds descriptive header comments

@@ -1,20 +1,26 @@
 ---
-name: "Inter-Agent Communication - ADK Agent Creation"
-objective: "Demonstrates creating A2A-compliant agents using Google ADK for calendar management."
+title: "Inter-Agent Communication - ADK Agent Creation"
+slug: "inter-agent-communication-a2a-adk-agent-creation"
+summary: "Demonstrates creating A2A-compliant agents using Google ADK for calendar management functionality with OAuth integration."
+tags: ["google-adk", "a2a", "inter-agent-communication", "calendar", "oauth"]
+status: "stable"
+last_update: "2025-10-14"
+origin_note: "docs/patterns/inter-agent-communication-a2a.md"
+languages: ["python"]
 how_to_run: "Requires Google ADK and calendar API credentials. Run: python inter-agent-communication-a2a-adk-agent-creation.py"
-from_note: "../patterns/inter-agent-communication-a2a.md"
+related_patterns: ["docs/patterns/inter-agent-communication-a2a.md"]
 ---
 
-# A2A Agent Creation for Calendar Management
+## Context
 
-This example shows how to create A2A-compliant agents using Google ADK for calendar management functionality.
+This snippet demonstrates how to create A2A (Agent-to-Agent) compliant agents using Google ADK. The agent uses CalendarToolset to integrate with Google Calendar API, enabling calendar management capabilities through the A2A protocol. This pattern allows agents from different systems to communicate and collaborate using a standardized interface.
 
-## Code Example
+## Snippet
 
 ```python
 import datetime
-from google.adk.agents import LlmAgent # type: ignore[import-untyped]
-from google.adk.tools.google_api_tool import CalendarToolset # type: ignore[import-untyped]
+from google.adk.agents import LlmAgent
+from google.adk.tools.google_api_tool import CalendarToolset
 
 async def create_agent(client_id, client_secret) -> LlmAgent:
     """Constructs the ADK agent."""
@@ -30,13 +36,13 @@ You are an agent that can help manage a user's calendar. Users will request info
     )
 ```
 
-## Explanation
+## Notes
 
-This example demonstrates how to create A2A-compliant agents using Google ADK:
+Key implementation details:
 
-1. **CalendarToolset**: Initializes calendar API tools with OAuth credentials
-2. **LlmAgent Configuration**: Creates an agent with calendar management capabilities
-3. **A2A Compliance**: Uses standard ADK agent structure compatible with A2A protocol
-4. **Tool Integration**: Loads Google Calendar API tools for event management
-
-The agent can handle calendar queries and modifications through the A2A protocol interface.</content>
+- **CalendarToolset Integration**: Initializes OAuth-based calendar API tools
+- **A2A Compliance**: Standard ADK agent structure compatible with A2A protocol
+- **Dynamic Instruction**: Includes current date for context-aware calendar operations
+- **Primary Calendar Default**: Assumes 'primary' calendar when not specified by user
+- **RFC3339 Timestamps**: Explicitly instructs agent to use proper datetime format
+- **Async Tool Loading**: Uses await to load calendar API tools asynchronously

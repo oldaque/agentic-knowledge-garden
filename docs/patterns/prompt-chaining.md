@@ -1,42 +1,57 @@
 ---
-title: "Chapter 1: Prompt Chaining"
+title: "Pattern: Prompt Chaining"
 slug: "prompt-chaining"
-tags: ["prompt-chaining", "pipeline", "agentic-pattern", "langchain", "google-adk"]
+tags: ["prompt-chaining", "pipeline", "agentic-pattern", "langchain", "workflow"]
+themes: ["reasoning/sequencing", "workflow/orchestration"]
 source:
-  type: "book"
+  origin_note: "notes/2025-10-13_book-agentic-design-patterns.md"
   author: "Antonio Gulli"
   org: "Google"
   url: "https://docs.google.com/document/d/1rsaK53T3Lg5KoGwvf8ukOUvbELRtH-V0LnOIFDxBryE/edit?tab=t.0"
 status: "stable"
-last_update: "2025-10-13"
-summary: "Pattern for breaking down complex tasks into sequential, manageable steps where each step's output becomes input for the next, improving reliability and control."
+last_update: "2025-10-14"
+summary: "Break complex goals into sequential prompts where each output feeds the next, keeping agents reliable, interpretable e fáceis de depurar."
+relationships:
+  snippets:
+    - "snippets/prompt-chaining/prompt-chaining-langchain-extraction-transformation.md"
+  examples:
+    - "examples/prompt-chaining/README.md"
+  resources: []
 ---
 
-# Chapter 1: Prompt Chaining
+### Problem
 
-## PROMPT CHAINING PATTERN OVERVIEW
+Agentes costumam falhar quando tentam resolver problemas extensos em um único prompt: o modelo ignora instruções, perde contexto e propaga erros de passos iniciais. O resultado é imprevisível e difícil de diagnosticar.
 
-Prompt chaining, sometimes referred to as Pipeline pattern, represents a powerful paradigm for handling intricate tasks when leveraging large language models (LLMs). Rather than expecting an LLM to solve a complex problem in a single, monolithic step, prompt chaining advocates for a divide-and-conquer strategy. The core idea is to break down the original, daunting problem into a sequence of smaller, more manageable sub-problems. Each sub-problem is addressed individually through a specifically designed prompt, and the output generated from one prompt is strategically fed as input into the subsequent prompt in the chain.
+### Pattern
 
-This sequential processing technique inherently introduces modularity and clarity into the interaction with LLMs. By decomposing a complex task, it becomes easier to understand and debug each individual step, making the overall process more robust and interpretable. Each step in the chain can be meticulously crafted and optimized to focus on a specific aspect of the larger problem, leading to more accurate and focused outputs.
+Prompt Chaining divide o objetivo em etapas curtas e determinísticas. Cada etapa tem um papel explícito, produz um artefato autocontido e passa esse artefato como entrada da etapa seguinte.  
+Boas práticas:
+- Especificar o papel do modelo em cada etapa para limitar escopo cognitivo.
+- Validar o output antes de encadear (ex.: normalizar JSON, checar tokens esperados).
+- Injetar ferramentas externas entre etapas conforme necessário (busca, cálculos).
 
-The output of one step acting as the input for the next is crucial. This passing of information establishes a dependency chain, hence the name, where the context and results of previous operations guide the subsequent processing. This allows the LLM to build on its previous work, refine its understanding, and progressively move closer to the desired solution.
+### Trade_offs
 
-Furthermore, prompt chaining is not just about breaking down problems; it also enables the integration of external knowledge and tools. At each step, the LLM can be instructed to interact with external systems, APIs, or databases, enriching its knowledge and abilities beyond its internal training data. This capability dramatically expands the potential of LLMs, allowing them to function not just as isolated models but as integral components of broader, more intelligent systems.
+- **Pró:** melhor controle, depuração simples e limites de contexto menores por etapa.  
+- **Pró:** fácil inserir verificações e correções automáticas entre passos.  
+- **Contra:** maior latência total e custo de tokens somados.  
+- **Contra:** cadeia longa pode acumular erro se validações forem fracas.
 
-The significance of prompt chaining extends beyond simple problem-solving. It serves as a foundational technique for building sophisticated AI agents. These agents can utilize prompt chains to autonomously plan, reason, and act in dynamic environments. By strategically structuring the sequence of prompts, an agent can engage in tasks requiring multi-step reasoning, planning, and decision-making. Such agent workflows can mimic human thought processes more closely, allowing for more natural and effective interactions with complex domains and systems.
+### When_to_use
 
-### Limitations of single prompts
-For multifaceted tasks, using a single, complex prompt for an LLM can be inefficient, causing the model to struggle with constraints and instructions, potentially leading to instruction neglect where parts of the prompt are overlooked, contextual drift where the model loses track of the initial context, error propagation where early errors amplify, prompts which require a longer context window where the model gets insufficient information to respond back and hallucination where the cognitive load increases the chance of incorrect information. For example, a query asking to analyze a market research report, summarize findings, identify trends with data points, and draft an email risks failure as the model might summarize well but fail to extract data or draft an email properly.
+- Tarefas com múltiplas transformações (extração → análise → geração).  
+- Quando é necessário explicar o raciocínio intermediário.  
+- Em pipelines que precisam misturar LLM com ferramentas externas entre passos.
 
-### Enhanced Reliability Through Sequential Decomposition
-Prompt chaining addresses these challenges by breaking the complex task into a focused, sequential workflow, which significantly improves reliability and control. Given the example above, a pipeline or chained approach can be described as follows:
+### Minimal_example
 
-1.  **Initial Prompt (Summarization):** "Summarize the key findings of the following market research report: [text]." The model's sole focus is summarization, increasing the accuracy of this initial step.
-2.  **Second Prompt (Trend Identification):** "Using the summary, identify the top three emerging trends and extract the specific data points that support each trend: [output from step 1]." This prompt is now more constrained and builds directly upon a validated output.
-3.  **Third Prompt (Email Composition):** "Draft a concise email to the marketing team that outlines the following trends and their supporting data: [output from step 2]."
+- Snippet recomendado: [`snippets/prompt-chaining-langchain-extraction-transformation.md`](../snippets/prompt-chaining-langchain-extraction-transformation.md) demonstra extração + transformação usando LangChain.
 
-This decomposition allows for more granular control over the process. Each step is simpler and less ambiguous, which reduces the cognitive load on the model and leads to a more accurate and reliable final output. This modularity is analogous to a computational pipeline where each function performs a specific operation before passing its result to the next. To ensure an accurate response for each specific task, the model can be assigned a distinct role at every stage. For example, in the given scenario, the initial prompt could be designated as "Market Analyst," the subsequent prompt as "Trade Analyst," and the third prompt as "Expert Documentation Writer," and so forth.
+### Further_reading
+
+- [Livro Agentic Design Patterns — Capítulo 1](https://docs.google.com/document/d/1rsaK53T3Lg5KoGwvf8ukOUvbELRtH-V0LnOIFDxBryE/edit?tab=t.0)
+- [LangChain Docs — Sequential Chains](https://python.langchain.com/docs/modules/chains/)
 
 ### The Role of Structured Output
 The reliability of a prompt chain is highly dependent on the integrity of the data passed between steps. If the output of one prompt is ambiguous or poorly formatted, the subsequent prompt may fail due to faulty input. To mitigate this, specifying a structured output format, such as JSON or XML, is crucial.

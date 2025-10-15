@@ -1,75 +1,57 @@
 ---
-title: "Chapter 2: Routing"
+title: "Pattern: Routing"
 slug: "routing"
-tags: ["routing", "coordinator", "agentic-pattern", "langchain", "google-adk"]
+tags: ["routing", "coordinator", "intent-classification", "agentic-pattern"]
+themes: ["workflow/orchestration", "reasoning/selection"]
 source:
-  type: "book"
+  origin_note: "notes/2025-10-13_book-agentic-design-patterns.md"
   author: "Antonio Gulli"
   org: "Google"
   url: "https://docs.google.com/document/d/1ux_n8n3T4bYndOjs1DKW5ccpC802KISdy2IWnlvYbas/edit?tab=t.0"
 status: "stable"
-last_update: "2025-10-13"
-summary: "Pattern that enables dynamic decision-making in agentic systems by routing requests to specialized agents or tools based on context and intent analysis."
+last_update: "2025-10-14"
+summary: "Dirige cada requisição ao agente, ferramenta ou modelo mais adequado com base em intenção e contexto, mantendo decisões adaptativas controladas."
+relationships:
+  snippets:
+    - "snippets/routing/routing-langchain-coordinator-router.md"
+    - "snippets/routing/routing-google-adk-coordinator-subagents.md"
+  examples: []
+  resources: []
 ---
 
-# Chapter 2: Routing
+### Problem
 
-## ROUTING PATTERN OVERVIEW
+Fluxos lineares tratam todos os pedidos igualmente, desperdiçando recursos e entregando respostas fracas quando o contexto exige caminhos diferentes. Sem um roteador, o agente fica preso a heurísticas fixas e perde a chance de combinar especializações.
 
-While sequential processing via prompt chaining is a foundational technique for executing deterministic, linear workflows with language models, its applicability is limited in scenarios requiring adaptive responses. Real-world agentic systems must often arbitrate between multiple potential actions based on contingent factors, such as the state of the environment, user input, or the outcome of a preceding operation. This capacity for dynamic decision-making, which governs the flow of control to different specialized functions, tools, or sub-processes, is achieved through a mechanism known as routing.
+### Pattern
 
-Routing introduces conditional logic into an agent's operational framework, enabling a shift from a fixed execution path to a model where the agent dynamically evaluates specific criteria to select from a set of possible subsequent actions. This allows for more flexible and context-aware system behavior.
+Routing adiciona uma camada de coordenação que inspeciona intenção, estado e restrições (latência, custo, compliance) para decidir qual subagente, ferramenta ou modelo deve atuar.  
+Implementações comuns:
+- **Classificador de intenção** com LLM ou embeddings que retorna o destino (`"knowledge"`, `"calculator"`, `"support"`).  
+- **Árvores de decisão** com regras explícitas para cenários críticos (ex.: bloquear ações sensíveis).  
+- **Roteamento em cascata**: começa em modelo barato e sobe para especialistas quando confiança for baixa.  
+- **Feedback loop**: logs e métricas alimentam re-treino do roteador e thresholds de confiança.
 
-The core component of the Routing pattern is a mechanism that performs the evaluation and directs the flow. This mechanism can be implemented in several ways:
+### Trade_offs
 
-*   **LLM-based Routing:** The language model itself can be prompted to analyze the input and output a specific identifier or instruction that indicates the next step or destination.
-*   **Embedding-based Routing:** The input query can be converted into a vector embedding. This embedding is then compared to embeddings representing different routes or capabilities.
-*   **Rule-based Routing:** This involves using predefined rules or logic (e.g., if-else statements, switch cases) based on keywords, patterns, or structured data extracted from the input.
-*   **Machine Learning Model-Based Routing:** It employs a discriminative model, such as a classifier, that has been specifically trained on a small corpus of labeled data to perform a routing task.
+- **Pró:** Usa cada recurso no contexto certo, reduzindo custo e aumentando precisão.  
+- **Pró:** Escala facilmente — adicionar uma capability nova é só registrar no roteador.  
+- **Contra:** Ponto adicional de falha; roteadores precisam de monitoramento e auditoria.  
+- **Contra:** Requer dados etiquetados ou heurísticas claras; decisões erradas afetam UX.
 
-## PRACTICAL APPLICATIONS & USE CASES
+### When_to_use
 
-The routing pattern is a critical control mechanism in the design of adaptive agentic systems, enabling them to dynamically alter their execution path in response to variable inputs and internal states.
+- Produtos com múltiplos agentes especializados (pesquisa, cálculo, suporte crítico).  
+- Camadas de ferramentas heterogêneas (APIs externas, automações internas) que precisam de delegação confiável.  
+- Sistemas que equilibram custo/latência vs. qualidade (ex.: fallback para LLM premium).
 
-- **Human-Computer Interaction:** In virtual assistants or AI tutors, routing is used to interpret user intent and select the appropriate action or module.
-- **Data and Document Processing:** It acts as a classification and distribution function, directing incoming data like emails or tickets to the correct workflow.
-- **Multi-Agent/Tool Systems:** Routing serves as a high-level dispatcher, assigning tasks to the most suitable specialized agent or tool based on the current objective.
+### Minimal_example
 
-## HANDS-ON CODE EXAMPLE (LANGCHAIN)
+- [`snippets/routing-langchain-coordinator-router.md`](../snippets/routing-langchain-coordinator-router.md): coordenação com LangChain.
+- [`snippets/routing-google-adk-coordinator-subagents.md`](../snippets/routing-google-adk-coordinator-subagents.md): roteamento com Google ADK.
 
-This example demonstrates a simple coordinator that routes user requests to different sub-agent handlers based on the request's intent.
+### Further_reading
 
-[Code Example: LangChain Coordinator Router](../snippets/routing-langchain-coordinator-router.md)
-
-## HANDS-ON CODE EXAMPLE (GOOGLE ADK)
-
-This example shows routing within the Google Agent Development Kit (ADK) by defining a set of "tools" and letting the framework's logic route the user's intent to the correct function.
-
-[Code Example: Google ADK Coordinator with Sub-Agents](../snippets/routing-google-adk-coordinator-subagents.md)
-
-## AT A GLANCE
-
-**What:** Agentic systems need to handle a variety of inputs that can't be managed by a single, linear process. A rigid workflow lacks the ability to make decisions based on context.
-
-**Why:** The Routing pattern introduces conditional logic. It enables the agent to first analyze an incoming query to determine its intent and then dynamically direct the flow of control to the most appropriate specialized tool, function, or sub-agent.
-
-**Rule of Thumb:** Use the Routing pattern when an agent must decide between multiple distinct workflows, tools, or sub-agents based on the user's input or the current state.
-
-## VISUAL SUMMARY
-
-
-## KEY TAKEAWAYS
-
-*   Routing enables agents to make dynamic decisions about the next step in a workflow.
-*   It allows agents to handle diverse inputs and adapt their behavior, moving beyond linear execution.
-*   Routing logic can be implemented using LLMs, rule-based systems, or embedding similarity.
-*   Frameworks like LangGraph and Google ADK provide structured ways to define and manage routing.
-
-## CONCLUSION
-
-The Routing pattern is a critical step in building truly dynamic and responsive agentic systems. It empowers agents to make intelligent decisions about how to process information, respond to user input, and utilize available tools. Mastering this pattern is essential for creating versatile and robust agentic applications that can handle the variability of real-world tasks.
-
-## REFERENCES
-
-1.  [LangGraph Documentation](https://www.langchain.com/)
-2.  [Google Agent Developer Kit Documentation](https://google.github.io/adk-docs/)
+- [Agentic Design Patterns — Capítulo 2](https://docs.google.com/document/d/1ux_n8n3T4bYndOjs1DKW5ccpC802KISdy2IWnlvYbas/edit?tab=t.0)
+- [LangChain Router Chains](https://python.langchain.com/docs/modules/chains/router/)
+- [Google ADK Routing](https://google.github.io/adk-docs/)

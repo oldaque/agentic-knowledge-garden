@@ -1,0 +1,1580 @@
+{
+  "version": 1,
+  "generated_at": "2025-10-15T03:19:47.585232Z",
+  "items": [
+    {
+      "id": "guide:agentic-fundamentals",
+      "type": "guide",
+      "title": "Fundamentos de Sistemas Agentic",
+      "slug": "agentic-fundamentals",
+      "summary": "Introdução aos conceitos fundamentais de agentes autônomos: definição, componentes essenciais e ciclos de execução.",
+      "status": "draft",
+      "tags": [
+        "agents",
+        "fundamentals",
+        "intro",
+        "llm",
+        "tool-use"
+      ],
+      "themes": [
+        "foundations",
+        "intro"
+      ],
+      "created_at": "2025-10-15",
+      "updated_at": "2025-10-15",
+      "path": "guide/foundations/01_agentic-fundamentals.md",
+      "origin_note": null,
+      "promotions": [],
+      "relationships": {
+        "patterns": [
+          "docs/patterns/tool-use.md",
+          "docs/patterns/prompt-chaining.md",
+          "docs/patterns/routing.md"
+        ],
+        "snippets": [
+          "docs/snippets/tool-use-google-adk-code-execution.md"
+        ],
+        "examples": [
+          "docs/examples/tool-use/README.md"
+        ]
+      }
+    },
+    {
+      "id": "guide:memory-ecosystem",
+      "type": "guide",
+      "title": "Ecossistema de Memória em Agentes",
+      "slug": "memory-ecosystem",
+      "summary": "Arquiteturas de memória short-term e long-term em sistemas agentic, cobrindo context windows, vector stores e técnicas sem echo.",
+      "status": "draft",
+      "tags": [
+        "memory",
+        "state",
+        "context",
+        "rag",
+        "vector-db",
+        "session"
+      ],
+      "themes": [
+        "memory",
+        "state-management"
+      ],
+      "created_at": "2025-10-15",
+      "updated_at": "2025-10-15",
+      "path": "guide/patterns/02_memory-ecosystem.md",
+      "origin_note": null,
+      "promotions": [],
+      "relationships": {
+        "patterns": [
+          "docs/patterns/memory-management.md",
+          "docs/patterns/knowledge-retrieval-rag.md",
+          "docs/patterns/agent-memory-without-echo.md"
+        ],
+        "snippets": [],
+        "examples": []
+      }
+    },
+    {
+      "id": "pattern:evaluation-and-monitoring",
+      "type": "pattern",
+      "title": "Pattern: Evaluation and Monitoring",
+      "slug": "evaluation-and-monitoring",
+      "summary": "Instrumenta agentes com métricas, alertas e laços de feedback contínuos para garantir qualidade, eficiência e conformidade.",
+      "status": "stable",
+      "tags": [
+        "evaluation",
+        "monitoring",
+        "telemetry",
+        "metrics",
+        "agentic-pattern"
+      ],
+      "themes": [
+        "governance/measurement",
+        "operations/reliability"
+      ],
+      "created_at": "2025-10-15",
+      "updated_at": "2025-10-15",
+      "path": "patterns/evaluation-and-monitoring.md",
+      "origin_note": "notes/2025-10-13_book-agentic-design-patterns.md",
+      "promotions": [],
+      "relationships": {
+        "snippets": [
+          "snippets/evaluation-and-monitoring/evaluation-and-monitoring-llm-judge.md",
+          "snippets/evaluation-and-monitoring/evaluation-and-monitoring-response-accuracy.md",
+          "snippets/evaluation-and-monitoring/evaluation-and-monitoring-token-usage.md"
+        ],
+        "examples": [],
+        "resources": []
+      }
+    },
+    {
+      "id": "pattern:exception-handling-recovery",
+      "type": "pattern",
+      "title": "Pattern: Exception Handling and Recovery",
+      "slug": "exception-handling-recovery",
+      "summary": "Planeja falhas antes que aconteçam, captura exceções rapidamente e restaura o agente a um estado seguro sem quebrar a experiência.",
+      "status": "stable",
+      "tags": [
+        "exception-handling",
+        "recovery",
+        "robustness",
+        "error-handling",
+        "agentic-pattern"
+      ],
+      "themes": [
+        "operations/reliability",
+        "governance/safety"
+      ],
+      "created_at": "2025-10-15",
+      "updated_at": "2025-10-15",
+      "path": "patterns/exception-handling-recovery.md",
+      "origin_note": "notes/2025-10-13_book-agentic-design-patterns.md",
+      "promotions": [],
+      "relationships": {
+        "snippets": [
+          "snippets/exception-handling-recovery/exception-handling-recovery-adk-robust-location-agent.md"
+        ],
+        "examples": [],
+        "resources": []
+      }
+    },
+    {
+      "id": "pattern:goal-setting-and-monitoring",
+      "type": "pattern",
+      "title": "Pattern: Goal Setting and Monitoring",
+      "slug": "goal-setting-and-monitoring",
+      "summary": "Define objetivos claros, conecte-os a métricas acionáveis e use feedback contínuo para evitar deriva de comportamento.",
+      "status": "stable",
+      "tags": [
+        "goal-setting",
+        "monitoring",
+        "metrics",
+        "progress-tracking",
+        "agentic-pattern"
+      ],
+      "themes": [
+        "governance/measurement",
+        "workflow/orchestration"
+      ],
+      "created_at": "2025-10-15",
+      "updated_at": "2025-10-15",
+      "path": "patterns/goal-setting-and-monitoring.md",
+      "origin_note": "notes/2025-10-13_book-agentic-design-patterns.md",
+      "promotions": [],
+      "relationships": {
+        "snippets": [
+          "snippets/goal-setting/goal-setting-monitoring-langchain-code-generation-agent.md"
+        ],
+        "examples": [],
+        "resources": []
+      }
+    },
+    {
+      "id": "pattern:guardrails-safety",
+      "type": "pattern",
+      "title": "Pattern: Guardrails and Safety",
+      "slug": "guardrails-safety",
+      "summary": "Aplica controles multi-camada para manter agentes dentro das políticas, proteger dados sensíveis e evitar ações perigosas.",
+      "status": "stable",
+      "tags": [
+        "guardrails",
+        "safety",
+        "moderation",
+        "policy",
+        "agentic-pattern"
+      ],
+      "themes": [
+        "governance/safety",
+        "operations/reliability"
+      ],
+      "created_at": "2025-10-15",
+      "updated_at": "2025-10-15",
+      "path": "patterns/guardrails-safety-patterns.md",
+      "origin_note": "notes/2025-10-13_book-agentic-design-patterns.md",
+      "promotions": [],
+      "relationships": {
+        "snippets": [
+          "snippets/guardrails/guardrails-safety-patterns-crewai.md",
+          "snippets/guardrails/guardrails-safety-patterns-vertex-ai.md"
+        ],
+        "examples": [],
+        "resources": []
+      }
+    },
+    {
+      "id": "pattern:human-in-the-loop",
+      "type": "pattern",
+      "title": "Pattern: Human-in-the-Loop (HITL)",
+      "slug": "human-in-the-loop",
+      "summary": "Integra supervisão e colaboração humana em sistemas agentic para garantir qualidade, segurança e decisões éticas em contextos complexos ou de alto risco.",
+      "status": "stable",
+      "tags": [
+        "human-in-the-loop",
+        "hitl",
+        "supervision",
+        "collaboration",
+        "safety",
+        "agentic-pattern"
+      ],
+      "themes": [
+        "governance/oversight",
+        "architecture/collaboration"
+      ],
+      "created_at": "2025-10-15",
+      "updated_at": "2025-10-15",
+      "path": "patterns/human-in-the-loop.md",
+      "origin_note": "docs/notes/2025-10-13_book-agentic-design-patterns.md",
+      "promotions": [],
+      "relationships": {
+        "snippets": [
+          "snippets/human-in-the-loop/human-in-the-loop-adk-technical-support-agent.md"
+        ],
+        "examples": [],
+        "resources": []
+      }
+    },
+    {
+      "id": "pattern:inter-agent-communication-a2a",
+      "type": "pattern",
+      "title": "Pattern: Inter-Agent Communication (A2A)",
+      "slug": "inter-agent-communication-a2a",
+      "summary": "Protocolo aberto baseado em HTTP que padroniza comunicação e coordenação entre agentes de diferentes frameworks, permitindo delegação de tarefas e colaboração multi-agente.",
+      "status": "stable",
+      "tags": [
+        "inter-agent",
+        "communication",
+        "a2a",
+        "protocol",
+        "collaboration",
+        "agentic-pattern"
+      ],
+      "themes": [
+        "architecture/integration",
+        "execution/coordination"
+      ],
+      "created_at": "2025-10-15",
+      "updated_at": "2025-10-15",
+      "path": "patterns/inter-agent-communication-a2a.md",
+      "origin_note": "docs/notes/2025-10-13_book-agentic-design-patterns.md",
+      "promotions": [],
+      "relationships": {
+        "snippets": [
+          "snippets/inter-agent-communication/inter-agent-communication-a2a-adk-agent-creation.md",
+          "snippets/inter-agent-communication/inter-agent-communication-a2a-adk-server-setup.md"
+        ],
+        "examples": [],
+        "resources": []
+      }
+    },
+    {
+      "id": "pattern:knowledge-retrieval-rag",
+      "type": "pattern",
+      "title": "Pattern: Knowledge Retrieval (RAG)",
+      "slug": "knowledge-retrieval-rag",
+      "summary": "Conecta agentes a bases externas via busca semântica para fornecer contexto atualizado e citável antes da geração.",
+      "status": "stable",
+      "tags": [
+        "rag",
+        "retrieval",
+        "knowledge",
+        "vector",
+        "search",
+        "agentic-pattern"
+      ],
+      "themes": [
+        "knowledge/context",
+        "execution/tooling"
+      ],
+      "created_at": "2025-10-15",
+      "updated_at": "2025-10-15",
+      "path": "patterns/knowledge-retrieval-rag.md",
+      "origin_note": "notes/2025-10-13_book-agentic-design-patterns.md",
+      "promotions": [],
+      "relationships": {
+        "snippets": [
+          "snippets/knowledge-retrieval/knowledge-retrieval-rag-langchain.md",
+          "snippets/knowledge-retrieval/knowledge-retrieval-rag-adk-vertex-ai.md",
+          "snippets/knowledge-retrieval/knowledge-retrieval-rag-adk-google-search.md"
+        ],
+        "examples": [],
+        "resources": []
+      }
+    },
+    {
+      "id": "pattern:learning-and-adaptation",
+      "type": "pattern",
+      "title": "Pattern: Learning and Adaptation",
+      "slug": "learning-and-adaptation",
+      "summary": "Permite que agentes aprendam com experiência, adaptem-se a condições mutáveis e melhorem performance ao longo do tempo através de RL, feedback e evolução autônoma.",
+      "status": "stable",
+      "tags": [
+        "learning",
+        "adaptation",
+        "reinforcement-learning",
+        "online-learning",
+        "agentic-pattern"
+      ],
+      "themes": [
+        "evolution/improvement",
+        "architecture/learning"
+      ],
+      "created_at": "2025-10-15",
+      "updated_at": "2025-10-15",
+      "path": "patterns/learning-and-adaptation.md",
+      "origin_note": "docs/notes/2025-10-13_book-agentic-design-patterns.md",
+      "promotions": [],
+      "relationships": {
+        "snippets": [
+          "snippets/learning-adaptation/learning-adaptation-openevolve-optimization.md"
+        ],
+        "examples": [],
+        "resources": []
+      }
+    },
+    {
+      "id": "pattern:memory-management",
+      "type": "pattern",
+      "title": "Pattern: Memory Management",
+      "slug": "memory-management",
+      "summary": "Gerencia memória de curto e longo prazo em agentes para manter contexto, aprender com experiência e personalizar interações.",
+      "status": "stable",
+      "tags": [
+        "memory",
+        "context",
+        "retention",
+        "long-term",
+        "short-term",
+        "agentic-pattern"
+      ],
+      "themes": [
+        "knowledge/context",
+        "architecture/state"
+      ],
+      "created_at": "2025-10-15",
+      "updated_at": "2025-10-15",
+      "path": "patterns/memory-management.md",
+      "origin_note": "docs/notes/2025-10-13_book-agentic-design-patterns.md",
+      "promotions": [],
+      "relationships": {
+        "snippets": [],
+        "examples": [],
+        "resources": []
+      }
+    },
+    {
+      "id": "pattern:model-context-protocol-mcp",
+      "type": "pattern",
+      "title": "Pattern: Model Context Protocol (MCP)",
+      "slug": "model-context-protocol-mcp",
+      "summary": "Protocolo aberto que padroniza comunicação entre LLMs e ferramentas externas, promovendo interoperabilidade e reutilização de componentes.",
+      "status": "stable",
+      "tags": [
+        "mcp",
+        "protocol",
+        "model-context",
+        "interoperability",
+        "anthropic",
+        "agentic-pattern"
+      ],
+      "themes": [
+        "execution/tooling",
+        "architecture/integration"
+      ],
+      "created_at": "2025-10-15",
+      "updated_at": "2025-10-15",
+      "path": "patterns/model-context-protocol-mcp.md",
+      "origin_note": "docs/notes/2025-10-13_book-agentic-design-patterns.md",
+      "promotions": [],
+      "relationships": {
+        "snippets": [],
+        "examples": [],
+        "resources": []
+      }
+    },
+    {
+      "id": "pattern:multi-agent-collaboration",
+      "type": "pattern",
+      "title": "Pattern: Multi-Agent Collaboration",
+      "slug": "multi-agent-collaboration",
+      "summary": "Orquestra vários agentes especializados para quebrar problemas grandes em papéis claros, alinhando comunicação, coordenação e síntese.",
+      "status": "stable",
+      "tags": [
+        "multi-agent",
+        "collaboration",
+        "teamwork",
+        "agentic-pattern",
+        "crewai",
+        "google-adk"
+      ],
+      "themes": [
+        "architecture/coordination",
+        "workflow/orchestration"
+      ],
+      "created_at": "2025-10-15",
+      "updated_at": "2025-10-15",
+      "path": "patterns/multi-agent.md",
+      "origin_note": "notes/2025-10-13_book-agentic-design-patterns.md",
+      "promotions": [],
+      "relationships": {
+        "snippets": [
+          "snippets/multi-agent/multi-agent-crewai-blog-creation.md",
+          "snippets/multi-agent/multi-agent-google-adk-loop-agent.md",
+          "snippets/multi-agent/multi-agent-google-adk-hierarchical-structure.md"
+        ],
+        "examples": [
+          "examples/multi-agent/README.md"
+        ],
+        "resources": []
+      }
+    },
+    {
+      "id": "pattern:parallelization",
+      "type": "pattern",
+      "title": "Pattern: Parallelization",
+      "slug": "parallelization",
+      "summary": "Dispara chamadas e subagentes independentes ao mesmo tempo para reduzir latência e entregar respostas mais completas em menos ciclos.",
+      "status": "stable",
+      "tags": [
+        "parallelization",
+        "concurrency",
+        "performance",
+        "agentic-pattern"
+      ],
+      "themes": [
+        "execution/performance",
+        "workflow/orchestration"
+      ],
+      "created_at": "2025-10-15",
+      "updated_at": "2025-10-15",
+      "path": "patterns/parallelization.md",
+      "origin_note": "notes/2025-10-13_book-agentic-design-patterns.md",
+      "promotions": [],
+      "relationships": {
+        "snippets": [
+          "snippets/parallelization/parallelization-langchain-map-synthesis-chain.md",
+          "snippets/parallelization/parallelization-google-adk-research-synthesis.md"
+        ],
+        "examples": [],
+        "resources": []
+      }
+    },
+    {
+      "id": "pattern:planning",
+      "type": "pattern",
+      "title": "Pattern: Planning",
+      "slug": "planning",
+      "summary": "Faz o agente descobrir e revisitar a sequência de passos necessária para atingir um objetivo aberto antes de executar.",
+      "status": "stable",
+      "tags": [
+        "planning",
+        "strategy",
+        "workflow",
+        "agentic-pattern",
+        "crewai",
+        "openai"
+      ],
+      "themes": [
+        "reasoning/sequencing",
+        "workflow/orchestration"
+      ],
+      "created_at": "2025-10-15",
+      "updated_at": "2025-10-15",
+      "path": "patterns/planning.md",
+      "origin_note": "notes/2025-10-13_book-agentic-design-patterns.md",
+      "promotions": [],
+      "relationships": {
+        "snippets": [
+          "snippets/planning/planning-crewai-planner-writer-agent.md",
+          "snippets/planning/planning-openai-deep-research-api.md"
+        ],
+        "examples": [],
+        "resources": []
+      }
+    },
+    {
+      "id": "pattern:prompt-chaining",
+      "type": "pattern",
+      "title": "Pattern: Prompt Chaining",
+      "slug": "prompt-chaining",
+      "summary": "Break complex goals into sequential prompts where each output feeds the next, keeping agents reliable, interpretable e fáceis de depurar.",
+      "status": "stable",
+      "tags": [
+        "prompt-chaining",
+        "pipeline",
+        "agentic-pattern",
+        "langchain",
+        "workflow"
+      ],
+      "themes": [
+        "reasoning/sequencing",
+        "workflow/orchestration"
+      ],
+      "created_at": "2025-10-15",
+      "updated_at": "2025-10-15",
+      "path": "patterns/prompt-chaining.md",
+      "origin_note": "notes/2025-10-13_book-agentic-design-patterns.md",
+      "promotions": [],
+      "relationships": {
+        "snippets": [
+          "snippets/prompt-chaining/prompt-chaining-langchain-extraction-transformation.md"
+        ],
+        "examples": [
+          "examples/prompt-chaining/README.md"
+        ],
+        "resources": []
+      }
+    },
+    {
+      "id": "pattern:reasoning-techniques",
+      "type": "pattern",
+      "title": "Pattern: Reasoning Techniques",
+      "slug": "reasoning-techniques",
+      "summary": "Técnicas avançadas de raciocínio (CoT, ToT, ReAct, Self-Correction) que tornam explícito o processo de pensamento do agente, permitindo decomposição, exploração multi-caminho e refinamento iterativo.",
+      "status": "stable",
+      "tags": [
+        "reasoning",
+        "cot",
+        "tot",
+        "react",
+        "self-correction",
+        "agentic-pattern"
+      ],
+      "themes": [
+        "execution/reasoning",
+        "architecture/cognition"
+      ],
+      "created_at": "2025-10-15",
+      "updated_at": "2025-10-15",
+      "path": "patterns/reasoning-techniques.md",
+      "origin_note": "docs/notes/2025-10-13_book-agentic-design-patterns.md",
+      "promotions": [],
+      "relationships": {
+        "snippets": [
+          "snippets/reasoning-techniques/reasoning-techniques-adk-palms.md",
+          "snippets/reasoning-techniques/reasoning-techniques-langgraph-deepsearch.md"
+        ],
+        "examples": [],
+        "resources": []
+      }
+    },
+    {
+      "id": "pattern:reflection",
+      "type": "pattern",
+      "title": "Pattern: Reflection",
+      "slug": "reflection",
+      "summary": "Adiciona loop de autoavaliação (ou crítico dedicado) para revisar e refinir a saída antes de expor ao usuário.",
+      "status": "stable",
+      "tags": [
+        "reflection",
+        "self-critique",
+        "iterative-improvement",
+        "agentic-pattern"
+      ],
+      "themes": [
+        "reasoning/metacognition",
+        "quality-assurance"
+      ],
+      "created_at": "2025-10-15",
+      "updated_at": "2025-10-15",
+      "path": "patterns/reflection.md",
+      "origin_note": "notes/2025-10-13_book-agentic-design-patterns.md",
+      "promotions": [],
+      "relationships": {
+        "snippets": [
+          "snippets/reflection/reflection-google-adk-generator-critic.md",
+          "snippets/reflection/reflection-langchain-iterative-code-refinement.md"
+        ],
+        "examples": [],
+        "resources": []
+      }
+    },
+    {
+      "id": "pattern:resource-aware-optimization",
+      "type": "pattern",
+      "title": "Pattern: Resource-Aware Optimization",
+      "slug": "resource-aware-optimization",
+      "summary": "Otimiza uso de recursos computacionais, temporais e financeiros através de seleção dinâmica de modelos, caching e estratégias de eficiência.",
+      "status": "stable",
+      "tags": [
+        "resource",
+        "optimization",
+        "efficiency",
+        "cost",
+        "performance",
+        "agentic-pattern"
+      ],
+      "themes": [
+        "operations/efficiency",
+        "governance/cost"
+      ],
+      "created_at": "2025-10-15",
+      "updated_at": "2025-10-15",
+      "path": "patterns/resource-aware-optimization.md",
+      "origin_note": "docs/notes/2025-10-13_book-agentic-design-patterns.md",
+      "promotions": [],
+      "relationships": {
+        "snippets": [
+          "snippets/resource-aware-optimization/resource-aware-optimization-adk-agents.md",
+          "snippets/resource-aware-optimization/resource-aware-optimization-query-router-agent.md",
+          "snippets/resource-aware-optimization/resource-aware-optimization-openai.md",
+          "snippets/resource-aware-optimization/resource-aware-optimization-openrouter.md"
+        ],
+        "examples": [],
+        "resources": []
+      }
+    },
+    {
+      "id": "pattern:routing",
+      "type": "pattern",
+      "title": "Pattern: Routing",
+      "slug": "routing",
+      "summary": "Dirige cada requisição ao agente, ferramenta ou modelo mais adequado com base em intenção e contexto, mantendo decisões adaptativas controladas.",
+      "status": "stable",
+      "tags": [
+        "routing",
+        "coordinator",
+        "intent-classification",
+        "agentic-pattern"
+      ],
+      "themes": [
+        "workflow/orchestration",
+        "reasoning/selection"
+      ],
+      "created_at": "2025-10-15",
+      "updated_at": "2025-10-15",
+      "path": "patterns/routing.md",
+      "origin_note": "notes/2025-10-13_book-agentic-design-patterns.md",
+      "promotions": [],
+      "relationships": {
+        "snippets": [
+          "snippets/routing/routing-langchain-coordinator-router.md",
+          "snippets/routing/routing-google-adk-coordinator-subagents.md"
+        ],
+        "examples": [],
+        "resources": []
+      }
+    },
+    {
+      "id": "pattern:tool-use",
+      "type": "pattern",
+      "title": "Pattern: Tool Use",
+      "slug": "tool-use",
+      "summary": "Permite que agentes chamem funções, APIs e automações externas para ir além do que está no modelo.",
+      "status": "stable",
+      "tags": [
+        "tool-use",
+        "function-calling",
+        "external-apis",
+        "agentic-pattern"
+      ],
+      "themes": [
+        "execution/tooling",
+        "reasoning/augmentation"
+      ],
+      "created_at": "2025-10-15",
+      "updated_at": "2025-10-15",
+      "path": "patterns/tool-use.md",
+      "origin_note": "notes/2025-10-13_book-agentic-design-patterns.md",
+      "promotions": [],
+      "relationships": {
+        "snippets": [
+          "snippets/tool-use/tool-use-langchain-search-information.md",
+          "snippets/tool-use/tool-use-google-adk-google-search.md",
+          "snippets/tool-use/tool-use-crewai-stock-price-lookup.md"
+        ],
+        "examples": [
+          "examples/tool-use/README.md"
+        ],
+        "resources": []
+      }
+    },
+    {
+      "id": "resource:agent-to-agent-a2a-protocol-specification",
+      "type": "resource",
+      "title": "Agent-to-Agent (A2A) Protocol Specification",
+      "slug": "agent-to-agent-a2a-protocol-specification",
+      "summary": "Especificação aberta do protocolo A2A para comunicação inter-agente, permitindo interoperabilidade entre frameworks diversos (ADK, LangGraph, CrewAI).",
+      "status": "curated",
+      "tags": [
+        "a2a",
+        "protocol",
+        "inter-agent",
+        "specification",
+        "standard"
+      ],
+      "themes": [
+        "report"
+      ],
+      "created_at": "2025-10-14",
+      "updated_at": "2025-10-14",
+      "path": "resources/links.md",
+      "origin_note": "docs/notes/2025-10-13_book-agentic-design-patterns.md",
+      "promotions": [],
+      "relationships": {}
+    },
+    {
+      "id": "resource:chain-of-thought-prompting-paper-wei-et-al-2022",
+      "type": "resource",
+      "title": "Chain-of-Thought Prompting Paper (Wei et al., 2022)",
+      "slug": "chain-of-thought-prompting-paper-wei-et-al-2022",
+      "summary": "Artigo seminal que introduziu Chain-of-Thought prompting, demonstrando como prompts que elicitam raciocínio passo-a-passo melhoram drasticamente performance em tarefas complexas.",
+      "status": "curated",
+      "tags": [
+        "cot",
+        "reasoning",
+        "prompting",
+        "paper",
+        "arxiv"
+      ],
+      "themes": [
+        "paper"
+      ],
+      "created_at": "2025-10-14",
+      "updated_at": "2025-10-14",
+      "path": "resources/links.md",
+      "origin_note": "docs/notes/2025-10-13_book-agentic-design-patterns.md",
+      "promotions": [],
+      "relationships": {}
+    },
+    {
+      "id": "resource:crewai-documentation",
+      "type": "resource",
+      "title": "CrewAI Documentation",
+      "slug": "crewai-documentation",
+      "summary": "Framework Python para orquestrar agentes colaborativos com roles, goals e tasks compartilhadas — ideal para workflows multi-agent complexos.",
+      "status": "curated",
+      "tags": [
+        "crewai",
+        "multi-agent",
+        "framework",
+        "python",
+        "collaboration"
+      ],
+      "themes": [
+        "tool"
+      ],
+      "created_at": "2025-10-14",
+      "updated_at": "2025-10-14",
+      "path": "resources/links.md",
+      "origin_note": "docs/notes/2025-10-13_book-agentic-design-patterns.md",
+      "promotions": [],
+      "relationships": {}
+    },
+    {
+      "id": "resource:google-agent-development-kit-adk-documentation",
+      "type": "resource",
+      "title": "Google Agent Development Kit (ADK) Documentation",
+      "slug": "google-agent-development-kit-adk-documentation",
+      "summary": "Framework oficial do Google para construir agentes com Gemini, incluindo ferramentas integradas, memory management e multi-agent orchestration.",
+      "status": "curated",
+      "tags": [
+        "google-adk",
+        "framework",
+        "gemini",
+        "documentation",
+        "python"
+      ],
+      "themes": [
+        "tool"
+      ],
+      "created_at": "2025-10-14",
+      "updated_at": "2025-10-14",
+      "path": "resources/links.md",
+      "origin_note": "docs/notes/2025-10-13_book-agentic-design-patterns.md",
+      "promotions": [],
+      "relationships": {}
+    },
+    {
+      "id": "resource:langgraph-memory-management-guide",
+      "type": "resource",
+      "title": "LangGraph Memory Management Guide",
+      "slug": "langgraph-memory-management-guide",
+      "summary": "Guia oficial de gerenciamento de memória no LangGraph, cobrindo short-term context, long-term storage com BaseStore e técnicas de retrieval.",
+      "status": "curated",
+      "tags": [
+        "langgraph",
+        "memory",
+        "context",
+        "vector-db",
+        "tutorial"
+      ],
+      "themes": [
+        "blog"
+      ],
+      "created_at": "2025-10-14",
+      "updated_at": "2025-10-14",
+      "path": "resources/links.md",
+      "origin_note": "docs/notes/2025-10-13_book-agentic-design-patterns.md",
+      "promotions": [],
+      "relationships": {}
+    },
+    {
+      "id": "resource:livro-agentic-design-patterns",
+      "type": "resource",
+      "title": "Livro: Agentic Design Patterns",
+      "slug": "livro-agentic-design-patterns",
+      "summary": "Guia abrangente de padrões agenticos cobrindo fundamentos, arquitetura, governança e observabilidade — base curricular do garden.",
+      "status": "curated",
+      "tags": [
+        "book",
+        "agentic-patterns",
+        "design-patterns",
+        "google",
+        "reference"
+      ],
+      "themes": [
+        "book"
+      ],
+      "created_at": "2025-10-13",
+      "updated_at": "2025-10-13",
+      "path": "resources/links.md",
+      "origin_note": "docs/notes/2025-10-13_book-agentic-design-patterns.md",
+      "promotions": [],
+      "relationships": {}
+    },
+    {
+      "id": "snippet:evaluation-and-monitoring-llm-judge",
+      "type": "snippet",
+      "title": "Evaluation And Monitoring Llm Judge",
+      "slug": "evaluation-and-monitoring-llm-judge",
+      "summary": "",
+      "status": "draft",
+      "tags": [],
+      "themes": [
+        "core/unsorted"
+      ],
+      "created_at": "2025-10-15",
+      "updated_at": "2025-10-15",
+      "path": "snippets/evaluation-and-monitoring-llm-judge.md",
+      "origin_note": null,
+      "promotions": [],
+      "relationships": {}
+    },
+    {
+      "id": "snippet:evaluation-and-monitoring-response-accuracy",
+      "type": "snippet",
+      "title": "Evaluation And Monitoring Response Accuracy",
+      "slug": "evaluation-and-monitoring-response-accuracy",
+      "summary": "",
+      "status": "draft",
+      "tags": [],
+      "themes": [
+        "core/unsorted"
+      ],
+      "created_at": "2025-10-15",
+      "updated_at": "2025-10-15",
+      "path": "snippets/evaluation-and-monitoring-response-accuracy.md",
+      "origin_note": null,
+      "promotions": [],
+      "relationships": {}
+    },
+    {
+      "id": "snippet:evaluation-and-monitoring-token-usage",
+      "type": "snippet",
+      "title": "Evaluation And Monitoring Token Usage",
+      "slug": "evaluation-and-monitoring-token-usage",
+      "summary": "",
+      "status": "draft",
+      "tags": [],
+      "themes": [
+        "core/unsorted"
+      ],
+      "created_at": "2025-10-15",
+      "updated_at": "2025-10-15",
+      "path": "snippets/evaluation-and-monitoring-token-usage.md",
+      "origin_note": null,
+      "promotions": [],
+      "relationships": {}
+    },
+    {
+      "id": "snippet:exception-handling-recovery-adk-robust-location-agent",
+      "type": "snippet",
+      "title": "Exception Handling - ADK Robust Location Agent",
+      "slug": "exception-handling-recovery-adk-robust-location-agent",
+      "summary": "Demonstrates robust exception handling in ADK agents using SequentialAgent with multiple sub-agents that include fallback mechanisms for location retrieval.",
+      "status": "stable",
+      "tags": [
+        "google-adk",
+        "exception-handling",
+        "fallback",
+        "sequential-agent",
+        "error-recovery"
+      ],
+      "themes": [
+        "core/unsorted"
+      ],
+      "created_at": "2025-10-15",
+      "updated_at": "2025-10-15",
+      "path": "snippets/exception-handling-recovery-adk-robust-location-agent.md",
+      "origin_note": "docs/patterns/exception-handling-recovery.md",
+      "promotions": [],
+      "relationships": {}
+    },
+    {
+      "id": "snippet:goal-setting-monitoring-langchain-code-generation-agent",
+      "type": "snippet",
+      "title": "Goal Setting - LangChain Code Generation Agent",
+      "slug": "goal-setting-monitoring-langchain-code-generation-agent",
+      "summary": "Demonstrates iterative code generation with goal setting and monitoring using LangChain, featuring a feedback loop between code generator and critic.",
+      "status": "stable",
+      "tags": [
+        "langchain",
+        "goal-setting",
+        "code-generation",
+        "feedback-loop",
+        "iterative-refinement"
+      ],
+      "themes": [
+        "core/unsorted"
+      ],
+      "created_at": "2025-10-15",
+      "updated_at": "2025-10-15",
+      "path": "snippets/goal-setting-monitoring-langchain-code-generation-agent.md",
+      "origin_note": "docs/patterns/goal-setting-and-monitoring.md",
+      "promotions": [],
+      "relationships": {}
+    },
+    {
+      "id": "snippet:guardrails-safety-patterns-crewai",
+      "type": "snippet",
+      "title": "Guardrails Safety Patterns Crewai",
+      "slug": "guardrails-safety-patterns-crewai",
+      "summary": "",
+      "status": "draft",
+      "tags": [],
+      "themes": [
+        "core/unsorted"
+      ],
+      "created_at": "2025-10-15",
+      "updated_at": "2025-10-15",
+      "path": "snippets/guardrails-safety-patterns-crewai.md",
+      "origin_note": null,
+      "promotions": [],
+      "relationships": {}
+    },
+    {
+      "id": "snippet:guardrails-safety-patterns-vertex-ai",
+      "type": "snippet",
+      "title": "Guardrails Safety Patterns Vertex Ai",
+      "slug": "guardrails-safety-patterns-vertex-ai",
+      "summary": "",
+      "status": "draft",
+      "tags": [],
+      "themes": [
+        "core/unsorted"
+      ],
+      "created_at": "2025-10-15",
+      "updated_at": "2025-10-15",
+      "path": "snippets/guardrails-safety-patterns-vertex-ai.md",
+      "origin_note": null,
+      "promotions": [],
+      "relationships": {}
+    },
+    {
+      "id": "snippet:human-in-the-loop-adk-technical-support-agent",
+      "type": "snippet",
+      "title": "Human-in-the-Loop - ADK Technical Support Agent",
+      "slug": "human-in-the-loop-adk-technical-support-agent",
+      "summary": "Demonstrates HITL pattern with ADK agent for technical support, featuring automatic escalation mechanisms and personalization callbacks.",
+      "status": "stable",
+      "tags": [
+        "google-adk",
+        "human-in-the-loop",
+        "escalation",
+        "callbacks",
+        "customer-support"
+      ],
+      "themes": [
+        "core/unsorted"
+      ],
+      "created_at": "2025-10-15",
+      "updated_at": "2025-10-15",
+      "path": "snippets/human-in-the-loop-adk-technical-support-agent.md",
+      "origin_note": "docs/patterns/human-in-the-loop.md",
+      "promotions": [],
+      "relationships": {}
+    },
+    {
+      "id": "snippet:inter-agent-communication-a2a-adk-agent-creation",
+      "type": "snippet",
+      "title": "Inter-Agent Communication - ADK Agent Creation",
+      "slug": "inter-agent-communication-a2a-adk-agent-creation",
+      "summary": "Demonstrates creating A2A-compliant agents using Google ADK for calendar management functionality with OAuth integration.",
+      "status": "stable",
+      "tags": [
+        "google-adk",
+        "a2a",
+        "inter-agent-communication",
+        "calendar",
+        "oauth"
+      ],
+      "themes": [
+        "core/unsorted"
+      ],
+      "created_at": "2025-10-15",
+      "updated_at": "2025-10-15",
+      "path": "snippets/inter-agent-communication-a2a-adk-agent-creation.md",
+      "origin_note": "docs/patterns/inter-agent-communication-a2a.md",
+      "promotions": [],
+      "relationships": {}
+    },
+    {
+      "id": "snippet:inter-agent-communication-a2a-adk-server-setup",
+      "type": "snippet",
+      "title": "Inter-Agent Communication - ADK Server Setup",
+      "slug": "inter-agent-communication-a2a-adk-server-setup",
+      "summary": "Demonstrates setting up an A2A server using Google ADK for agent-to-agent communication with OAuth authentication support.",
+      "status": "stable",
+      "tags": [
+        "google-adk",
+        "a2a",
+        "server-setup",
+        "starlette",
+        "uvicorn",
+        "oauth"
+      ],
+      "themes": [
+        "core/unsorted"
+      ],
+      "created_at": "2025-10-15",
+      "updated_at": "2025-10-15",
+      "path": "snippets/inter-agent-communication-a2a-adk-server-setup.md",
+      "origin_note": "docs/patterns/inter-agent-communication-a2a.md",
+      "promotions": [],
+      "relationships": {}
+    },
+    {
+      "id": "snippet:knowledge-retrieval-rag-adk-google-search",
+      "type": "snippet",
+      "title": "Knowledge Retrieval Rag Adk Google Search",
+      "slug": "knowledge-retrieval-rag-adk-google-search",
+      "summary": "",
+      "status": "draft",
+      "tags": [],
+      "themes": [
+        "core/unsorted"
+      ],
+      "created_at": "2025-10-15",
+      "updated_at": "2025-10-15",
+      "path": "snippets/knowledge-retrieval-rag-adk-google-search.md",
+      "origin_note": null,
+      "promotions": [],
+      "relationships": {}
+    },
+    {
+      "id": "snippet:knowledge-retrieval-rag-adk-vertex-ai",
+      "type": "snippet",
+      "title": "Knowledge Retrieval Rag Adk Vertex Ai",
+      "slug": "knowledge-retrieval-rag-adk-vertex-ai",
+      "summary": "",
+      "status": "draft",
+      "tags": [],
+      "themes": [
+        "core/unsorted"
+      ],
+      "created_at": "2025-10-15",
+      "updated_at": "2025-10-15",
+      "path": "snippets/knowledge-retrieval-rag-adk-vertex-ai.md",
+      "origin_note": null,
+      "promotions": [],
+      "relationships": {}
+    },
+    {
+      "id": "snippet:knowledge-retrieval-rag-langchain",
+      "type": "snippet",
+      "title": "Knowledge Retrieval Rag Langchain",
+      "slug": "knowledge-retrieval-rag-langchain",
+      "summary": "",
+      "status": "draft",
+      "tags": [],
+      "themes": [
+        "core/unsorted"
+      ],
+      "created_at": "2025-10-15",
+      "updated_at": "2025-10-15",
+      "path": "snippets/knowledge-retrieval-rag-langchain.md",
+      "origin_note": null,
+      "promotions": [],
+      "relationships": {}
+    },
+    {
+      "id": "snippet:learning-adaptation-openevolve-optimization",
+      "type": "snippet",
+      "title": "Learning Adaptation Openevolve Optimization",
+      "slug": "learning-adaptation-openevolve-optimization",
+      "summary": "",
+      "status": "draft",
+      "tags": [],
+      "themes": [
+        "core/unsorted"
+      ],
+      "created_at": "2025-10-15",
+      "updated_at": "2025-10-15",
+      "path": "snippets/learning-adaptation-openevolve-optimization.md",
+      "origin_note": null,
+      "promotions": [],
+      "relationships": {}
+    },
+    {
+      "id": "snippet:multi-agent-crewai-blog-creation",
+      "type": "snippet",
+      "title": "Multi-Agent Blog Creation with CrewAI",
+      "slug": "multi-agent-crewai-blog-creation",
+      "summary": "Demonstrates multi-agent system using CrewAI with researcher and writer agents collaborating to produce a blog post about AI trends.",
+      "status": "stable",
+      "tags": [
+        "crewai",
+        "multi-agent",
+        "collaboration",
+        "research",
+        "content-creation"
+      ],
+      "themes": [
+        "core/unsorted"
+      ],
+      "created_at": "2025-10-15",
+      "updated_at": "2025-10-15",
+      "path": "snippets/multi-agent-crewai-blog-creation.md",
+      "origin_note": "docs/patterns/multi-agent.md",
+      "promotions": [],
+      "relationships": {}
+    },
+    {
+      "id": "snippet:multi-agent-google-adk-agent-as-tool",
+      "type": "snippet",
+      "title": "Multi Agent Google Adk Agent As Tool",
+      "slug": "multi-agent-google-adk-agent-as-tool",
+      "summary": "",
+      "status": "draft",
+      "tags": [],
+      "themes": [
+        "core/unsorted"
+      ],
+      "created_at": "2025-10-15",
+      "updated_at": "2025-10-15",
+      "path": "snippets/multi-agent-google-adk-agent-as-tool.md",
+      "origin_note": null,
+      "promotions": [],
+      "relationships": {}
+    },
+    {
+      "id": "snippet:multi-agent-google-adk-hierarchical-structure",
+      "type": "snippet",
+      "title": "Multi Agent Google Adk Hierarchical Structure",
+      "slug": "multi-agent-google-adk-hierarchical-structure",
+      "summary": "",
+      "status": "draft",
+      "tags": [],
+      "themes": [
+        "core/unsorted"
+      ],
+      "created_at": "2025-10-15",
+      "updated_at": "2025-10-15",
+      "path": "snippets/multi-agent-google-adk-hierarchical-structure.md",
+      "origin_note": null,
+      "promotions": [],
+      "relationships": {}
+    },
+    {
+      "id": "snippet:multi-agent-google-adk-loop-agent",
+      "type": "snippet",
+      "title": "Multi Agent Google Adk Loop Agent",
+      "slug": "multi-agent-google-adk-loop-agent",
+      "summary": "",
+      "status": "draft",
+      "tags": [],
+      "themes": [
+        "core/unsorted"
+      ],
+      "created_at": "2025-10-15",
+      "updated_at": "2025-10-15",
+      "path": "snippets/multi-agent-google-adk-loop-agent.md",
+      "origin_note": null,
+      "promotions": [],
+      "relationships": {}
+    },
+    {
+      "id": "snippet:multi-agent-google-adk-parallel-agent",
+      "type": "snippet",
+      "title": "Multi Agent Google Adk Parallel Agent",
+      "slug": "multi-agent-google-adk-parallel-agent",
+      "summary": "",
+      "status": "draft",
+      "tags": [],
+      "themes": [
+        "core/unsorted"
+      ],
+      "created_at": "2025-10-15",
+      "updated_at": "2025-10-15",
+      "path": "snippets/multi-agent-google-adk-parallel-agent.md",
+      "origin_note": null,
+      "promotions": [],
+      "relationships": {}
+    },
+    {
+      "id": "snippet:multi-agent-google-adk-sequential-agent",
+      "type": "snippet",
+      "title": "Multi Agent Google Adk Sequential Agent",
+      "slug": "multi-agent-google-adk-sequential-agent",
+      "summary": "",
+      "status": "draft",
+      "tags": [],
+      "themes": [
+        "core/unsorted"
+      ],
+      "created_at": "2025-10-15",
+      "updated_at": "2025-10-15",
+      "path": "snippets/multi-agent-google-adk-sequential-agent.md",
+      "origin_note": null,
+      "promotions": [],
+      "relationships": {}
+    },
+    {
+      "id": "snippet:parallelization-google-adk-research-synthesis",
+      "type": "snippet",
+      "title": "Parallelization Google Adk Research Synthesis",
+      "slug": "parallelization-google-adk-research-synthesis",
+      "summary": "",
+      "status": "draft",
+      "tags": [],
+      "themes": [
+        "core/unsorted"
+      ],
+      "created_at": "2025-10-15",
+      "updated_at": "2025-10-15",
+      "path": "snippets/parallelization-google-adk-research-synthesis.md",
+      "origin_note": null,
+      "promotions": [],
+      "relationships": {}
+    },
+    {
+      "id": "snippet:parallelization-langchain-map-synthesis-chain",
+      "type": "snippet",
+      "title": "Parallelization Langchain Map Synthesis Chain",
+      "slug": "parallelization-langchain-map-synthesis-chain",
+      "summary": "",
+      "status": "draft",
+      "tags": [],
+      "themes": [
+        "core/unsorted"
+      ],
+      "created_at": "2025-10-15",
+      "updated_at": "2025-10-15",
+      "path": "snippets/parallelization-langchain-map-synthesis-chain.md",
+      "origin_note": null,
+      "promotions": [],
+      "relationships": {}
+    },
+    {
+      "id": "snippet:planning-crewai-planner-writer-agent",
+      "type": "snippet",
+      "title": "Planning Crewai Planner Writer Agent",
+      "slug": "planning-crewai-planner-writer-agent",
+      "summary": "",
+      "status": "draft",
+      "tags": [],
+      "themes": [
+        "core/unsorted"
+      ],
+      "created_at": "2025-10-15",
+      "updated_at": "2025-10-15",
+      "path": "snippets/planning-crewai-planner-writer-agent.md",
+      "origin_note": null,
+      "promotions": [],
+      "relationships": {}
+    },
+    {
+      "id": "snippet:planning-openai-deep-research-api",
+      "type": "snippet",
+      "title": "Planning Openai Deep Research Api",
+      "slug": "planning-openai-deep-research-api",
+      "summary": "",
+      "status": "draft",
+      "tags": [],
+      "themes": [
+        "core/unsorted"
+      ],
+      "created_at": "2025-10-15",
+      "updated_at": "2025-10-15",
+      "path": "snippets/planning-openai-deep-research-api.md",
+      "origin_note": null,
+      "promotions": [],
+      "relationships": {}
+    },
+    {
+      "id": "snippet:prompt-chaining-langchain-extraction-transformation",
+      "type": "snippet",
+      "title": "Prompt Chaining - LangChain Extraction and Transformation",
+      "slug": "prompt-chaining-langchain-extraction-transformation",
+      "summary": "Demonstrates prompt chaining using LangChain to extract information from unstructured text and transform it into structured JSON format through sequential processing.",
+      "status": "stable",
+      "tags": [
+        "langchain",
+        "prompt-chaining",
+        "lcel",
+        "extraction",
+        "json"
+      ],
+      "themes": [
+        "core/unsorted"
+      ],
+      "created_at": "2025-10-15",
+      "updated_at": "2025-10-15",
+      "path": "snippets/prompt-chaining-langchain-extraction-transformation.md",
+      "origin_note": "docs/patterns/prompt-chaining.md",
+      "promotions": [],
+      "relationships": {}
+    },
+    {
+      "id": "snippet:reasoning-techniques-adk-palms",
+      "type": "snippet",
+      "title": "Reasoning Techniques Adk Palms",
+      "slug": "reasoning-techniques-adk-palms",
+      "summary": "",
+      "status": "draft",
+      "tags": [],
+      "themes": [
+        "core/unsorted"
+      ],
+      "created_at": "2025-10-15",
+      "updated_at": "2025-10-15",
+      "path": "snippets/reasoning-techniques-adk-palms.md",
+      "origin_note": null,
+      "promotions": [],
+      "relationships": {}
+    },
+    {
+      "id": "snippet:reasoning-techniques-langgraph-deepsearch",
+      "type": "snippet",
+      "title": "Reasoning Techniques Langgraph Deepsearch",
+      "slug": "reasoning-techniques-langgraph-deepsearch",
+      "summary": "",
+      "status": "draft",
+      "tags": [],
+      "themes": [
+        "core/unsorted"
+      ],
+      "created_at": "2025-10-15",
+      "updated_at": "2025-10-15",
+      "path": "snippets/reasoning-techniques-langgraph-deepsearch.md",
+      "origin_note": null,
+      "promotions": [],
+      "relationships": {}
+    },
+    {
+      "id": "snippet:reflection-google-adk-generator-critic",
+      "type": "snippet",
+      "title": "Reflection Google Adk Generator Critic",
+      "slug": "reflection-google-adk-generator-critic",
+      "summary": "",
+      "status": "draft",
+      "tags": [],
+      "themes": [
+        "core/unsorted"
+      ],
+      "created_at": "2025-10-15",
+      "updated_at": "2025-10-15",
+      "path": "snippets/reflection-google-adk-generator-critic.md",
+      "origin_note": null,
+      "promotions": [],
+      "relationships": {}
+    },
+    {
+      "id": "snippet:reflection-langchain-iterative-code-refinement",
+      "type": "snippet",
+      "title": "Reflection Langchain Iterative Code Refinement",
+      "slug": "reflection-langchain-iterative-code-refinement",
+      "summary": "",
+      "status": "draft",
+      "tags": [],
+      "themes": [
+        "core/unsorted"
+      ],
+      "created_at": "2025-10-15",
+      "updated_at": "2025-10-15",
+      "path": "snippets/reflection-langchain-iterative-code-refinement.md",
+      "origin_note": null,
+      "promotions": [],
+      "relationships": {}
+    },
+    {
+      "id": "snippet:resource-aware-optimization-adk-agents",
+      "type": "snippet",
+      "title": "Resource Aware Optimization Adk Agents",
+      "slug": "resource-aware-optimization-adk-agents",
+      "summary": "",
+      "status": "draft",
+      "tags": [],
+      "themes": [
+        "core/unsorted"
+      ],
+      "created_at": "2025-10-15",
+      "updated_at": "2025-10-15",
+      "path": "snippets/resource-aware-optimization-adk-agents.md",
+      "origin_note": null,
+      "promotions": [],
+      "relationships": {}
+    },
+    {
+      "id": "snippet:resource-aware-optimization-openai",
+      "type": "snippet",
+      "title": "Resource Aware Optimization Openai",
+      "slug": "resource-aware-optimization-openai",
+      "summary": "",
+      "status": "draft",
+      "tags": [],
+      "themes": [
+        "core/unsorted"
+      ],
+      "created_at": "2025-10-15",
+      "updated_at": "2025-10-15",
+      "path": "snippets/resource-aware-optimization-openai.md",
+      "origin_note": null,
+      "promotions": [],
+      "relationships": {}
+    },
+    {
+      "id": "snippet:resource-aware-optimization-openrouter",
+      "type": "snippet",
+      "title": "Resource Aware Optimization Openrouter",
+      "slug": "resource-aware-optimization-openrouter",
+      "summary": "",
+      "status": "draft",
+      "tags": [],
+      "themes": [
+        "core/unsorted"
+      ],
+      "created_at": "2025-10-15",
+      "updated_at": "2025-10-15",
+      "path": "snippets/resource-aware-optimization-openrouter.md",
+      "origin_note": null,
+      "promotions": [],
+      "relationships": {}
+    },
+    {
+      "id": "snippet:resource-aware-optimization-query-router-agent",
+      "type": "snippet",
+      "title": "Resource Aware Optimization Query Router Agent",
+      "slug": "resource-aware-optimization-query-router-agent",
+      "summary": "",
+      "status": "draft",
+      "tags": [],
+      "themes": [
+        "core/unsorted"
+      ],
+      "created_at": "2025-10-15",
+      "updated_at": "2025-10-15",
+      "path": "snippets/resource-aware-optimization-query-router-agent.md",
+      "origin_note": null,
+      "promotions": [],
+      "relationships": {}
+    },
+    {
+      "id": "snippet:routing-google-adk-coordinator-subagents",
+      "type": "snippet",
+      "title": "Routing Google Adk Coordinator Subagents",
+      "slug": "routing-google-adk-coordinator-subagents",
+      "summary": "",
+      "status": "draft",
+      "tags": [],
+      "themes": [
+        "core/unsorted"
+      ],
+      "created_at": "2025-10-15",
+      "updated_at": "2025-10-15",
+      "path": "snippets/routing-google-adk-coordinator-subagents.md",
+      "origin_note": null,
+      "promotions": [],
+      "relationships": {}
+    },
+    {
+      "id": "snippet:routing-langchain-coordinator-router",
+      "type": "snippet",
+      "title": "Routing Langchain Coordinator Router",
+      "slug": "routing-langchain-coordinator-router",
+      "summary": "",
+      "status": "draft",
+      "tags": [],
+      "themes": [
+        "core/unsorted"
+      ],
+      "created_at": "2025-10-15",
+      "updated_at": "2025-10-15",
+      "path": "snippets/routing-langchain-coordinator-router.md",
+      "origin_note": null,
+      "promotions": [],
+      "relationships": {}
+    },
+    {
+      "id": "snippet:tool-use-crewai-stock-price-lookup",
+      "type": "snippet",
+      "title": "Tool Use Crewai Stock Price Lookup",
+      "slug": "tool-use-crewai-stock-price-lookup",
+      "summary": "",
+      "status": "draft",
+      "tags": [],
+      "themes": [
+        "core/unsorted"
+      ],
+      "created_at": "2025-10-15",
+      "updated_at": "2025-10-15",
+      "path": "snippets/tool-use-crewai-stock-price-lookup.md",
+      "origin_note": null,
+      "promotions": [],
+      "relationships": {}
+    },
+    {
+      "id": "snippet:tool-use-google-adk-code-execution",
+      "type": "snippet",
+      "title": "Tool Use Google Adk Code Execution",
+      "slug": "tool-use-google-adk-code-execution",
+      "summary": "",
+      "status": "draft",
+      "tags": [],
+      "themes": [
+        "core/unsorted"
+      ],
+      "created_at": "2025-10-15",
+      "updated_at": "2025-10-15",
+      "path": "snippets/tool-use-google-adk-code-execution.md",
+      "origin_note": null,
+      "promotions": [],
+      "relationships": {}
+    },
+    {
+      "id": "snippet:tool-use-google-adk-google-search",
+      "type": "snippet",
+      "title": "Tool Use Google Adk Google Search",
+      "slug": "tool-use-google-adk-google-search",
+      "summary": "",
+      "status": "draft",
+      "tags": [],
+      "themes": [
+        "core/unsorted"
+      ],
+      "created_at": "2025-10-15",
+      "updated_at": "2025-10-15",
+      "path": "snippets/tool-use-google-adk-google-search.md",
+      "origin_note": null,
+      "promotions": [],
+      "relationships": {}
+    },
+    {
+      "id": "snippet:tool-use-langchain-search-information",
+      "type": "snippet",
+      "title": "Tool Use Langchain Search Information",
+      "slug": "tool-use-langchain-search-information",
+      "summary": "",
+      "status": "draft",
+      "tags": [],
+      "themes": [
+        "core/unsorted"
+      ],
+      "created_at": "2025-10-15",
+      "updated_at": "2025-10-15",
+      "path": "snippets/tool-use-langchain-search-information.md",
+      "origin_note": null,
+      "promotions": [],
+      "relationships": {}
+    }
+  ]
+}

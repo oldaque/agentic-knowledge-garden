@@ -1,109 +1,79 @@
 # Agentic Knowledge Garden
+**Agentic Knowledge Garden** é um brain dump evolutivo sobre agentes de IA. Cada nota nasce no Brain Dump, cria conexões e promove conteúdo reutilizável.
 
-**Agentic Knowledge Garden** is a public repository designed to organize and share knowledge about **building AI agents**, combining **research, practice, and curation** in one place.
+## Brain Dump Highlights
+_No entries yet._
 
-It works like a **knowledge garden** — a space where ideas start as simple notes, grow with references and experiments, and eventually evolve into guides, patterns, or reusable examples.
+## Freshly Promoted
+<div class="kg-grid">
+  <div class="kg-card">
+    <div class="kg-card__type">Guide</div>
+    <h3><a href="./guide/foundations/01_agentic-fundamentals/">Fundamentos de Sistemas Agentic</a></h3>
+    <p class="kg-card__summary">Introdução aos conceitos fundamentais de agentes autônomos: definição, componentes essenciais e ciclos de execução.</p>
+    <div class="kg-card__meta">
+      <span class="kg-badge kg-badge--status">Draft</span>
+      <span class="kg-badge kg-badge--date">2025-10-15</span>
+      <span class="kg-badge">agents</span><span class="kg-badge">fundamentals</span><span class="kg-badge">intro</span>
+    </div>
+  </div>
+  <div class="kg-card">
+    <div class="kg-card__type">Guide</div>
+    <h3><a href="./guide/patterns/02_memory-ecosystem/">Ecossistema de Memória em Agentes</a></h3>
+    <p class="kg-card__summary">Arquiteturas de memória short-term e long-term em sistemas agentic, cobrindo context windows, vector stores e técnicas sem echo.</p>
+    <div class="kg-card__meta">
+      <span class="kg-badge kg-badge--status">Draft</span>
+      <span class="kg-badge kg-badge--date">2025-10-15</span>
+      <span class="kg-badge">memory</span><span class="kg-badge">state</span><span class="kg-badge">context</span>
+    </div>
+  </div>
+  <div class="kg-card">
+    <div class="kg-card__type">Pattern</div>
+    <h3><a href="./patterns/evaluation-and-monitoring/">Pattern: Evaluation and Monitoring</a></h3>
+    <p class="kg-card__summary">Instrumenta agentes com métricas, alertas e laços de feedback contínuos para garantir qualidade, eficiência e conformidade.</p>
+    <div class="kg-card__meta">
+      <span class="kg-badge kg-badge--status">Stable</span>
+      <span class="kg-badge kg-badge--date">2025-10-15</span>
+      <span class="kg-badge">evaluation</span><span class="kg-badge">monitoring</span><span class="kg-badge">telemetry</span>
+    </div>
+  </div>
+  <div class="kg-card">
+    <div class="kg-card__type">Pattern</div>
+    <h3><a href="./patterns/exception-handling-recovery/">Pattern: Exception Handling and Recovery</a></h3>
+    <p class="kg-card__summary">Planeja falhas antes que aconteçam, captura exceções rapidamente e restaura o agente a um estado seguro sem quebrar a experiência.</p>
+    <div class="kg-card__meta">
+      <span class="kg-badge kg-badge--status">Stable</span>
+      <span class="kg-badge kg-badge--date">2025-10-15</span>
+      <span class="kg-badge">exception-handling</span><span class="kg-badge">recovery</span><span class="kg-badge">robustness</span>
+    </div>
+  </div>
+  <div class="kg-card">
+    <div class="kg-card__type">Pattern</div>
+    <h3><a href="./patterns/goal-setting-and-monitoring/">Pattern: Goal Setting and Monitoring</a></h3>
+    <p class="kg-card__summary">Define objetivos claros, conecte-os a métricas acionáveis e use feedback contínuo para evitar deriva de comportamento.</p>
+    <div class="kg-card__meta">
+      <span class="kg-badge kg-badge--status">Stable</span>
+      <span class="kg-badge kg-badge--date">2025-10-15</span>
+      <span class="kg-badge">goal-setting</span><span class="kg-badge">monitoring</span><span class="kg-badge">metrics</span>
+    </div>
+  </div>
+  <div class="kg-card">
+    <div class="kg-card__type">Pattern</div>
+    <h3><a href="./patterns/guardrails-safety-patterns/">Pattern: Guardrails and Safety</a></h3>
+    <p class="kg-card__summary">Aplica controles multi-camada para manter agentes dentro das políticas, proteger dados sensíveis e evitar ações perigosas.</p>
+    <div class="kg-card__meta">
+      <span class="kg-badge kg-badge--status">Stable</span>
+      <span class="kg-badge kg-badge--date">2025-10-15</span>
+      <span class="kg-badge">guardrails</span><span class="kg-badge">safety</span><span class="kg-badge">moderation</span>
+    </div>
+  </div>
+</div>
 
----
+## Explore Pillars
+- Brain Dump → ideias brutas e sinais.
+- Patterns → soluções recorrentes comentadas.
+- Guides → fundamentos organizados por tema.
+- Resources → referências externas curadas.
+- Snippets → blocos de código mínimos.
+- Examples → fluxos reprodutíveis.
 
-## 🌱 Purpose
-To gather concepts, patterns, and practices around agentic AI development in an organized, accessible, and evolving way.  
-Every contribution starts small (as a note) and can grow over time as understanding deepens.
-
----
-
-## 🧭 Structure
-
-```bash
-docs/
-├─ README.md
-├─ index.md
-├─ assets/
-├─ guide/      # structured chapters and consolidated knowledge
-├─ patterns/   # recurring design patterns for agent systems
-├─ resources/  # curated references, papers, authors, and links
-├─ snippets/   # small illustrative code or prompt snippets
-├─ examples/   # practical and reproducible examples
-└─ notes/      # starting point for raw notes and discoveries
-```
-
-**Notes → Decisions → Promotions**
-Each piece of content begins in `notes/`. From there, it can be promoted to another section:
-
-* `guide/` for structured and educational material
-* `patterns/` for recurring agent design patterns
-* `resources/` for curated references and sources
-* `snippets/` for short, reusable code blocks
-* `examples/` for complete, working demonstrations
-
----
-
-## 📚 How to Navigate
-
-### 🔸 `notes/`
-
-Raw notes and idea sketches. Use this section to capture insights, references, and exploratory thinking.
-
-### 🔸 `guide/`
-
-Consolidated content explaining topics in a structured or sequential way. Best for continuous reading.
-
-### 🔸 `patterns/`
-
-A catalog of patterns and architectures for AI agents. Each file defines a problem, the applied pattern, and practical examples.
-
-### 🔸 `resources/`
-
-Curated links, articles, papers, and authors relevant to agentic AI development.
-
-### 🔸 `snippets/`
-
-Short, ready-to-use code or prompt snippets derived from notes or examples.
-
-### 🔸 `examples/`
-
-Minimal working projects that demonstrate key concepts in practice.
-
----
-
-## 🧩 Contributing
-
-You can:
-
-* Add new **notes** to expand the knowledge base
-* Consolidate notes into structured **guide chapters**
-* Add **patterns** or **references** to existing sections
-* Improve, organize, or review existing content
-
-Use Markdown for all files and follow the structure defined in each section’s `section_file_schema.yml`.
-
----
-
-## 🔗 Inspiration
-
-This repository blends ideas from:
-
-* **Knowledge Gardens** — living notes that evolve over time
-* **Awesome Lists** — curated, organized collections of references
-* **Cookbooks** — hands-on, practical examples ready to apply
-
----
-
-## ⚙️ License
-
-All content is released under the MIT License, unless otherwise specified by source authors or publications.
-
----
-
-## 🌐 Quick Navigation
-
-* [`notes/`](./notes/README.md) – raw ideas and notes
-* [`guide/`](./guide/README.md) – complete guide
-* [`patterns/`](./patterns/README.md) – design patterns
-* [`resources/`](./resources/README.md) – external references
-* [`snippets/`](./snippets/README.md) – code snippets
-* [`examples/`](./examples/README.md) – practical examples
-
----
-
-> The goal is to maintain a living, collaborative repository where technical knowledge about AI agents can be cultivated, refined, and shared.
+> Tudo nasce de uma nota. Explore, combine, promova.

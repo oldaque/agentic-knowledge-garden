@@ -1,15 +1,21 @@
 ---
-name: "Human-in-the-Loop - ADK Technical Support Agent"
-objective: "Demonstrates HITL pattern with ADK agent for technical support with escalation capabilities."
+title: "Human-in-the-Loop - ADK Technical Support Agent"
+slug: "human-in-the-loop-adk-technical-support-agent"
+summary: "Demonstrates HITL pattern with ADK agent for technical support, featuring automatic escalation mechanisms and personalization callbacks."
+tags: ["google-adk", "human-in-the-loop", "escalation", "callbacks", "customer-support"]
+status: "stable"
+last_update: "2025-10-14"
+origin_note: "docs/patterns/human-in-the-loop.md"
+languages: ["python"]
 how_to_run: "Requires Google ADK. Run: python human-in-the-loop-adk-technical-support-agent.py"
-from_note: "../patterns/human-in-the-loop.md"
+related_patterns: ["docs/patterns/human-in-the-loop.md"]
 ---
 
-# Human-in-the-Loop with ADK Technical Support Agent
+## Context
 
-This example shows how to implement HITL using Google ADK's agent framework with escalation mechanisms for technical support scenarios.
+This snippet demonstrates the Human-in-the-Loop (HITL) pattern using Google ADK's agent framework. It implements a technical support agent that can handle automated troubleshooting but escalates complex cases to human specialists. The pattern includes personalization callbacks that inject customer context into agent responses, demonstrating how AI and human expertise can work together seamlessly.
 
-## Code Example
+## Snippet
 
 ```python
 from google.adk.agents import Agent
@@ -75,19 +81,13 @@ def personalization_callback(
     return None # Return None to continue with the modified request
 ```
 
-## Explanation
+## Notes
 
-This example demonstrates Human-in-the-Loop implementation with:
+Key implementation details:
 
-1. **Technical Support Agent**: Uses ADK framework with three tools:
-   - `troubleshoot_issue`: Performs automated troubleshooting
-   - `create_ticket`: Logs issues requiring human attention
-   - `escalate_to_human`: Transfers complex cases to specialists
-
-2. **HITL Escalation Logic**: Agent automatically escalates based on issue complexity
-
-3. **Personalization Callback**: Custom callback that adds customer context (name, tier, purchase history) to enhance responses
-
-4. **State Management**: Tracks customer information in agent state for continuity
-
-The pattern showcases how AI agents can work alongside human specialists, escalating cases that require nuanced judgment or expertise.</content>
+- **Three-Tier Escalation**: Automated troubleshooting, ticket creation, and human escalation
+- **State-Based Personalization**: Callback injects customer context from session state
+- **Escalation Logic**: Agent autonomously decides when cases require human expertise
+- **Context Injection**: System messages added to LLM request for personalization
+- **Professional Tone**: Instructions emphasize empathetic but clear communication
+- **Multi-Tenant Design**: Pattern suitable for systems handling multiple customers with different tiers

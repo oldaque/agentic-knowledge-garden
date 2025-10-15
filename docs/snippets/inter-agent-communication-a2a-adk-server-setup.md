@@ -1,15 +1,21 @@
 ---
-name: "Inter-Agent Communication - ADK Server Setup"
-objective: "Demonstrates setting up an A2A server using Google ADK for agent communication."
+title: "Inter-Agent Communication - ADK Server Setup"
+slug: "inter-agent-communication-a2a-adk-server-setup"
+summary: "Demonstrates setting up an A2A server using Google ADK for agent-to-agent communication with OAuth authentication support."
+tags: ["google-adk", "a2a", "server-setup", "starlette", "uvicorn", "oauth"]
+status: "stable"
+last_update: "2025-10-14"
+origin_note: "docs/patterns/inter-agent-communication-a2a.md"
+languages: ["python"]
 how_to_run: "Requires Google ADK and appropriate credentials. Run: python inter-agent-communication-a2a-adk-server-setup.py"
-from_note: "../patterns/inter-agent-communication-a2a.md"
+related_patterns: ["docs/patterns/inter-agent-communication-a2a.md"]
 ---
 
-# A2A Server Setup with Google ADK
+## Context
 
-This example shows how to set up an A2A (Agent-to-Agent) server using Google ADK for inter-agent communication.
+This snippet demonstrates setting up a complete A2A (Agent-to-Agent) server using Google ADK. It creates an HTTP server that exposes ADK agents through the A2A protocol, enabling other agents to discover capabilities and communicate via standardized endpoints. The setup includes agent card definition, OAuth authentication handling, and Starlette web framework integration.
 
-## Code Example
+## Snippet
 
 ```python
 import os
@@ -106,14 +112,14 @@ if __name__ == '__main__':
     main()
 ```
 
-## Explanation
+## Notes
 
-This example demonstrates setting up an A2A (Agent-to-Agent) server using Google ADK:
+Key implementation details:
 
-1. **Agent Card Creation**: Defines agent capabilities (skills, input/output modes, streaming support)
-2. **ADK Agent Executor**: Wraps the ADK agent to handle A2A protocol requests
-3. **In-Memory Services**: Uses InMemoryArtifactService, InMemorySessionService, and InMemoryMemoryService for stateless operation
-4. **Starlette Web Application**: Creates HTTP server with A2A routes and authentication endpoint
-5. **Uvicorn Server**: Runs the application on specified host and port
-
-The setup provides a complete A2A-compliant server that other agents can communicate with using the defined skills.</content>
+- **Agent Card**: Defines agent capabilities, skills, and I/O modes for discovery
+- **ADKAgentExecutor**: Wraps ADK agent to handle A2A protocol requests
+- **In-Memory Services**: Uses stateless services for artifacts, sessions, and memory
+- **OAuth Handler**: Custom endpoint for OAuth callback authentication flow
+- **Starlette Integration**: Creates HTTP server with A2A-compatible routes
+- **Uvicorn Server**: Runs async web application on specified host and port
+- **Streaming Support**: Agent card declares streaming capabilities for real-time responses

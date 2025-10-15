@@ -3,13 +3,56 @@ site_description: Public repository for agentic AI knowledge
 site_url: https://oldaque.github.io/agentic-knowledge-garden
 
 nav:
-  - Home: index.md
-  - Guide: guide/README.md
-  - Patterns: patterns/README.md
-  - Resources: resources/README.md
-  - Notes: notes/README.md
-  - Snippets: snippets/README.md
-  - Examples: examples/README.md
+  - Garden Overview: index.md
+  - Brain Dump:
+      - Overview: notes/README.md
+      - Source Notes:
+          - Agent Memory Without Echo: notes/2025-10-13_agent-memory-without-echo.md
+          - Agentic Design Patterns (Book): notes/2025-10-13_book-agentic-design-patterns.md
+  - Patterns:
+      - Overview: patterns/README.md
+      - Memory & Context:
+          - Agent Memory Without Echo: patterns/agent-memory-without-echo.md
+          - Memory Management: patterns/memory-management.md
+          - Knowledge Retrieval (RAG): patterns/knowledge-retrieval-rag.md
+      - Tooling & Integration:
+          - Model Context Protocol (MCP): patterns/model-context-protocol-mcp.md
+          - Tool Use: patterns/tool-use.md
+      - Reasoning & Planning:
+          - Prompt Chaining: patterns/prompt-chaining.md
+          - Routing: patterns/routing.md
+          - Planning: patterns/planning.md
+          - Reflection: patterns/reflection.md
+          - Parallelization: patterns/parallelization.md
+          - Reasoning Techniques: patterns/reasoning-techniques.md
+      - Collaboration & Multi-Agent:
+          - Multi-Agent Collaboration: patterns/multi-agent.md
+          - Inter-Agent Communication (A2A): patterns/inter-agent-communication-a2a.md
+          - Human-in-the-Loop: patterns/human-in-the-loop.md
+      - Governance & Reliability:
+          - Goal Setting and Monitoring: patterns/goal-setting-and-monitoring.md
+          - Evaluation and Monitoring: patterns/evaluation-and-monitoring.md
+          - Guardrails and Safety: patterns/guardrails-safety-patterns.md
+          - Exception Handling and Recovery: patterns/exception-handling-recovery.md
+          - Resource-Aware Optimization: patterns/resource-aware-optimization.md
+      - Evolution & Learning:
+          - Learning and Adaptation: patterns/learning-and-adaptation.md
+  - Guides:
+      - Overview: guide/README.md
+      - Foundations:
+          - Agentic Fundamentals: guide/foundations/01_agentic-fundamentals.md
+      - Pattern Deep Dives:
+          - Memory Ecosystem: guide/patterns/02_memory-ecosystem.md
+  - Examples:
+      - Overview: examples/README.md
+      - Prompt Chaining Pipeline: examples/prompt-chaining/README.md
+      - Tool Use Research Agent: examples/tool-use/README.md
+      - Multi-Agent Content Crew: examples/multi-agent/README.md
+  - Snippets:
+      - Overview: snippets/README.md
+  - Resources:
+      - Overview: resources/README.md
+      - Links: resources/links.md
 
 
 theme:
@@ -17,7 +60,8 @@ theme:
   palette:
     - scheme: slate
   features:
-    - navigation.sections
+    - navigation.instant
+    - navigation.tabs
     - content.code.copy
 
 markdown_extensions:

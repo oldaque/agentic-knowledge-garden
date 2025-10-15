@@ -1,65 +1,64 @@
 ---
-title: "Chapter 8: Memory Management"
+title: "Pattern: Memory Management"
 slug: "memory-management"
-tags: ["memory", "context", "retention", "agentic-pattern", "long-term", "short-term"]
+tags: ["memory", "context", "retention", "long-term", "short-term", "agentic-pattern"]
+themes: ["knowledge/context", "architecture/state"]
 source:
-  type: "book"
+  origin_note: "docs/notes/2025-10-13_book-agentic-design-patterns.md"
   author: "Antonio Gulli"
   org: "Google"
   url: "https://docs.google.com/document/d/1asVTObtzIye0I9ypAztaeeI_sr_Hx2TORE02uUuqH_c/edit?tab=t.0"
 status: "stable"
-last_update: "2025-10-13"
-summary: "Pattern for managing short-term and long-term memory in agents to maintain context, learn from experience, and personalize interactions."
+last_update: "2025-10-14"
+summary: "Gerencia memória de curto e longo prazo em agentes para manter contexto, aprender com experiência e personalizar interações."
+relationships:
+  snippets: []
+  examples: []
+  resources: []
 ---
 
-# Chapter 8: Memory Management
+### Problem
 
-## Introduction to Memory Management in Agents
-Effective memory management is crucial for agents to retain information, make informed decisions, maintain conversational context, and improve over time.
+Agentes precisam reter informações entre sessões, recordar preferências, rastrear progresso e aprender com interações passadas, mas LLMs têm apenas janelas de contexto limitadas e efêmeras.
 
-## Types of Memory
-1.  **Short-Term Memory (Contextual Memory)**:
-    *   Holds information currently being processed or recently accessed.
-    *   Primarily exists within the LLM's context window, including recent messages, tool usage, and reflections.
-    *   Has limited capacity and is ephemeral, lost once the session concludes.
-2.  **Long-Term Memory (Persistent Memory)**:
-    *   A repository for information agents need to retain across various interactions, tasks, or extended periods.
-    *   Typically stored outside the agent's immediate processing environment (e.g., databases, knowledge graphs, vector databases).
-    *   Enables retrieval based on semantic similarity (semantic search).
+### Pattern
 
-## Practical Applications & Use Cases
-Memory management is vital for agents to surpass basic question-answering. Applications include:
-*   Chatbots and Conversational AI (maintaining flow, recalling preferences).
-*   Task-Oriented Agents (tracking steps, progress).
-*   Personalized Experiences (storing user preferences, behaviors).
-*   Learning and Improvement (refining performance from past interactions).
-*   Information Retrieval (RAG - accessing knowledge bases).
-*   Autonomous Systems (maps, routes, learned behaviors).
+Implementar sistema de memória em duas camadas:
 
-## Memory Management in Google Agent Developer Kit (ADK)
-ADK structures context management through:
-*   **Session**: An individual chat thread logging messages (Events) and storing temporary data (State). Managed by `SessionService` (e.g., `InMemorySessionService`, `DatabaseSessionService`, `VertexAiSessionService`).
-*   **State (`session.state`)**: Data stored within a Session, relevant only to the current chat thread. Operates as a dictionary with key-value pairs. Updates should occur via `output_key` on `LlmAgent` or `EventActions.state_delta` when appending events, not direct modification.
-*   **Memory (`MemoryService`)**: A searchable repository for long-term knowledge from past chats or external sources. Managed by `MemoryService` (e.g., `InMemoryMemoryService`, `VertexAiRagMemoryService`). Primary functions are `add_session_to_memory` and `search_memory`.
+1. **Short-Term Memory (Memória Contextual)**
+   - Mantém informações recentes dentro da janela de contexto do LLM.
+   - Inclui mensagens, uso de ferramentas, reflexões temporárias.
+   - Capacidade limitada; persiste apenas durante a sessão.
 
-## Memory Management in LangChain and LangGraph
-*   **Short-Term Memory**: Thread-scoped, tracking ongoing conversation within a single session.
-    *   `ChatMessageHistory`: Manual control over conversation history.
-    *   `ConversationBufferMemory`: Automated integration into chains, making history available to prompts. Can return history as a formatted string or a list of message objects.
-*   **Long-Term Memory**: Stores user-specific or application-level data across sessions, shared between conversational threads.
-    *   **Semantic Memory**: Remembering facts (e.g., user preferences, domain knowledge).
-    *   **Episodic Memory**: Remembering experiences (e.g., how to accomplish a task, often via few-shot examples).
-    *   **Procedural Memory**: Remembering rules (agent's core instructions, behaviors, often updated via "Reflection").
-    *   LangGraph stores long-term memories as JSON documents in a `BaseStore` (e.g., `InMemoryStore`), organized by namespaces and keys.
+2. **Long-Term Memory (Memória Persistente)**
+   - Repositório externo (banco de dados, vector stores, grafos de conhecimento).
+   - Permite busca semântica e recuperação entre sessões.
+   - Armazena preferências, aprendizados, históricos.
 
-## Vertex Memory Bank
-A managed service in Vertex AI Agent Engine providing persistent, long-term memory. It uses Gemini models to asynchronously analyze conversation histories, extract key facts, and user preferences, storing them by defined scope (e.g., user ID). It integrates seamlessly with Google ADK and supports other frameworks via direct API calls.
+Frameworks como ADK e LangGraph fornecem:
+- **Session/State**: contexto temporário de chat.
+- **MemoryService/BaseStore**: busca persistente de conhecimento.
 
-## Key Takeaways
-*   Memory is crucial for agents to track, learn, and personalize interactions.
-*   Agents require both short-term (contextual, temporary) and long-term (persistent, searchable) memory.
-*   Short-term memory is limited by the LLM's context window; long-term memory uses external storage like vector databases.
-*   Frameworks like ADK provide specific components: `Session` (chat thread), `State` (temporary chat data), and `MemoryService` (searchable long-term knowledge).
-*   ADK's `SessionService` manages the lifecycle of a chat session, and `session.state` is a dictionary for temporary data, updated via `EventActions.state_delta` or `output_key`.
-*   LangChain offers `ConversationBufferMemory` for short-term context, while LangGraph enables advanced long-term memory (semantic, episodic, procedural) using stores.
-*   Vertex Memory Bank offers a managed service for persistent, long-term memory, integrating with ADK, LangGraph, and CrewAI.
+### Trade_offs
+
+- **Pró:** personalização, rastreamento de tarefas complexas, aprendizado contínuo.
+- **Pró:** suporta conversações longas e múltiplas sessões.
+- **Contra:** aumenta complexidade (infra de armazenamento, sincronização).
+- **Contra:** requer políticas de privacidade e retenção de dados.
+
+### When_to_use
+
+- Chatbots que mantêm contexto de sessões anteriores.
+- Agentes de tarefas que rastreiam progresso multi-etapa.
+- Aplicações personalizadas que aprendem preferências do usuário.
+- Sistemas autônomos que evoluem com experiência acumulada.
+
+### Minimal_example
+
+(Snippets a serem criados: ADK SessionService, LangGraph Memory Store, Vertex Memory Bank)
+
+### Further_reading
+
+- [Agentic Design Patterns — Capítulo 8](https://docs.google.com/document/d/1asVTObtzIye0I9ypAztaeeI_sr_Hx2TORE02uUuqH_c/edit?tab=t.0)
+- [LangGraph Memory Management](https://langchain-ai.github.io/langgraph/concepts/memory/)
+- [Vertex Memory Bank](https://cloud.google.com/vertex-ai/docs/agent-engine/memory-bank)

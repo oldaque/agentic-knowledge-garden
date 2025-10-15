@@ -1,22 +1,56 @@
 ---
-title: "Chapter 12: Exception Handling and Recovery"
+title: "Pattern: Exception Handling and Recovery"
 slug: "exception-handling-recovery"
 tags: ["exception-handling", "recovery", "robustness", "error-handling", "agentic-pattern"]
+themes: ["operations/reliability", "governance/safety"]
 source:
-  type: "book"
+  origin_note: "notes/2025-10-13_book-agentic-design-patterns.md"
   author: "Antonio Gulli"
   org: "Google"
   url: "https://docs.google.com/document/d/1C07AuMur6-infwE0viCp4QtAy_wWI-uceFm6MaYHQGk/edit?tab=t.0#heading=h.m2kk4kdjt6ir"
 status: "stable"
-last_update: "2025-10-13"
-summary: "Pattern for building resilient agents that can handle errors, exceptions, and unexpected situations gracefully with recovery mechanisms."
+last_update: "2025-10-14"
+summary: "Planeja falhas antes que aconteçam, captura exceções rapidamente e restaura o agente a um estado seguro sem quebrar a experiência."
+relationships:
+  snippets:
+    - "snippets/exception-handling-recovery/exception-handling-recovery-adk-robust-location-agent.md"
+  examples: []
+  resources: []
 ---
 
-# Chapter 12: Exception Handling and Recovery
+### Problem
 
-For AI agents to operate reliably in diverse real-world environments, they must be able to manage unforeseen situations, errors, and malfunctions. Just as humans adapt to unexpected obstacles, intelligent agents need robust systems to detect problems, initiate recovery procedures, or at least ensure controlled failure. This essential requirement forms the basis of the Exception Handling and Recovery pattern.
+Agentes em produção inevitavelmente encontram erros (APIs indisponíveis, dados inválidos, timeouts). Sem tratamento explícito, o sistema entra em loop ou falha sem aviso, corroendo confiança.
 
-This pattern focuses on developing exceptionally durable and resilient agents that can maintain uninterrupted functionality and operational integrity despite various difficulties and anomalies. It emphasizes the importance of both proactive preparation and reactive strategies to ensure continuous operation, even when facing challenges. This adaptability is critical for agents to function successfully in complex and unpredictable settings, ultimately boosting their overall effectiveness and trustworthiness.
+### Pattern
+
+Definir estratégias de detecção precoce, tratamento e restauração:
+- Observabilidade — métricas, logs estruturados por etapa.
+- Classificação de falhas (transiente, permanente, fatais) e ações correspondentes.
+- Retentativas com backoff, circuit breakers, fallback de degradação graciosa.
+- Playbooks de recovery: reprocessar tarefas, avisar usuário, escalar para humano.
+
+### Trade_offs
+
+- **Pró:** melhora SLA e confiança do usuário.  
+- **Pró:** reduz custos com incidentes manuais.  
+- **Contra:** fluxo fica mais complexo; depende de monitoramento ativo.  
+- **Contra:** proteção demais pode mascarar bugs reais.
+
+### When_to_use
+
+- Qualquer agente exposto a APIs externas ou pipelines longos.  
+- Ambientes regulados onde falhas precisam de trilha auditável.  
+- Sistemas críticos (financeiro, saúde, suporte) que não podem simplesmente “cair”.
+
+### Minimal_example
+
+- [`snippets/exception-handling-recovery/exception-handling-recovery-adk-robust-location-agent.md`](../snippets/exception-handling-recovery-adk-robust-location-agent.md) — exemplo com ADK aplicando fallback e retentativas.
+
+### Further_reading
+
+- [Agentic Design Patterns — Capítulo 12](https://docs.google.com/document/d/1C07AuMur6-infwE0viCp4QtAy_wWI-uceFm6MaYHQGk/edit?tab=t.0#heading=h.m2kk4kdjt6ir)
+- [Retries, Backoff and Jitter](https://aws.amazon.com/blogs/architecture/exponential-backoff-and-jitter/)
 
 The capacity to handle unexpected events ensures these AI systems are not only intelligent but also stable and reliable, which fosters greater confidence in their deployment and performance. Integrating comprehensive monitoring and diagnostic tools further strengthens an agent's ability to quickly identify and address issues, preventing potential disruptions and ensuring smoother operation in evolving conditions. These advanced systems are crucial for maintaining the integrity and efficiency of AI operations, reinforcing their ability to manage complexity and unpredictability.
 

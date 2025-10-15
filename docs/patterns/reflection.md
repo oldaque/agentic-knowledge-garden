@@ -1,153 +1,51 @@
 ---
-title: "Chapter 4: Reflection"
+title: "Pattern: Reflection"
 slug: "reflection"
-tags: ["reflection", "critique", "iterative", "agentic-pattern", "langchain", "google-adk"]
+tags: ["reflection", "self-critique", "iterative-improvement", "agentic-pattern"]
+themes: ["reasoning/metacognition", "quality-assurance"]
 source:
-  type: "book"
+  origin_note: "notes/2025-10-13_book-agentic-design-patterns.md"
   author: "Antonio Gulli"
   org: "Google"
-  url: "https://docs.google.com/document/d/1HXXJOQIMWowtLw4WMiSR360caDAlZPtl5dPPgvq9IT4/edit?tab=t.0#heading=h.a7nkedxjnyap"
+  url: "https://docs.google.com/document/d/1HXXJOQIMWowtLw4WMiSR360caDAlZPtl5dPPgvq9IT4/edit?tab=t.0"
 status: "stable"
-last_update: "2025-10-13"
-summary: "Pattern for iterative self-correction in agentic systems where agents evaluate their own outputs and refine them for improved accuracy and quality."
+last_update: "2025-10-14"
+summary: "Adiciona loop de autoavaliação (ou crítico dedicado) para revisar e refinir a saída antes de expor ao usuário."
+relationships:
+  snippets:
+    - "snippets/reflection/reflection-google-adk-generator-critic.md"
+    - "snippets/reflection/reflection-langchain-iterative-code-refinement.md"
+  examples: []
+  resources: []
 ---
 
-# Chapter 4: Reflection
+### Problem
 
-## REFLECTION PATTERN OVERVIEW
+Mesmo com cadeias bem projetadas, a primeira resposta do agente pode conter erros, inconsistências ou estilo inadequado. Sem feedback interno, o usuário recebe resultado ruim e precisa refazer a solicitação.
 
-In the preceding chapters, we've explored fundamental agentic patterns: Chaining for sequential execution, Routing for dynamic path selection, and Parallelization for concurrent task execution. These patterns enable agents to perform complex tasks more efficiently and flexibly. However, even with sophisticated workflows, an agent's initial output or plan might not be optimal, accurate, or complete. This is where the Reflection pattern comes into play.
+### Pattern
 
-The Reflection pattern involves an agent evaluating its own work, output, or internal state and using that evaluation to improve its performance or refine its response. It's a form of self-correction or self-improvement, allowing the agent to iteratively refine its output or adjust its approach based on feedback, internal critique, or comparison against desired criteria. Reflection can occasionally be facilitated by a separate agent whose specific role is to analyze the output of an initial agent.
+Reflection introduz uma etapa de crítica que avalia a resposta antes da entrega. Pode ser o próprio agente (self-reflection) ou um par produtor/crítico. O crítico compara a saída com critérios (requisitos, fatos, estilo) e gera feedback estruturado; o produtor usa o feedback para gerar uma nova versão. O ciclo termina ao atingir qualidade desejada ou limite de iterações.
 
-Unlike a simple sequential chain where output is passed directly to the next step, or routing which chooses a path, reflection introduces a feedback loop. The agent doesn't just produce an output; it then examines that output (or the process that generated it), identifies potential issues or areas for improvement, and uses those insights to generate a better version or modify its future actions.
+### Trade_offs
 
-The process typically involves:
+- **Pró:** melhora consistência e reduz erros recorrentes; útil para conteúdo sensível.  
+- **Pró:** registra racionalidade explícita, útil para auditoria.  
+- **Contra:** aumenta latência e custo (chamadas extras).  
+- **Contra:** se crítica for pobre, pode gerar loops inúteis; requer critérios bem definidos.
 
-1.  **Execution:** The agent performs a task or generates an initial output.
-2.  **Evaluation/Critique:** The agent (often using another LLM call or a set of rules) analyzes the result from the previous step. This evaluation might check for factual accuracy, coherence, style, completeness, adherence to instructions, or other relevant criteria.
-3.  **Reflection/Refinement:** Based on the critique, the agent determines how to improve. This might involve generating a refined output, adjusting parameters for a subsequent step, or even modifying the overall plan.
-4.  **Iteration (Optional but common):** The refined output or adjusted approach can then be executed, and the reflection process can repeat until a satisfactory result is achieved or a stopping condition is met.
+### When_to_use
 
-A key and highly effective implementation of the Reflection pattern separates the process into two distinct logical roles: a Producer and a Critic. This is often called the "Generator-Critic" or "Producer-Reviewer" model. While a single agent can perform self-reflection, using two specialized agents (or two separate LLM calls with distinct system prompts) often yields more robust and unbiased results.
+- Geração de código/documentos com requisitos estritos.  
+- Respostas que precisam de validação factual (RAG, relatórios).  
+- Qualquer fluxo onde um reviewer humano avaliaria antes de publicar.
 
-1.  **The Producer Agent:** This agent's primary responsibility is to perform the initial execution of the task. It focuses entirely on generating the content, whether it's writing code, drafting a blog post, or creating a plan. It takes the initial prompt and produces the first version of the output.
+### Minimal_example
 
-2.  **The Critic Agent:** This agent's sole purpose is to evaluate the output generated by the Producer. It is given a different set of instructions, often a distinct persona (e.g., "You are a senior software engineer," "You are a meticulous fact-checker"). The Critic's instructions guide it to analyze the Producer's work against specific criteria, such as factual accuracy, code quality, stylistic requirements, or completeness. It is designed to find flaws, suggest improvements, and provide structured feedback.
+- [`snippets/reflection-langchain-iterative-code-refinement.md`](../snippets/reflection-langchain-iterative-code-refinement.md) — ciclo produtor/crítico para código.  
+- [`snippets/reflection-google-adk-generator-critic.md`](../snippets/reflection-google-adk-generator-critic.md) — implementação usando Google ADK.
 
-This separation of concerns is powerful because it prevents the "cognitive bias" of an agent reviewing its own work. The Critic agent approaches the output with a fresh perspective, dedicated entirely to finding errors and areas for improvement. The feedback from the Critic is then passed back to the Producer agent, which uses it as a guide to generate a new, refined version of the output. The provided LangChain and ADK code examples both implement this two-agent model: the LangChain example uses a specific "reflector_prompt" to create a critic persona, while the ADK example explicitly defines a producer and a reviewer agent.
+### Further_reading
 
-Implementing reflection often requires structuring the agent's workflow to include these feedback loops. This can be achieved through iterative loops in code, or using frameworks that support state management and conditional transitions based on evaluation results. While a single step of evaluation and refinement can be implemented within either a LangChain/LangGraph, or ADK, or Crew.AI chain, true iterative reflection typically involves more complex orchestration.
-
-The Reflection pattern is crucial for building agents that can produce high-quality outputs, handle nuanced tasks, and exhibit a degree of self-awareness and adaptability. It moves agents beyond simply executing instructions towards a more sophisticated form of problem-solving and content generation.
-
-The intersection of reflection with goal setting and monitoring (see Chapter 11) is worth noticing. A goal provides the ultimate benchmark for the agent's self-evaluation, while monitoring tracks its progress. In a number of practical cases, Reflection then might act as the corrective engine, using monitored feedback to analyze deviations and adjust its strategy. This synergy transforms the agent from a passive executor into a purposeful system that adaptively works to achieve its objectives.
-
-Furthermore, the effectiveness of the Reflection pattern is significantly enhanced when the LLM keeps a memory of the conversation (see Chapter 8). This conversational history provides crucial context for the evaluation phase, allowing the agent to assess its output not just in isolation, but against the backdrop of previous interactions, user feedback, and evolving goals. It enables the agent to learn from past critiques and avoid repeating errors. Without memory, each reflection is a self-contained event; with memory, reflection becomes a cumulative process where each cycle builds upon the last, leading to more intelligent and context-aware refinement.
-
-## PRACTICAL APPLICATIONS & USE CASES
-
-The Reflection pattern is valuable in scenarios where output quality, accuracy, or adherence to complex constraints is critical:
-
-1.  **Creative Writing and Content Generation:**
-    Refining generated text, stories, poems, or marketing copy.
-    *   **Use Case:** An agent writing a blog post.
-    *   **Reflection:** Generate a draft, critique it for flow, tone, and clarity, then rewrite based on the critique. Repeat until the post meets quality standards.
-    *   **Benefit:** Produces more polished and effective content.
-
-2.  **Code Generation and Debugging:**
-    Writing code, identifying errors, and fixing them.
-    *   **Use Case:** An agent writing a Python function.
-    *   **Reflection:** Write initial code, run tests or static analysis, identify errors or inefficiencies, then modify the code based on the findings.
-    *   **Benefit:** Generates more robust and functional code.
-
-3.  **Complex Problem Solving:**
-    Evaluating intermediate steps or proposed solutions in multi-step reasoning tasks.
-    *   **Use Case:** An agent solving a logic puzzle.
-    *   **Reflection:** Propose a step, evaluate if it leads closer to the solution or introduces contradictions, backtrack or choose a different step if needed.
-    *   **Benefit:** Improves the agent's ability to navigate complex problem spaces.
-
-4.  **Summarization and Information Synthesis:**
-    Refining summaries for accuracy, completeness, and conciseness.
-    *   **Use Case:** An agent summarizing a long document.
-    *   **Reflection:** Generate an initial summary, compare it against key points in the original document, refine the summary to include missing information or improve accuracy.
-    *   **Benefit:** Creates more accurate and comprehensive summaries.
-
-5.  **Planning and Strategy:**
-    Evaluating a proposed plan and identifying potential flaws or improvements.
-    *   **Use Case:** An agent planning a series of actions to achieve a goal.
-    *   **Reflection:** Generate a plan, simulate its execution or evaluate its feasibility against constraints, revise the plan based on the evaluation.
-    *   **Benefit:** Develops more effective and realistic plans.
-
-6.  **Conversational Agents:**
-    Reviewing previous turns in a conversation to maintain context, correct misunderstandings, or improve response quality.
-    *   **Use Case:** A customer support chatbot.
-    *   **Reflection:** After a user response, review the conversation history and the last generated message to ensure coherence and address the user's latest input accurately.
-    *   **Benefit:** Leads to more natural and effective conversations.
-
-Reflection adds a layer of meta-cognition to agentic systems, enabling them to learn from their own outputs and processes, leading to more intelligent, reliable, and high-quality results.
-
-## HANDS-ON CODE EXAMPLE (LANGCHAIN)
-
-The implementation of a complete, iterative reflection process necessitates mechanisms for state management and cyclical execution. While these are handled natively in graph-based frameworks like LangGraph or through custom procedural code, the fundamental principle of a single reflection cycle can be demonstrated effectively using the compositional syntax of LCEL (LangChain Expression Language).
-
-This example implements a reflection loop using the Langchain library and OpenAI's GPT-4o model to iteratively generate and refine a Python function that calculates the factorial of a number. The process starts with a task prompt, generates initial code, and then repeatedly reflects on the code based on critiques from a simulated senior software engineer role, refining the code in each iteration until the critique stage determines the code is perfect or a maximum number of iterations is reached. Finally, it prints the resulting refined code.
-
-First, ensure you have the necessary libraries installed:
-
-```bash
-pip install langchain langchain-community langchain-openai
-```
-
-You will also need to set up your environment with your API key for the language model you choose (e.g., OpenAI, Google Gemini, Anthropic).
-
-[Code Example: LangChain Iterative Code Refinement](../snippets/reflection-langchain-iterative-code-refinement.md)
-
-The code begins by setting up the environment, loading API keys, and initializing a powerful language model like GPT-4o with a low temperature for focused outputs. The core task is defined by a prompt asking for a Python function to calculate the factorial of a number, including specific requirements for docstrings, edge cases (factorial of 0), and error handling for negative input. The `run_reflection_loop` function orchestrates the iterative refinement process. Within the loop, in the first iteration, the language model generates initial code based on the task prompt. In subsequent iterations, it refines the code based on critiques from the previous step. A separate "reflector" role, also played by the language model but with a different system prompt, acts as a senior software engineer to critique the generated code against the original task requirements. This critique is provided as a bulleted list of issues or the phrase 'CODE_IS_PERFECT' if no issues are found. The loop continues until the critique indicates the code is perfect or a maximum number of iterations is reached. The conversation history is maintained and passed to the language model in each step to provide context for both generation/refinement and reflection stages. Finally, the script prints the last generated code version after the loop concludes.
-
-## HANDS-ON CODE EXAMPLE (ADK)
-
-Let's now look at a conceptual code example implemented using the Google ADK. Specifically, the code showcases this by employing a Generator-Critic structure, where one component (the Generator) produces an initial result or plan, and another component (the Critic) provides critical feedback or a critique, guiding the Generator towards a more refined or accurate final output.
-
-[Code Example: Google ADK Generator-Critic Pipeline](../snippets/reflection-google-adk-generator-critic.md)
-
-This code demonstrates the use of a sequential agent pipeline in Google ADK for generating and reviewing text. It defines two LlmAgent instances: `generator` and `reviewer`. The `generator` agent is designed to create an initial draft paragraph on a given subject. It is instructed to write a short and informative piece and saves its output to the state key `draft_text`. The `reviewer` agent acts as a fact-checker for the text produced by the generator. It is instructed to read the text from `draft_text` and verify its factual accuracy. The reviewer's output is a structured dictionary with two keys: `status` and `reasoning`. `status` indicates if the text is "ACCURATE" or "INACCURATE", while `reasoning` provides an explanation for the status. This dictionary is saved to the state key `review_output`. A `SequentialAgent` named `review_pipeline` is created to manage the execution order of the two agents. It ensures that the generator runs first, followed by the reviewer. The overall execution flow is that the generator produces text, which is then saved to the state. Subsequently, the reviewer reads this text from the state, performs its fact-checking, and saves its findings (the status and reasoning) back to the state. This pipeline allows for a structured process of content creation and review using separate agents. Note: An alternative implementation utilizing ADK's `LoopAgent` is also available for those interested.
-
-Before concluding, it's important to consider that while the Reflection pattern significantly enhances output quality, it comes with important trade-offs. The iterative process, though powerful, can lead to higher costs and latency, since every refinement loop may require a new LLM call, making it suboptimal for time-sensitive applications. Furthermore, the pattern is memory-intensive; with each iteration, the conversational history expands, including the initial output, critique, and subsequent refinements.
-
-## AT GLANCE
-
-**What:** An agent's initial output is often suboptimal, suffering from inaccuracies, incompleteness, or a failure to meet complex requirements. Basic agentic workflows lack a built-in process for the agent to recognize and fix its own errors. This is solved by having the agent evaluate its own work or, more robustly, by introducing a separate logical agent to act as a critic, preventing the initial response from being the final one regardless of quality.
-
-**Why:** The Reflection pattern offers a solution by introducing a mechanism for self-correction and refinement. It establishes a feedback loop where a "producer" agent generates an output, and then a "critic" agent (or the producer itself) evaluates it against predefined criteria. This critique is then used to generate an improved version. This iterative process of generation, evaluation, and refinement progressively enhances the quality of the final result, leading to more accurate, coherent, and reliable outcomes.
-
-**Rule of thumb:** Use the Reflection pattern when the quality, accuracy, and detail of the final output are more important than speed and cost. It is particularly effective for tasks like generating polished long-form content, writing and debugging code, and creating detailed plans. Employ a separate critic agent when tasks require high objectivity or specialized evaluation that a generalist producer agent might miss.
-
-**Visual summary**
-
-
-
-## KEY TAKEAWAYS
-
-*   The primary advantage of the Reflection pattern is its ability to iteratively self-correct and refine outputs, leading to significantly higher quality, accuracy, and adherence to complex instructions.
-*   It involves a feedback loop of execution, evaluation/critique, and refinement. Reflection is essential for tasks requiring high-quality, accurate, or nuanced outputs.
-*   A powerful implementation is the Producer-Critic model, where a separate agent (or prompted role) evaluates the initial output. This separation of concerns enhances objectivity and allows for more specialized, structured feedback.
-*   However, these benefits come at the cost of increased latency and computational expense, along with a higher risk of exceeding the model's context window or being throttled by API services.
-*   While full iterative reflection often requires stateful workflows (like LangGraph), a single reflection step can be implemented in LangChain using LCEL to pass output for critique and subsequent refinement.
-*   Google ADK can facilitate reflection through sequential workflows where one agent's output is critiqued by another agent, allowing for subsequent refinement steps.
-*   This pattern enables agents to perform self-correction and enhance their performance over time.
-
-## CONCLUSION
-
-The reflection pattern provides a crucial mechanism for self-correction within an agent's workflow, enabling iterative improvement beyond a single-pass execution. This is achieved by creating a loop where the system generates an output, evaluates it against specific criteria, and then uses that evaluation to produce a refined result. This evaluation can be performed by the agent itself (self-reflection) or, often more effectively, by a distinct critic agent, which represents a key architectural choice within the pattern.
-
-While a fully autonomous, multi-step reflection process requires a robust architecture for state management, its core principle is effectively demonstrated in a single generate-critique-refine cycle. As a control structure, reflection can be integrated with other foundational patterns to construct more robust and functionally complex agentic systems.
-
-## REFERENCES
-
-Here are some resources for further reading on the Reflection pattern and related concepts:
-
-1.  [Training Language Models to Self-Correct via Reinforcement Learning](https://arxiv.org/abs/2409.12917)
-2.  [LangChain Expression Language (LCEL) Documentation](https://python.langchain.com/docs/introduction/)
-3.  [LangGraph Documentation](https://www.langchain.com/langgraph)
-4.  [Google Agent Developer Kit (ADK) Documentation (Multi-Agent Systems)](https://google.github.io/adk-docs/agents/multi-agents/)
+- [Agentic Design Patterns — Capítulo 4](https://docs.google.com/document/d/1HXXJOQIMWowtLw4WMiSR360caDAlZPtl5dPPgvq9IT4/edit?tab=t.0)
+- [Self-Refine paper](https://arxiv.org/abs/2303.17651)

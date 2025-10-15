@@ -1,15 +1,21 @@
 ---
-name: "Multi-Agent Blog Creation with CrewAI"
-objective: "Demonstrates a multi-agent system using CrewAI to research and write a blog post."
+title: "Multi-Agent Blog Creation with CrewAI"
+slug: "multi-agent-crewai-blog-creation"
+summary: "Demonstrates multi-agent system using CrewAI with researcher and writer agents collaborating to produce a blog post about AI trends."
+tags: ["crewai", "multi-agent", "collaboration", "research", "content-creation"]
+status: "stable"
+last_update: "2025-10-14"
+origin_note: "docs/patterns/multi-agent.md"
+languages: ["python"]
 how_to_run: "Requires CrewAI, LangChain, and a Google API key. Run with `python your_script_name.py`."
-from_note: "../patterns/multi-agent.md"
+related_patterns: ["docs/patterns/multi-agent.md"]
 ---
 
-# Multi-Agent Blog Creation with CrewAI
+## Context
 
-This snippet illustrates a multi-agent system for content creation using CrewAI. It defines two agents, a researcher and a writer, who collaborate to produce a blog post about AI trends.
+This snippet demonstrates a multi-agent collaboration pattern using CrewAI for content creation. It defines two specialized agents (researcher and writer) that work sequentially: the researcher finds and summarizes AI trends, then the writer creates a blog post based on those findings. The pattern showcases how agents with different roles can collaborate through task dependencies and context sharing.
 
-## Code Example
+## Snippet
 
 ```python
 import os
@@ -89,12 +95,13 @@ if __name__ == "__main__":
     main()
 ```
 
-## How It Works
+## Notes
 
-1.  **Environment Setup**: The script first loads environment variables, ensuring a Google API key is available.
-2.  **Agent Definition**: Two distinct agents, a `researcher` and a `writer`, are created with specific roles, goals, and backstories.
-3.  **Task Definition**: Each agent is assigned a `Task`. The `research_task` is to find AI trends, and the `writing_task` is to write a blog post based on the context of the research task.
-4.  **Crew Formation**: A `Crew` is formed with the agents and their tasks. The process is set to `sequential`, meaning the tasks will be executed one after the other.
-5.  **Execution**: The `kickoff` method starts the crew's work. The researcher will first execute its task, and its output will be passed as context to the writer's task. The final result is the completed blog post.
+Key implementation details:
 
-```
+- **Agent Specialization**: Researcher focuses on finding trends, writer on content creation
+- **Sequential Process**: Writer task depends on researcher task via context parameter
+- **Task Dependencies**: Writer receives researcher output through context array
+- **Role-Based Design**: Each agent has distinct role, goal, and backstory
+- **Error Handling**: Try-except block catches crew execution failures
+- **Verbosity Control**: Different verbosity levels for agents and crew for debugging

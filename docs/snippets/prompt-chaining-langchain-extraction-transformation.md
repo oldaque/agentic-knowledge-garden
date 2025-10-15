@@ -1,15 +1,21 @@
 ---
-name: "Prompt Chaining - LangChain Extraction and Transformation"
-objective: "Demonstrates prompt chaining using LangChain to extract information and transform it to JSON format sequentially."
+title: "Prompt Chaining - LangChain Extraction and Transformation"
+slug: "prompt-chaining-langchain-extraction-transformation"
+summary: "Demonstrates prompt chaining using LangChain to extract information from unstructured text and transform it into structured JSON format through sequential processing."
+tags: ["langchain", "prompt-chaining", "lcel", "extraction", "json"]
+status: "stable"
+last_update: "2025-10-14"
+origin_note: "docs/patterns/prompt-chaining.md"
+languages: ["python"]
 how_to_run: "Requires OPENAI_API_KEY environment variable. Run: python prompt-chaining-langchain-extraction-transformation.py"
-from_note: "../patterns/prompt-chaining.md"
+related_patterns: ["docs/patterns/prompt-chaining.md"]
 ---
 
-# Prompt Chaining with LangChain: Extraction and Transformation
+## Context
 
-This code example demonstrates the Prompt Chaining pattern using LangChain Expression Language (LCEL) to sequentially process information through two linked prompts.
+This snippet demonstrates the Prompt Chaining pattern using LangChain Expression Language (LCEL). It shows how to sequentially process information through two linked prompts: first extracting technical specifications from unstructured text, then transforming those specifications into structured JSON format. The pattern uses LangChain's pipe operator to chain prompts together, where the output of one becomes the input to the next.
 
-## Code Example
+## Snippet
 
 ```python
 import os
@@ -58,12 +64,12 @@ print("\n--- Final JSON Output ---")
 print(final_result)
 ```
 
-## Explanation
+## Notes
 
-This example shows how prompt chaining works by:
+Key implementation details:
 
-1. **First Prompt Chain**: Extracts technical specifications from unstructured text
-2. **Second Prompt Chain**: Transforms the extracted specifications into structured JSON format
-3. **LCEL Composition**: Uses LangChain's `|` operator to chain the two prompts together
-
-The output of the extraction step becomes the input for the transformation step, creating a sequential processing pipeline.
+- **LCEL Composition**: Uses LangChain's `|` operator to chain two prompts together seamlessly
+- **Sequential Processing**: First prompt extracts specifications, second prompt transforms them to JSON
+- **Output Parsing**: `StrOutputParser()` converts LLM messages to simple strings for easy downstream processing
+- **Data Flow**: The extraction chain's output becomes the input for the transformation step via dictionary mapping
+- **Temperature Setting**: Uses `temperature=0` for deterministic, consistent outputs

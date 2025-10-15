@@ -1,15 +1,21 @@
 ---
-name: "Exception Handling - ADK Robust Location Agent"
-objective: "Demonstrates robust exception handling in ADK agents with fallback mechanisms for location retrieval."
+title: "Exception Handling - ADK Robust Location Agent"
+slug: "exception-handling-recovery-adk-robust-location-agent"
+summary: "Demonstrates robust exception handling in ADK agents using SequentialAgent with multiple sub-agents that include fallback mechanisms for location retrieval."
+tags: ["google-adk", "exception-handling", "fallback", "sequential-agent", "error-recovery"]
+status: "stable"
+last_update: "2025-10-14"
+origin_note: "docs/patterns/exception-handling-recovery.md"
+languages: ["python"]
 how_to_run: "Requires Google ADK. Run: python exception-handling-recovery-adk-robust-location-agent.py"
-from_note: "../patterns/exception-handling-recovery.md"
+related_patterns: ["docs/patterns/exception-handling-recovery.md"]
 ---
 
-# Exception Handling with Fallback Agents in Google ADK
+## Context
 
-This example demonstrates robust exception handling using a SequentialAgent with multiple sub-agents that include fallback mechanisms. The primary agent attempts precise location lookup, with a fallback agent that handles errors gracefully.
+This snippet demonstrates the Exception Handling and Recovery pattern using Google ADK's SequentialAgent. It implements a robust error handling strategy with multiple sub-agents that work together: a primary agent attempts precise location lookup, a fallback agent handles errors gracefully by providing alternative lookups, and a response agent presents the final result. The pattern uses state management to track failures and coordinate the fallback logic.
 
-## Code Example
+## Snippet
 
 ```python
 from google.adk.agents import Agent, SequentialAgent
@@ -56,10 +62,13 @@ robust_location_agent = SequentialAgent(
 )
 ```
 
-## How It Works
+## Notes
 
-1. **Primary Handler**: Attempts to get precise location information using a specific tool
-2. **Fallback Handler**: Checks if the primary lookup failed and provides alternative location lookup if needed
-3. **Response Agent**: Presents the final location information to the user, with error handling for cases where location couldn't be retrieved
+Key implementation details:
 
-This pattern ensures the agent can handle tool failures gracefully and still provide useful responses.
+- **Primary Handler**: Attempts precise location lookup first with specialized tool
+- **Fallback Handler**: Checks state for failure flag and provides alternative lookup if needed
+- **Response Agent**: Presents final results with appropriate error messages when necessary
+- **State Management**: Uses session state to track failures and coordinate between agents
+- **Sequential Orchestration**: SequentialAgent guarantees execution order for proper error handling flow
+- **Graceful Degradation**: System provides increasingly general information rather than complete failure

@@ -1,43 +1,62 @@
 ---
-title: "Chapter 7: Multi-Agent Collaboration"
+title: "Pattern: Multi-Agent Collaboration"
 slug: "multi-agent-collaboration"
 tags: ["multi-agent", "collaboration", "teamwork", "agentic-pattern", "crewai", "google-adk"]
+themes: ["architecture/coordination", "workflow/orchestration"]
 source:
-  type: "book"
+  origin_note: "notes/2025-10-13_book-agentic-design-patterns.md"
   author: "Antonio Gulli"
   org: "Google"
   url: "https://docs.google.com/document/d/1RZ5-2fykDQKOBx01pwfKkDe0GCs5ydca7xW9Q4wqS_M/edit?tab=t.0"
 status: "stable"
-last_update: "2025-10-13"
-summary: "Pattern for orchestrating multiple specialized agents to work together on complex tasks, each handling specific roles and responsibilities."
+last_update: "2025-10-14"
+summary: "Orquestra vários agentes especializados para quebrar problemas grandes em papéis claros, alinhando comunicação, coordenação e síntese."
+relationships:
+  snippets:
+    - "snippets/multi-agent/multi-agent-crewai-blog-creation.md"
+    - "snippets/multi-agent/multi-agent-google-adk-loop-agent.md"
+    - "snippets/multi-agent/multi-agent-google-adk-hierarchical-structure.md"
+  examples:
+    - "examples/multi-agent/README.md"
+  resources: []
 ---
 
-# Chapter 7: Multi-Agent Collaboration
+### Problem
 
-## MULTI-AGENT COLLABORATION PATTERN OVERVIEW
+Um único agente generalista não consegue dominar todas as habilidades ou manter qualidade em demandas complexas (pesquisa + escrita + revisão + execução). Falta especialização e coordenação explícita.
 
-The Multi-Agent Collaboration pattern addresses the limitations of monolithic agent architectures by structuring a system as a cooperative ensemble of distinct, specialized agents. A high-level objective is broken down into discrete sub-problems, each assigned to an agent with specific tools, data access, or reasoning capabilities.
+### Pattern
 
-Collaboration can take various forms:
+Estruturar o sistema como equipe: cada agente assume papel específico (pesquisador, executor, crítico, gerente). Um coordenador distribui tarefas, agenda a comunicação (sequential, paralelo, debate) e consolida entregas. Kanban interno e protocolos claros evitam conflitos.
 
-*   **Sequential Handoffs:** One agent completes a task and passes its output to another.
-*   **Parallel Processing:** Multiple agents work on different parts of a problem simultaneously.
-*   **Debate and Consensus:** Agents with varied perspectives engage in discussions to reach a consensus.
-*   **Hierarchical Structures:** A manager agent delegates tasks to worker agents and synthesizes results.
-*   **Expert Teams:** Agents with specialized knowledge collaborate to produce complex output.
-*   **Critic-Reviewer:** Agents create initial outputs, and a second group critically assesses them for quality and adherence to policies.
+Formas comuns:
+- handoff sequencial (producer → reviewer → publisher);
+- execução paralela com merge posterior;
+- debates/consenso quando há desacordo;
+- hierarquia (manager + workers).
 
+### Trade_offs
 
-Frameworks such as Crew AI and Google ADK facilitate this paradigm by providing structures for the specification of agents, tasks, and their interactive procedures.
+- **Pró:** especialização aumenta qualidade e throughput.  
+- **Pró:** escalável — adicionar nova habilidade = novo agente.  
+- **Contra:** coordenação ruim causa conflitos e loops.  
+- **Contra:** custo maior (várias execuções) e observabilidade mais difícil.
 
-## PRACTICAL APPLICATIONS & USE CASES
+### When_to_use
 
-*   **Complex Research and Analysis:** A team of agents specializing in searching, summarizing, and synthesizing information.
-*   **Software Development:** Agents acting as requirements analysts, code generators, testers, and documentation writers.
-*   **Creative Content Generation:** Agents for market research, copywriting, graphic design, and social media scheduling.
-*   **Financial Analysis:** Agents for fetching stock data, analyzing news sentiment, technical analysis, and investment recommendations.
-*   **Customer Support Escalation:** A front-line agent handling initial queries, escalating complex issues to specialists.
-*   **Supply Chain Optimization:** Agents representing different nodes (suppliers, manufacturers) collaborating to optimize logistics.
+- Projetos multidisciplinares (pesquisa + escrita + validação).  
+- Sistemas que exigem redundância ou defesa (agente crítico).  
+- Experimentos com diversas abordagens simultâneas.
+
+### Minimal_example
+
+- [`snippets/multi-agent-crewai-blog-creation.md`](../snippets/multi-agent-crewai-blog-creation.md) — pipeline de conteúdo com CrewAI.  
+- [`snippets/multi-agent-google-adk-loop-agent.md`](../snippets/multi-agent-google-adk-loop-agent.md) — loop colaborativo no Google ADK.
+
+### Further_reading
+
+- [Agentic Design Patterns — Capítulo 7](https://docs.google.com/document/d/1RZ5-2fykDQKOBx01pwfKkDe0GCs5ydca7xW9Q4wqS_M/edit?tab=t.0)
+- [CrewAI Docs — Multi-Agent Crews](https://docs.crewai.com/)
 *   **Network Analysis & Remediation:** Multiple agents collaborating to triage and remediate issues in autonomous operations.
 
 ## MULTI-AGENT COLLABORATION: EXPLORING INTERRELATIONSHIPS AND COMMUNICATION STRUCTURES

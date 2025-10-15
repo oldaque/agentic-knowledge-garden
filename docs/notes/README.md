@@ -1,4 +1,10 @@
-# Notas
+---
+title: "Brain Dump"
+summary: "Notas brutas que alimentam todo o jardim."
+---
 
-- [Memória do agente sem eco: como evitar respostas duplicadas](./2025-10-13_agent-memory-without-echo.md)
-- [Livro: Agentic Design Patterns](./2025-10-13_book-agentic-design-patterns.md)
+# Brain Dump
+Notas recentes e sinais que evoluem em padrões, guias e recursos.
+
+## Last Updates
+_No entries yet._
